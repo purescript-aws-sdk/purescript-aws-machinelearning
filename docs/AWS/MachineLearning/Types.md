@@ -42,7 +42,7 @@ Constructs AddTagsInput's fields from required parameters
 
 ``` purescript
 newtype AddTagsOutput
-  = AddTagsOutput { "ResourceId" :: NullOrUndefined (EntityId), "ResourceType" :: NullOrUndefined (TaggableResourceType) }
+  = AddTagsOutput { "ResourceId" :: Maybe (EntityId), "ResourceType" :: Maybe (TaggableResourceType) }
 ```
 
 <p>Amazon ML returns the following elements. </p>
@@ -67,7 +67,7 @@ Constructs AddTagsOutput from required parameters
 #### `newAddTagsOutput'`
 
 ``` purescript
-newAddTagsOutput' :: ({ "ResourceId" :: NullOrUndefined (EntityId), "ResourceType" :: NullOrUndefined (TaggableResourceType) } -> { "ResourceId" :: NullOrUndefined (EntityId), "ResourceType" :: NullOrUndefined (TaggableResourceType) }) -> AddTagsOutput
+newAddTagsOutput' :: ({ "ResourceId" :: Maybe (EntityId), "ResourceType" :: Maybe (TaggableResourceType) } -> { "ResourceId" :: Maybe (EntityId), "ResourceType" :: Maybe (TaggableResourceType) }) -> AddTagsOutput
 ```
 
 Constructs AddTagsOutput's fields from required parameters
@@ -112,7 +112,7 @@ Encode AwsUserArn
 
 ``` purescript
 newtype BatchPrediction
-  = BatchPrediction { "BatchPredictionId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "OutputUri" :: NullOrUndefined (S3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "TotalRecordCount" :: NullOrUndefined (LongType), "InvalidRecordCount" :: NullOrUndefined (LongType) }
+  = BatchPrediction { "BatchPredictionId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "BatchPredictionDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "OutputUri" :: Maybe (S3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "TotalRecordCount" :: Maybe (LongType), "InvalidRecordCount" :: Maybe (LongType) }
 ```
 
 <p> Represents the output of a <code>GetBatchPrediction</code> operation.</p> <p> The content consists of the detailed metadata, the status, and the data file information of a <code>Batch Prediction</code>.</p>
@@ -137,7 +137,7 @@ Constructs BatchPrediction from required parameters
 #### `newBatchPrediction'`
 
 ``` purescript
-newBatchPrediction' :: ({ "BatchPredictionId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "OutputUri" :: NullOrUndefined (S3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "TotalRecordCount" :: NullOrUndefined (LongType), "InvalidRecordCount" :: NullOrUndefined (LongType) } -> { "BatchPredictionId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "OutputUri" :: NullOrUndefined (S3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "TotalRecordCount" :: NullOrUndefined (LongType), "InvalidRecordCount" :: NullOrUndefined (LongType) }) -> BatchPrediction
+newBatchPrediction' :: ({ "BatchPredictionId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "BatchPredictionDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "OutputUri" :: Maybe (S3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "TotalRecordCount" :: Maybe (LongType), "InvalidRecordCount" :: Maybe (LongType) } -> { "BatchPredictionId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "BatchPredictionDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "OutputUri" :: Maybe (S3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "TotalRecordCount" :: Maybe (LongType), "InvalidRecordCount" :: Maybe (LongType) }) -> BatchPrediction
 ```
 
 Constructs BatchPrediction's fields from required parameters
@@ -214,7 +214,7 @@ Encode ComputeStatistics
 
 ``` purescript
 newtype CreateBatchPredictionInput
-  = CreateBatchPredictionInput { "BatchPredictionId" :: EntityId, "BatchPredictionName" :: NullOrUndefined (EntityName), "MLModelId" :: EntityId, "BatchPredictionDataSourceId" :: EntityId, "OutputUri" :: S3Url }
+  = CreateBatchPredictionInput { "BatchPredictionId" :: EntityId, "BatchPredictionName" :: Maybe (EntityName), "MLModelId" :: EntityId, "BatchPredictionDataSourceId" :: EntityId, "OutputUri" :: S3Url }
 ```
 
 ##### Instances
@@ -237,7 +237,7 @@ Constructs CreateBatchPredictionInput from required parameters
 #### `newCreateBatchPredictionInput'`
 
 ``` purescript
-newCreateBatchPredictionInput' :: EntityId -> EntityId -> EntityId -> S3Url -> ({ "BatchPredictionId" :: EntityId, "BatchPredictionName" :: NullOrUndefined (EntityName), "MLModelId" :: EntityId, "BatchPredictionDataSourceId" :: EntityId, "OutputUri" :: S3Url } -> { "BatchPredictionId" :: EntityId, "BatchPredictionName" :: NullOrUndefined (EntityName), "MLModelId" :: EntityId, "BatchPredictionDataSourceId" :: EntityId, "OutputUri" :: S3Url }) -> CreateBatchPredictionInput
+newCreateBatchPredictionInput' :: EntityId -> EntityId -> EntityId -> S3Url -> ({ "BatchPredictionId" :: EntityId, "BatchPredictionName" :: Maybe (EntityName), "MLModelId" :: EntityId, "BatchPredictionDataSourceId" :: EntityId, "OutputUri" :: S3Url } -> { "BatchPredictionId" :: EntityId, "BatchPredictionName" :: Maybe (EntityName), "MLModelId" :: EntityId, "BatchPredictionDataSourceId" :: EntityId, "OutputUri" :: S3Url }) -> CreateBatchPredictionInput
 ```
 
 Constructs CreateBatchPredictionInput's fields from required parameters
@@ -246,7 +246,7 @@ Constructs CreateBatchPredictionInput's fields from required parameters
 
 ``` purescript
 newtype CreateBatchPredictionOutput
-  = CreateBatchPredictionOutput { "BatchPredictionId" :: NullOrUndefined (EntityId) }
+  = CreateBatchPredictionOutput { "BatchPredictionId" :: Maybe (EntityId) }
 ```
 
 <p> Represents the output of a <code>CreateBatchPrediction</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateBatchPrediction</code> operation is asynchronous. You can poll for status updates by using the <code>&gt;GetBatchPrediction</code> operation and checking the <code>Status</code> parameter of the result. </p>
@@ -271,7 +271,7 @@ Constructs CreateBatchPredictionOutput from required parameters
 #### `newCreateBatchPredictionOutput'`
 
 ``` purescript
-newCreateBatchPredictionOutput' :: ({ "BatchPredictionId" :: NullOrUndefined (EntityId) } -> { "BatchPredictionId" :: NullOrUndefined (EntityId) }) -> CreateBatchPredictionOutput
+newCreateBatchPredictionOutput' :: ({ "BatchPredictionId" :: Maybe (EntityId) } -> { "BatchPredictionId" :: Maybe (EntityId) }) -> CreateBatchPredictionOutput
 ```
 
 Constructs CreateBatchPredictionOutput's fields from required parameters
@@ -280,7 +280,7 @@ Constructs CreateBatchPredictionOutput's fields from required parameters
 
 ``` purescript
 newtype CreateDataSourceFromRDSInput
-  = CreateDataSourceFromRDSInput { "DataSourceId" :: EntityId, "DataSourceName" :: NullOrUndefined (EntityName), "RDSData" :: RDSDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) }
+  = CreateDataSourceFromRDSInput { "DataSourceId" :: EntityId, "DataSourceName" :: Maybe (EntityName), "RDSData" :: RDSDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: Maybe (ComputeStatistics) }
 ```
 
 ##### Instances
@@ -303,7 +303,7 @@ Constructs CreateDataSourceFromRDSInput from required parameters
 #### `newCreateDataSourceFromRDSInput'`
 
 ``` purescript
-newCreateDataSourceFromRDSInput' :: EntityId -> RDSDataSpec -> RoleARN -> ({ "DataSourceId" :: EntityId, "DataSourceName" :: NullOrUndefined (EntityName), "RDSData" :: RDSDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) } -> { "DataSourceId" :: EntityId, "DataSourceName" :: NullOrUndefined (EntityName), "RDSData" :: RDSDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) }) -> CreateDataSourceFromRDSInput
+newCreateDataSourceFromRDSInput' :: EntityId -> RDSDataSpec -> RoleARN -> ({ "DataSourceId" :: EntityId, "DataSourceName" :: Maybe (EntityName), "RDSData" :: RDSDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: Maybe (ComputeStatistics) } -> { "DataSourceId" :: EntityId, "DataSourceName" :: Maybe (EntityName), "RDSData" :: RDSDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: Maybe (ComputeStatistics) }) -> CreateDataSourceFromRDSInput
 ```
 
 Constructs CreateDataSourceFromRDSInput's fields from required parameters
@@ -312,7 +312,7 @@ Constructs CreateDataSourceFromRDSInput's fields from required parameters
 
 ``` purescript
 newtype CreateDataSourceFromRDSOutput
-  = CreateDataSourceFromRDSOutput { "DataSourceId" :: NullOrUndefined (EntityId) }
+  = CreateDataSourceFromRDSOutput { "DataSourceId" :: Maybe (EntityId) }
 ```
 
 <p> Represents the output of a <code>CreateDataSourceFromRDS</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateDataSourceFromRDS</code>&gt; operation is asynchronous. You can poll for updates by using the <code>GetBatchPrediction</code> operation and checking the <code>Status</code> parameter. You can inspect the <code>Message</code> when <code>Status</code> shows up as <code>FAILED</code>. You can also check the progress of the copy operation by going to the <code>DataPipeline</code> console and looking up the pipeline using the <code>pipelineId </code> from the describe call.</p>
@@ -337,7 +337,7 @@ Constructs CreateDataSourceFromRDSOutput from required parameters
 #### `newCreateDataSourceFromRDSOutput'`
 
 ``` purescript
-newCreateDataSourceFromRDSOutput' :: ({ "DataSourceId" :: NullOrUndefined (EntityId) } -> { "DataSourceId" :: NullOrUndefined (EntityId) }) -> CreateDataSourceFromRDSOutput
+newCreateDataSourceFromRDSOutput' :: ({ "DataSourceId" :: Maybe (EntityId) } -> { "DataSourceId" :: Maybe (EntityId) }) -> CreateDataSourceFromRDSOutput
 ```
 
 Constructs CreateDataSourceFromRDSOutput's fields from required parameters
@@ -346,7 +346,7 @@ Constructs CreateDataSourceFromRDSOutput's fields from required parameters
 
 ``` purescript
 newtype CreateDataSourceFromRedshiftInput
-  = CreateDataSourceFromRedshiftInput { "DataSourceId" :: EntityId, "DataSourceName" :: NullOrUndefined (EntityName), "DataSpec" :: RedshiftDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) }
+  = CreateDataSourceFromRedshiftInput { "DataSourceId" :: EntityId, "DataSourceName" :: Maybe (EntityName), "DataSpec" :: RedshiftDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: Maybe (ComputeStatistics) }
 ```
 
 ##### Instances
@@ -369,7 +369,7 @@ Constructs CreateDataSourceFromRedshiftInput from required parameters
 #### `newCreateDataSourceFromRedshiftInput'`
 
 ``` purescript
-newCreateDataSourceFromRedshiftInput' :: EntityId -> RedshiftDataSpec -> RoleARN -> ({ "DataSourceId" :: EntityId, "DataSourceName" :: NullOrUndefined (EntityName), "DataSpec" :: RedshiftDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) } -> { "DataSourceId" :: EntityId, "DataSourceName" :: NullOrUndefined (EntityName), "DataSpec" :: RedshiftDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) }) -> CreateDataSourceFromRedshiftInput
+newCreateDataSourceFromRedshiftInput' :: EntityId -> RedshiftDataSpec -> RoleARN -> ({ "DataSourceId" :: EntityId, "DataSourceName" :: Maybe (EntityName), "DataSpec" :: RedshiftDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: Maybe (ComputeStatistics) } -> { "DataSourceId" :: EntityId, "DataSourceName" :: Maybe (EntityName), "DataSpec" :: RedshiftDataSpec, "RoleARN" :: RoleARN, "ComputeStatistics" :: Maybe (ComputeStatistics) }) -> CreateDataSourceFromRedshiftInput
 ```
 
 Constructs CreateDataSourceFromRedshiftInput's fields from required parameters
@@ -378,7 +378,7 @@ Constructs CreateDataSourceFromRedshiftInput's fields from required parameters
 
 ``` purescript
 newtype CreateDataSourceFromRedshiftOutput
-  = CreateDataSourceFromRedshiftOutput { "DataSourceId" :: NullOrUndefined (EntityId) }
+  = CreateDataSourceFromRedshiftOutput { "DataSourceId" :: Maybe (EntityId) }
 ```
 
 <p> Represents the output of a <code>CreateDataSourceFromRedshift</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateDataSourceFromRedshift</code> operation is asynchronous. You can poll for updates by using the <code>GetBatchPrediction</code> operation and checking the <code>Status</code> parameter. </p>
@@ -403,7 +403,7 @@ Constructs CreateDataSourceFromRedshiftOutput from required parameters
 #### `newCreateDataSourceFromRedshiftOutput'`
 
 ``` purescript
-newCreateDataSourceFromRedshiftOutput' :: ({ "DataSourceId" :: NullOrUndefined (EntityId) } -> { "DataSourceId" :: NullOrUndefined (EntityId) }) -> CreateDataSourceFromRedshiftOutput
+newCreateDataSourceFromRedshiftOutput' :: ({ "DataSourceId" :: Maybe (EntityId) } -> { "DataSourceId" :: Maybe (EntityId) }) -> CreateDataSourceFromRedshiftOutput
 ```
 
 Constructs CreateDataSourceFromRedshiftOutput's fields from required parameters
@@ -412,7 +412,7 @@ Constructs CreateDataSourceFromRedshiftOutput's fields from required parameters
 
 ``` purescript
 newtype CreateDataSourceFromS3Input
-  = CreateDataSourceFromS3Input { "DataSourceId" :: EntityId, "DataSourceName" :: NullOrUndefined (EntityName), "DataSpec" :: S3DataSpec, "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) }
+  = CreateDataSourceFromS3Input { "DataSourceId" :: EntityId, "DataSourceName" :: Maybe (EntityName), "DataSpec" :: S3DataSpec, "ComputeStatistics" :: Maybe (ComputeStatistics) }
 ```
 
 ##### Instances
@@ -435,7 +435,7 @@ Constructs CreateDataSourceFromS3Input from required parameters
 #### `newCreateDataSourceFromS3Input'`
 
 ``` purescript
-newCreateDataSourceFromS3Input' :: EntityId -> S3DataSpec -> ({ "DataSourceId" :: EntityId, "DataSourceName" :: NullOrUndefined (EntityName), "DataSpec" :: S3DataSpec, "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) } -> { "DataSourceId" :: EntityId, "DataSourceName" :: NullOrUndefined (EntityName), "DataSpec" :: S3DataSpec, "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) }) -> CreateDataSourceFromS3Input
+newCreateDataSourceFromS3Input' :: EntityId -> S3DataSpec -> ({ "DataSourceId" :: EntityId, "DataSourceName" :: Maybe (EntityName), "DataSpec" :: S3DataSpec, "ComputeStatistics" :: Maybe (ComputeStatistics) } -> { "DataSourceId" :: EntityId, "DataSourceName" :: Maybe (EntityName), "DataSpec" :: S3DataSpec, "ComputeStatistics" :: Maybe (ComputeStatistics) }) -> CreateDataSourceFromS3Input
 ```
 
 Constructs CreateDataSourceFromS3Input's fields from required parameters
@@ -444,7 +444,7 @@ Constructs CreateDataSourceFromS3Input's fields from required parameters
 
 ``` purescript
 newtype CreateDataSourceFromS3Output
-  = CreateDataSourceFromS3Output { "DataSourceId" :: NullOrUndefined (EntityId) }
+  = CreateDataSourceFromS3Output { "DataSourceId" :: Maybe (EntityId) }
 ```
 
 <p> Represents the output of a <code>CreateDataSourceFromS3</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateDataSourceFromS3</code> operation is asynchronous. You can poll for updates by using the <code>GetBatchPrediction</code> operation and checking the <code>Status</code> parameter. </p>
@@ -469,7 +469,7 @@ Constructs CreateDataSourceFromS3Output from required parameters
 #### `newCreateDataSourceFromS3Output'`
 
 ``` purescript
-newCreateDataSourceFromS3Output' :: ({ "DataSourceId" :: NullOrUndefined (EntityId) } -> { "DataSourceId" :: NullOrUndefined (EntityId) }) -> CreateDataSourceFromS3Output
+newCreateDataSourceFromS3Output' :: ({ "DataSourceId" :: Maybe (EntityId) } -> { "DataSourceId" :: Maybe (EntityId) }) -> CreateDataSourceFromS3Output
 ```
 
 Constructs CreateDataSourceFromS3Output's fields from required parameters
@@ -478,7 +478,7 @@ Constructs CreateDataSourceFromS3Output's fields from required parameters
 
 ``` purescript
 newtype CreateEvaluationInput
-  = CreateEvaluationInput { "EvaluationId" :: EntityId, "EvaluationName" :: NullOrUndefined (EntityName), "MLModelId" :: EntityId, "EvaluationDataSourceId" :: EntityId }
+  = CreateEvaluationInput { "EvaluationId" :: EntityId, "EvaluationName" :: Maybe (EntityName), "MLModelId" :: EntityId, "EvaluationDataSourceId" :: EntityId }
 ```
 
 ##### Instances
@@ -501,7 +501,7 @@ Constructs CreateEvaluationInput from required parameters
 #### `newCreateEvaluationInput'`
 
 ``` purescript
-newCreateEvaluationInput' :: EntityId -> EntityId -> EntityId -> ({ "EvaluationId" :: EntityId, "EvaluationName" :: NullOrUndefined (EntityName), "MLModelId" :: EntityId, "EvaluationDataSourceId" :: EntityId } -> { "EvaluationId" :: EntityId, "EvaluationName" :: NullOrUndefined (EntityName), "MLModelId" :: EntityId, "EvaluationDataSourceId" :: EntityId }) -> CreateEvaluationInput
+newCreateEvaluationInput' :: EntityId -> EntityId -> EntityId -> ({ "EvaluationId" :: EntityId, "EvaluationName" :: Maybe (EntityName), "MLModelId" :: EntityId, "EvaluationDataSourceId" :: EntityId } -> { "EvaluationId" :: EntityId, "EvaluationName" :: Maybe (EntityName), "MLModelId" :: EntityId, "EvaluationDataSourceId" :: EntityId }) -> CreateEvaluationInput
 ```
 
 Constructs CreateEvaluationInput's fields from required parameters
@@ -510,7 +510,7 @@ Constructs CreateEvaluationInput's fields from required parameters
 
 ``` purescript
 newtype CreateEvaluationOutput
-  = CreateEvaluationOutput { "EvaluationId" :: NullOrUndefined (EntityId) }
+  = CreateEvaluationOutput { "EvaluationId" :: Maybe (EntityId) }
 ```
 
 <p> Represents the output of a <code>CreateEvaluation</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p><code>CreateEvaluation</code> operation is asynchronous. You can poll for status updates by using the <code>GetEvcaluation</code> operation and checking the <code>Status</code> parameter. </p>
@@ -535,7 +535,7 @@ Constructs CreateEvaluationOutput from required parameters
 #### `newCreateEvaluationOutput'`
 
 ``` purescript
-newCreateEvaluationOutput' :: ({ "EvaluationId" :: NullOrUndefined (EntityId) } -> { "EvaluationId" :: NullOrUndefined (EntityId) }) -> CreateEvaluationOutput
+newCreateEvaluationOutput' :: ({ "EvaluationId" :: Maybe (EntityId) } -> { "EvaluationId" :: Maybe (EntityId) }) -> CreateEvaluationOutput
 ```
 
 Constructs CreateEvaluationOutput's fields from required parameters
@@ -544,7 +544,7 @@ Constructs CreateEvaluationOutput's fields from required parameters
 
 ``` purescript
 newtype CreateMLModelInput
-  = CreateMLModelInput { "MLModelId" :: EntityId, "MLModelName" :: NullOrUndefined (EntityName), "MLModelType" :: MLModelType, "Parameters" :: NullOrUndefined (TrainingParameters), "TrainingDataSourceId" :: EntityId, "Recipe" :: NullOrUndefined (Recipe), "RecipeUri" :: NullOrUndefined (S3Url) }
+  = CreateMLModelInput { "MLModelId" :: EntityId, "MLModelName" :: Maybe (EntityName), "MLModelType" :: MLModelType, "Parameters" :: Maybe (TrainingParameters), "TrainingDataSourceId" :: EntityId, "Recipe" :: Maybe (Recipe), "RecipeUri" :: Maybe (S3Url) }
 ```
 
 ##### Instances
@@ -567,7 +567,7 @@ Constructs CreateMLModelInput from required parameters
 #### `newCreateMLModelInput'`
 
 ``` purescript
-newCreateMLModelInput' :: EntityId -> MLModelType -> EntityId -> ({ "MLModelId" :: EntityId, "MLModelName" :: NullOrUndefined (EntityName), "MLModelType" :: MLModelType, "Parameters" :: NullOrUndefined (TrainingParameters), "TrainingDataSourceId" :: EntityId, "Recipe" :: NullOrUndefined (Recipe), "RecipeUri" :: NullOrUndefined (S3Url) } -> { "MLModelId" :: EntityId, "MLModelName" :: NullOrUndefined (EntityName), "MLModelType" :: MLModelType, "Parameters" :: NullOrUndefined (TrainingParameters), "TrainingDataSourceId" :: EntityId, "Recipe" :: NullOrUndefined (Recipe), "RecipeUri" :: NullOrUndefined (S3Url) }) -> CreateMLModelInput
+newCreateMLModelInput' :: EntityId -> MLModelType -> EntityId -> ({ "MLModelId" :: EntityId, "MLModelName" :: Maybe (EntityName), "MLModelType" :: MLModelType, "Parameters" :: Maybe (TrainingParameters), "TrainingDataSourceId" :: EntityId, "Recipe" :: Maybe (Recipe), "RecipeUri" :: Maybe (S3Url) } -> { "MLModelId" :: EntityId, "MLModelName" :: Maybe (EntityName), "MLModelType" :: MLModelType, "Parameters" :: Maybe (TrainingParameters), "TrainingDataSourceId" :: EntityId, "Recipe" :: Maybe (Recipe), "RecipeUri" :: Maybe (S3Url) }) -> CreateMLModelInput
 ```
 
 Constructs CreateMLModelInput's fields from required parameters
@@ -576,7 +576,7 @@ Constructs CreateMLModelInput's fields from required parameters
 
 ``` purescript
 newtype CreateMLModelOutput
-  = CreateMLModelOutput { "MLModelId" :: NullOrUndefined (EntityId) }
+  = CreateMLModelOutput { "MLModelId" :: Maybe (EntityId) }
 ```
 
 <p> Represents the output of a <code>CreateMLModel</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateMLModel</code> operation is asynchronous. You can poll for status updates by using the <code>GetMLModel</code> operation and checking the <code>Status</code> parameter. </p>
@@ -601,7 +601,7 @@ Constructs CreateMLModelOutput from required parameters
 #### `newCreateMLModelOutput'`
 
 ``` purescript
-newCreateMLModelOutput' :: ({ "MLModelId" :: NullOrUndefined (EntityId) } -> { "MLModelId" :: NullOrUndefined (EntityId) }) -> CreateMLModelOutput
+newCreateMLModelOutput' :: ({ "MLModelId" :: Maybe (EntityId) } -> { "MLModelId" :: Maybe (EntityId) }) -> CreateMLModelOutput
 ```
 
 Constructs CreateMLModelOutput's fields from required parameters
@@ -642,7 +642,7 @@ Constructs CreateRealtimeEndpointInput's fields from required parameters
 
 ``` purescript
 newtype CreateRealtimeEndpointOutput
-  = CreateRealtimeEndpointOutput { "MLModelId" :: NullOrUndefined (EntityId), "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) }
+  = CreateRealtimeEndpointOutput { "MLModelId" :: Maybe (EntityId), "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) }
 ```
 
 <p>Represents the output of an <code>CreateRealtimeEndpoint</code> operation.</p> <p>The result contains the <code>MLModelId</code> and the endpoint information for the <code>MLModel</code>.</p> <note> <p>The endpoint information includes the URI of the <code>MLModel</code>; that is, the location to send online prediction requests for the specified <code>MLModel</code>.</p> </note>
@@ -667,7 +667,7 @@ Constructs CreateRealtimeEndpointOutput from required parameters
 #### `newCreateRealtimeEndpointOutput'`
 
 ``` purescript
-newCreateRealtimeEndpointOutput' :: ({ "MLModelId" :: NullOrUndefined (EntityId), "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) } -> { "MLModelId" :: NullOrUndefined (EntityId), "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) }) -> CreateRealtimeEndpointOutput
+newCreateRealtimeEndpointOutput' :: ({ "MLModelId" :: Maybe (EntityId), "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) } -> { "MLModelId" :: Maybe (EntityId), "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) }) -> CreateRealtimeEndpointOutput
 ```
 
 Constructs CreateRealtimeEndpointOutput's fields from required parameters
@@ -710,7 +710,7 @@ Encode DataSchema
 
 ``` purescript
 newtype DataSource
-  = DataSource { "DataSourceId" :: NullOrUndefined (EntityId), "DataLocationS3" :: NullOrUndefined (S3Url), "DataRearrangement" :: NullOrUndefined (DataRearrangement), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "DataSizeInBytes" :: NullOrUndefined (LongType), "NumberOfFiles" :: NullOrUndefined (LongType), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "Message" :: NullOrUndefined (Message), "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata), "RDSMetadata" :: NullOrUndefined (RDSMetadata), "RoleARN" :: NullOrUndefined (RoleARN), "ComputeStatistics" :: NullOrUndefined (ComputeStatistics), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) }
+  = DataSource { "DataSourceId" :: Maybe (EntityId), "DataLocationS3" :: Maybe (S3Url), "DataRearrangement" :: Maybe (DataRearrangement), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "DataSizeInBytes" :: Maybe (LongType), "NumberOfFiles" :: Maybe (LongType), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "Message" :: Maybe (Message), "RedshiftMetadata" :: Maybe (RedshiftMetadata), "RDSMetadata" :: Maybe (RDSMetadata), "RoleARN" :: Maybe (RoleARN), "ComputeStatistics" :: Maybe (ComputeStatistics), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) }
 ```
 
 <p> Represents the output of the <code>GetDataSource</code> operation. </p> <p> The content consists of the detailed metadata and data file information and the current status of the <code>DataSource</code>. </p>
@@ -735,7 +735,7 @@ Constructs DataSource from required parameters
 #### `newDataSource'`
 
 ``` purescript
-newDataSource' :: ({ "DataSourceId" :: NullOrUndefined (EntityId), "DataLocationS3" :: NullOrUndefined (S3Url), "DataRearrangement" :: NullOrUndefined (DataRearrangement), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "DataSizeInBytes" :: NullOrUndefined (LongType), "NumberOfFiles" :: NullOrUndefined (LongType), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "Message" :: NullOrUndefined (Message), "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata), "RDSMetadata" :: NullOrUndefined (RDSMetadata), "RoleARN" :: NullOrUndefined (RoleARN), "ComputeStatistics" :: NullOrUndefined (ComputeStatistics), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) } -> { "DataSourceId" :: NullOrUndefined (EntityId), "DataLocationS3" :: NullOrUndefined (S3Url), "DataRearrangement" :: NullOrUndefined (DataRearrangement), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "DataSizeInBytes" :: NullOrUndefined (LongType), "NumberOfFiles" :: NullOrUndefined (LongType), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "Message" :: NullOrUndefined (Message), "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata), "RDSMetadata" :: NullOrUndefined (RDSMetadata), "RoleARN" :: NullOrUndefined (RoleARN), "ComputeStatistics" :: NullOrUndefined (ComputeStatistics), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) }) -> DataSource
+newDataSource' :: ({ "DataSourceId" :: Maybe (EntityId), "DataLocationS3" :: Maybe (S3Url), "DataRearrangement" :: Maybe (DataRearrangement), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "DataSizeInBytes" :: Maybe (LongType), "NumberOfFiles" :: Maybe (LongType), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "Message" :: Maybe (Message), "RedshiftMetadata" :: Maybe (RedshiftMetadata), "RDSMetadata" :: Maybe (RDSMetadata), "RoleARN" :: Maybe (RoleARN), "ComputeStatistics" :: Maybe (ComputeStatistics), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) } -> { "DataSourceId" :: Maybe (EntityId), "DataLocationS3" :: Maybe (S3Url), "DataRearrangement" :: Maybe (DataRearrangement), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "DataSizeInBytes" :: Maybe (LongType), "NumberOfFiles" :: Maybe (LongType), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "Message" :: Maybe (Message), "RedshiftMetadata" :: Maybe (RedshiftMetadata), "RDSMetadata" :: Maybe (RDSMetadata), "RoleARN" :: Maybe (RoleARN), "ComputeStatistics" :: Maybe (ComputeStatistics), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) }) -> DataSource
 ```
 
 Constructs DataSource's fields from required parameters
@@ -810,7 +810,7 @@ Constructs DeleteBatchPredictionInput's fields from required parameters
 
 ``` purescript
 newtype DeleteBatchPredictionOutput
-  = DeleteBatchPredictionOutput { "BatchPredictionId" :: NullOrUndefined (EntityId) }
+  = DeleteBatchPredictionOutput { "BatchPredictionId" :: Maybe (EntityId) }
 ```
 
 <p> Represents the output of a <code>DeleteBatchPrediction</code> operation.</p> <p>You can use the <code>GetBatchPrediction</code> operation and check the value of the <code>Status</code> parameter to see whether a <code>BatchPrediction</code> is marked as <code>DELETED</code>.</p>
@@ -835,7 +835,7 @@ Constructs DeleteBatchPredictionOutput from required parameters
 #### `newDeleteBatchPredictionOutput'`
 
 ``` purescript
-newDeleteBatchPredictionOutput' :: ({ "BatchPredictionId" :: NullOrUndefined (EntityId) } -> { "BatchPredictionId" :: NullOrUndefined (EntityId) }) -> DeleteBatchPredictionOutput
+newDeleteBatchPredictionOutput' :: ({ "BatchPredictionId" :: Maybe (EntityId) } -> { "BatchPredictionId" :: Maybe (EntityId) }) -> DeleteBatchPredictionOutput
 ```
 
 Constructs DeleteBatchPredictionOutput's fields from required parameters
@@ -876,7 +876,7 @@ Constructs DeleteDataSourceInput's fields from required parameters
 
 ``` purescript
 newtype DeleteDataSourceOutput
-  = DeleteDataSourceOutput { "DataSourceId" :: NullOrUndefined (EntityId) }
+  = DeleteDataSourceOutput { "DataSourceId" :: Maybe (EntityId) }
 ```
 
 <p> Represents the output of a <code>DeleteDataSource</code> operation.</p>
@@ -901,7 +901,7 @@ Constructs DeleteDataSourceOutput from required parameters
 #### `newDeleteDataSourceOutput'`
 
 ``` purescript
-newDeleteDataSourceOutput' :: ({ "DataSourceId" :: NullOrUndefined (EntityId) } -> { "DataSourceId" :: NullOrUndefined (EntityId) }) -> DeleteDataSourceOutput
+newDeleteDataSourceOutput' :: ({ "DataSourceId" :: Maybe (EntityId) } -> { "DataSourceId" :: Maybe (EntityId) }) -> DeleteDataSourceOutput
 ```
 
 Constructs DeleteDataSourceOutput's fields from required parameters
@@ -942,7 +942,7 @@ Constructs DeleteEvaluationInput's fields from required parameters
 
 ``` purescript
 newtype DeleteEvaluationOutput
-  = DeleteEvaluationOutput { "EvaluationId" :: NullOrUndefined (EntityId) }
+  = DeleteEvaluationOutput { "EvaluationId" :: Maybe (EntityId) }
 ```
 
 <p> Represents the output of a <code>DeleteEvaluation</code> operation. The output indicates that Amazon Machine Learning (Amazon ML) received the request.</p> <p>You can use the <code>GetEvaluation</code> operation and check the value of the <code>Status</code> parameter to see whether an <code>Evaluation</code> is marked as <code>DELETED</code>.</p>
@@ -967,7 +967,7 @@ Constructs DeleteEvaluationOutput from required parameters
 #### `newDeleteEvaluationOutput'`
 
 ``` purescript
-newDeleteEvaluationOutput' :: ({ "EvaluationId" :: NullOrUndefined (EntityId) } -> { "EvaluationId" :: NullOrUndefined (EntityId) }) -> DeleteEvaluationOutput
+newDeleteEvaluationOutput' :: ({ "EvaluationId" :: Maybe (EntityId) } -> { "EvaluationId" :: Maybe (EntityId) }) -> DeleteEvaluationOutput
 ```
 
 Constructs DeleteEvaluationOutput's fields from required parameters
@@ -1008,7 +1008,7 @@ Constructs DeleteMLModelInput's fields from required parameters
 
 ``` purescript
 newtype DeleteMLModelOutput
-  = DeleteMLModelOutput { "MLModelId" :: NullOrUndefined (EntityId) }
+  = DeleteMLModelOutput { "MLModelId" :: Maybe (EntityId) }
 ```
 
 <p>Represents the output of a <code>DeleteMLModel</code> operation.</p> <p>You can use the <code>GetMLModel</code> operation and check the value of the <code>Status</code> parameter to see whether an <code>MLModel</code> is marked as <code>DELETED</code>.</p>
@@ -1033,7 +1033,7 @@ Constructs DeleteMLModelOutput from required parameters
 #### `newDeleteMLModelOutput'`
 
 ``` purescript
-newDeleteMLModelOutput' :: ({ "MLModelId" :: NullOrUndefined (EntityId) } -> { "MLModelId" :: NullOrUndefined (EntityId) }) -> DeleteMLModelOutput
+newDeleteMLModelOutput' :: ({ "MLModelId" :: Maybe (EntityId) } -> { "MLModelId" :: Maybe (EntityId) }) -> DeleteMLModelOutput
 ```
 
 Constructs DeleteMLModelOutput's fields from required parameters
@@ -1074,7 +1074,7 @@ Constructs DeleteRealtimeEndpointInput's fields from required parameters
 
 ``` purescript
 newtype DeleteRealtimeEndpointOutput
-  = DeleteRealtimeEndpointOutput { "MLModelId" :: NullOrUndefined (EntityId), "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) }
+  = DeleteRealtimeEndpointOutput { "MLModelId" :: Maybe (EntityId), "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) }
 ```
 
 <p>Represents the output of an <code>DeleteRealtimeEndpoint</code> operation.</p> <p>The result contains the <code>MLModelId</code> and the endpoint information for the <code>MLModel</code>. </p>
@@ -1099,7 +1099,7 @@ Constructs DeleteRealtimeEndpointOutput from required parameters
 #### `newDeleteRealtimeEndpointOutput'`
 
 ``` purescript
-newDeleteRealtimeEndpointOutput' :: ({ "MLModelId" :: NullOrUndefined (EntityId), "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) } -> { "MLModelId" :: NullOrUndefined (EntityId), "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) }) -> DeleteRealtimeEndpointOutput
+newDeleteRealtimeEndpointOutput' :: ({ "MLModelId" :: Maybe (EntityId), "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) } -> { "MLModelId" :: Maybe (EntityId), "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) }) -> DeleteRealtimeEndpointOutput
 ```
 
 Constructs DeleteRealtimeEndpointOutput's fields from required parameters
@@ -1140,7 +1140,7 @@ Constructs DeleteTagsInput's fields from required parameters
 
 ``` purescript
 newtype DeleteTagsOutput
-  = DeleteTagsOutput { "ResourceId" :: NullOrUndefined (EntityId), "ResourceType" :: NullOrUndefined (TaggableResourceType) }
+  = DeleteTagsOutput { "ResourceId" :: Maybe (EntityId), "ResourceType" :: Maybe (TaggableResourceType) }
 ```
 
 <p>Amazon ML returns the following elements. </p>
@@ -1165,7 +1165,7 @@ Constructs DeleteTagsOutput from required parameters
 #### `newDeleteTagsOutput'`
 
 ``` purescript
-newDeleteTagsOutput' :: ({ "ResourceId" :: NullOrUndefined (EntityId), "ResourceType" :: NullOrUndefined (TaggableResourceType) } -> { "ResourceId" :: NullOrUndefined (EntityId), "ResourceType" :: NullOrUndefined (TaggableResourceType) }) -> DeleteTagsOutput
+newDeleteTagsOutput' :: ({ "ResourceId" :: Maybe (EntityId), "ResourceType" :: Maybe (TaggableResourceType) } -> { "ResourceId" :: Maybe (EntityId), "ResourceType" :: Maybe (TaggableResourceType) }) -> DeleteTagsOutput
 ```
 
 Constructs DeleteTagsOutput's fields from required parameters
@@ -1174,7 +1174,7 @@ Constructs DeleteTagsOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeBatchPredictionsInput
-  = DescribeBatchPredictionsInput { "FilterVariable" :: NullOrUndefined (BatchPredictionFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) }
+  = DescribeBatchPredictionsInput { "FilterVariable" :: Maybe (BatchPredictionFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) }
 ```
 
 ##### Instances
@@ -1197,7 +1197,7 @@ Constructs DescribeBatchPredictionsInput from required parameters
 #### `newDescribeBatchPredictionsInput'`
 
 ``` purescript
-newDescribeBatchPredictionsInput' :: ({ "FilterVariable" :: NullOrUndefined (BatchPredictionFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) } -> { "FilterVariable" :: NullOrUndefined (BatchPredictionFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) }) -> DescribeBatchPredictionsInput
+newDescribeBatchPredictionsInput' :: ({ "FilterVariable" :: Maybe (BatchPredictionFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) } -> { "FilterVariable" :: Maybe (BatchPredictionFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) }) -> DescribeBatchPredictionsInput
 ```
 
 Constructs DescribeBatchPredictionsInput's fields from required parameters
@@ -1206,7 +1206,7 @@ Constructs DescribeBatchPredictionsInput's fields from required parameters
 
 ``` purescript
 newtype DescribeBatchPredictionsOutput
-  = DescribeBatchPredictionsOutput { "Results" :: NullOrUndefined (BatchPredictions), "NextToken" :: NullOrUndefined (StringType) }
+  = DescribeBatchPredictionsOutput { "Results" :: Maybe (BatchPredictions), "NextToken" :: Maybe (StringType) }
 ```
 
 <p>Represents the output of a <code>DescribeBatchPredictions</code> operation. The content is essentially a list of <code>BatchPrediction</code>s.</p>
@@ -1231,7 +1231,7 @@ Constructs DescribeBatchPredictionsOutput from required parameters
 #### `newDescribeBatchPredictionsOutput'`
 
 ``` purescript
-newDescribeBatchPredictionsOutput' :: ({ "Results" :: NullOrUndefined (BatchPredictions), "NextToken" :: NullOrUndefined (StringType) } -> { "Results" :: NullOrUndefined (BatchPredictions), "NextToken" :: NullOrUndefined (StringType) }) -> DescribeBatchPredictionsOutput
+newDescribeBatchPredictionsOutput' :: ({ "Results" :: Maybe (BatchPredictions), "NextToken" :: Maybe (StringType) } -> { "Results" :: Maybe (BatchPredictions), "NextToken" :: Maybe (StringType) }) -> DescribeBatchPredictionsOutput
 ```
 
 Constructs DescribeBatchPredictionsOutput's fields from required parameters
@@ -1240,7 +1240,7 @@ Constructs DescribeBatchPredictionsOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeDataSourcesInput
-  = DescribeDataSourcesInput { "FilterVariable" :: NullOrUndefined (DataSourceFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) }
+  = DescribeDataSourcesInput { "FilterVariable" :: Maybe (DataSourceFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) }
 ```
 
 ##### Instances
@@ -1263,7 +1263,7 @@ Constructs DescribeDataSourcesInput from required parameters
 #### `newDescribeDataSourcesInput'`
 
 ``` purescript
-newDescribeDataSourcesInput' :: ({ "FilterVariable" :: NullOrUndefined (DataSourceFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) } -> { "FilterVariable" :: NullOrUndefined (DataSourceFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) }) -> DescribeDataSourcesInput
+newDescribeDataSourcesInput' :: ({ "FilterVariable" :: Maybe (DataSourceFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) } -> { "FilterVariable" :: Maybe (DataSourceFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) }) -> DescribeDataSourcesInput
 ```
 
 Constructs DescribeDataSourcesInput's fields from required parameters
@@ -1272,7 +1272,7 @@ Constructs DescribeDataSourcesInput's fields from required parameters
 
 ``` purescript
 newtype DescribeDataSourcesOutput
-  = DescribeDataSourcesOutput { "Results" :: NullOrUndefined (DataSources), "NextToken" :: NullOrUndefined (StringType) }
+  = DescribeDataSourcesOutput { "Results" :: Maybe (DataSources), "NextToken" :: Maybe (StringType) }
 ```
 
 <p>Represents the query results from a <a>DescribeDataSources</a> operation. The content is essentially a list of <code>DataSource</code>.</p>
@@ -1297,7 +1297,7 @@ Constructs DescribeDataSourcesOutput from required parameters
 #### `newDescribeDataSourcesOutput'`
 
 ``` purescript
-newDescribeDataSourcesOutput' :: ({ "Results" :: NullOrUndefined (DataSources), "NextToken" :: NullOrUndefined (StringType) } -> { "Results" :: NullOrUndefined (DataSources), "NextToken" :: NullOrUndefined (StringType) }) -> DescribeDataSourcesOutput
+newDescribeDataSourcesOutput' :: ({ "Results" :: Maybe (DataSources), "NextToken" :: Maybe (StringType) } -> { "Results" :: Maybe (DataSources), "NextToken" :: Maybe (StringType) }) -> DescribeDataSourcesOutput
 ```
 
 Constructs DescribeDataSourcesOutput's fields from required parameters
@@ -1306,7 +1306,7 @@ Constructs DescribeDataSourcesOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeEvaluationsInput
-  = DescribeEvaluationsInput { "FilterVariable" :: NullOrUndefined (EvaluationFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) }
+  = DescribeEvaluationsInput { "FilterVariable" :: Maybe (EvaluationFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) }
 ```
 
 ##### Instances
@@ -1329,7 +1329,7 @@ Constructs DescribeEvaluationsInput from required parameters
 #### `newDescribeEvaluationsInput'`
 
 ``` purescript
-newDescribeEvaluationsInput' :: ({ "FilterVariable" :: NullOrUndefined (EvaluationFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) } -> { "FilterVariable" :: NullOrUndefined (EvaluationFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) }) -> DescribeEvaluationsInput
+newDescribeEvaluationsInput' :: ({ "FilterVariable" :: Maybe (EvaluationFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) } -> { "FilterVariable" :: Maybe (EvaluationFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) }) -> DescribeEvaluationsInput
 ```
 
 Constructs DescribeEvaluationsInput's fields from required parameters
@@ -1338,7 +1338,7 @@ Constructs DescribeEvaluationsInput's fields from required parameters
 
 ``` purescript
 newtype DescribeEvaluationsOutput
-  = DescribeEvaluationsOutput { "Results" :: NullOrUndefined (Evaluations), "NextToken" :: NullOrUndefined (StringType) }
+  = DescribeEvaluationsOutput { "Results" :: Maybe (Evaluations), "NextToken" :: Maybe (StringType) }
 ```
 
 <p>Represents the query results from a <code>DescribeEvaluations</code> operation. The content is essentially a list of <code>Evaluation</code>.</p>
@@ -1363,7 +1363,7 @@ Constructs DescribeEvaluationsOutput from required parameters
 #### `newDescribeEvaluationsOutput'`
 
 ``` purescript
-newDescribeEvaluationsOutput' :: ({ "Results" :: NullOrUndefined (Evaluations), "NextToken" :: NullOrUndefined (StringType) } -> { "Results" :: NullOrUndefined (Evaluations), "NextToken" :: NullOrUndefined (StringType) }) -> DescribeEvaluationsOutput
+newDescribeEvaluationsOutput' :: ({ "Results" :: Maybe (Evaluations), "NextToken" :: Maybe (StringType) } -> { "Results" :: Maybe (Evaluations), "NextToken" :: Maybe (StringType) }) -> DescribeEvaluationsOutput
 ```
 
 Constructs DescribeEvaluationsOutput's fields from required parameters
@@ -1372,7 +1372,7 @@ Constructs DescribeEvaluationsOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeMLModelsInput
-  = DescribeMLModelsInput { "FilterVariable" :: NullOrUndefined (MLModelFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) }
+  = DescribeMLModelsInput { "FilterVariable" :: Maybe (MLModelFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) }
 ```
 
 ##### Instances
@@ -1395,7 +1395,7 @@ Constructs DescribeMLModelsInput from required parameters
 #### `newDescribeMLModelsInput'`
 
 ``` purescript
-newDescribeMLModelsInput' :: ({ "FilterVariable" :: NullOrUndefined (MLModelFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) } -> { "FilterVariable" :: NullOrUndefined (MLModelFilterVariable), "EQ" :: NullOrUndefined (ComparatorValue), "GT" :: NullOrUndefined (ComparatorValue), "LT" :: NullOrUndefined (ComparatorValue), "GE" :: NullOrUndefined (ComparatorValue), "LE" :: NullOrUndefined (ComparatorValue), "NE" :: NullOrUndefined (ComparatorValue), "Prefix" :: NullOrUndefined (ComparatorValue), "SortOrder" :: NullOrUndefined (SortOrder), "NextToken" :: NullOrUndefined (StringType), "Limit" :: NullOrUndefined (PageLimit) }) -> DescribeMLModelsInput
+newDescribeMLModelsInput' :: ({ "FilterVariable" :: Maybe (MLModelFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) } -> { "FilterVariable" :: Maybe (MLModelFilterVariable), "EQ" :: Maybe (ComparatorValue), "GT" :: Maybe (ComparatorValue), "LT" :: Maybe (ComparatorValue), "GE" :: Maybe (ComparatorValue), "LE" :: Maybe (ComparatorValue), "NE" :: Maybe (ComparatorValue), "Prefix" :: Maybe (ComparatorValue), "SortOrder" :: Maybe (SortOrder), "NextToken" :: Maybe (StringType), "Limit" :: Maybe (PageLimit) }) -> DescribeMLModelsInput
 ```
 
 Constructs DescribeMLModelsInput's fields from required parameters
@@ -1404,7 +1404,7 @@ Constructs DescribeMLModelsInput's fields from required parameters
 
 ``` purescript
 newtype DescribeMLModelsOutput
-  = DescribeMLModelsOutput { "Results" :: NullOrUndefined (MLModels), "NextToken" :: NullOrUndefined (StringType) }
+  = DescribeMLModelsOutput { "Results" :: Maybe (MLModels), "NextToken" :: Maybe (StringType) }
 ```
 
 <p>Represents the output of a <code>DescribeMLModels</code> operation. The content is essentially a list of <code>MLModel</code>.</p>
@@ -1429,7 +1429,7 @@ Constructs DescribeMLModelsOutput from required parameters
 #### `newDescribeMLModelsOutput'`
 
 ``` purescript
-newDescribeMLModelsOutput' :: ({ "Results" :: NullOrUndefined (MLModels), "NextToken" :: NullOrUndefined (StringType) } -> { "Results" :: NullOrUndefined (MLModels), "NextToken" :: NullOrUndefined (StringType) }) -> DescribeMLModelsOutput
+newDescribeMLModelsOutput' :: ({ "Results" :: Maybe (MLModels), "NextToken" :: Maybe (StringType) } -> { "Results" :: Maybe (MLModels), "NextToken" :: Maybe (StringType) }) -> DescribeMLModelsOutput
 ```
 
 Constructs DescribeMLModelsOutput's fields from required parameters
@@ -1470,7 +1470,7 @@ Constructs DescribeTagsInput's fields from required parameters
 
 ``` purescript
 newtype DescribeTagsOutput
-  = DescribeTagsOutput { "ResourceId" :: NullOrUndefined (EntityId), "ResourceType" :: NullOrUndefined (TaggableResourceType), "Tags" :: NullOrUndefined (TagList) }
+  = DescribeTagsOutput { "ResourceId" :: Maybe (EntityId), "ResourceType" :: Maybe (TaggableResourceType), "Tags" :: Maybe (TagList) }
 ```
 
 <p>Amazon ML returns the following elements. </p>
@@ -1495,7 +1495,7 @@ Constructs DescribeTagsOutput from required parameters
 #### `newDescribeTagsOutput'`
 
 ``` purescript
-newDescribeTagsOutput' :: ({ "ResourceId" :: NullOrUndefined (EntityId), "ResourceType" :: NullOrUndefined (TaggableResourceType), "Tags" :: NullOrUndefined (TagList) } -> { "ResourceId" :: NullOrUndefined (EntityId), "ResourceType" :: NullOrUndefined (TaggableResourceType), "Tags" :: NullOrUndefined (TagList) }) -> DescribeTagsOutput
+newDescribeTagsOutput' :: ({ "ResourceId" :: Maybe (EntityId), "ResourceType" :: Maybe (TaggableResourceType), "Tags" :: Maybe (TagList) } -> { "ResourceId" :: Maybe (EntityId), "ResourceType" :: Maybe (TaggableResourceType), "Tags" :: Maybe (TagList) }) -> DescribeTagsOutput
 ```
 
 Constructs DescribeTagsOutput's fields from required parameters
@@ -1754,7 +1754,7 @@ Encode ErrorMessage
 
 ``` purescript
 newtype Evaluation
-  = Evaluation { "EvaluationId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "EvaluationDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) }
+  = Evaluation { "EvaluationId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "EvaluationDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "PerformanceMetrics" :: Maybe (PerformanceMetrics), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) }
 ```
 
 <p> Represents the output of <code>GetEvaluation</code> operation. </p> <p>The content consists of the detailed metadata and data file information and the current status of the <code>Evaluation</code>.</p>
@@ -1779,7 +1779,7 @@ Constructs Evaluation from required parameters
 #### `newEvaluation'`
 
 ``` purescript
-newEvaluation' :: ({ "EvaluationId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "EvaluationDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) } -> { "EvaluationId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "EvaluationDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) }) -> Evaluation
+newEvaluation' :: ({ "EvaluationId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "EvaluationDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "PerformanceMetrics" :: Maybe (PerformanceMetrics), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) } -> { "EvaluationId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "EvaluationDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "PerformanceMetrics" :: Maybe (PerformanceMetrics), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) }) -> Evaluation
 ```
 
 Constructs Evaluation's fields from required parameters
@@ -1854,7 +1854,7 @@ Constructs GetBatchPredictionInput's fields from required parameters
 
 ``` purescript
 newtype GetBatchPredictionOutput
-  = GetBatchPredictionOutput { "BatchPredictionId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "OutputUri" :: NullOrUndefined (S3Url), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "TotalRecordCount" :: NullOrUndefined (LongType), "InvalidRecordCount" :: NullOrUndefined (LongType) }
+  = GetBatchPredictionOutput { "BatchPredictionId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "BatchPredictionDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "OutputUri" :: Maybe (S3Url), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "TotalRecordCount" :: Maybe (LongType), "InvalidRecordCount" :: Maybe (LongType) }
 ```
 
 <p>Represents the output of a <code>GetBatchPrediction</code> operation and describes a <code>BatchPrediction</code>.</p>
@@ -1879,7 +1879,7 @@ Constructs GetBatchPredictionOutput from required parameters
 #### `newGetBatchPredictionOutput'`
 
 ``` purescript
-newGetBatchPredictionOutput' :: ({ "BatchPredictionId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "OutputUri" :: NullOrUndefined (S3Url), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "TotalRecordCount" :: NullOrUndefined (LongType), "InvalidRecordCount" :: NullOrUndefined (LongType) } -> { "BatchPredictionId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "OutputUri" :: NullOrUndefined (S3Url), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "TotalRecordCount" :: NullOrUndefined (LongType), "InvalidRecordCount" :: NullOrUndefined (LongType) }) -> GetBatchPredictionOutput
+newGetBatchPredictionOutput' :: ({ "BatchPredictionId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "BatchPredictionDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "OutputUri" :: Maybe (S3Url), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "TotalRecordCount" :: Maybe (LongType), "InvalidRecordCount" :: Maybe (LongType) } -> { "BatchPredictionId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "BatchPredictionDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "OutputUri" :: Maybe (S3Url), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "TotalRecordCount" :: Maybe (LongType), "InvalidRecordCount" :: Maybe (LongType) }) -> GetBatchPredictionOutput
 ```
 
 Constructs GetBatchPredictionOutput's fields from required parameters
@@ -1888,7 +1888,7 @@ Constructs GetBatchPredictionOutput's fields from required parameters
 
 ``` purescript
 newtype GetDataSourceInput
-  = GetDataSourceInput { "DataSourceId" :: EntityId, "Verbose" :: NullOrUndefined (Verbose) }
+  = GetDataSourceInput { "DataSourceId" :: EntityId, "Verbose" :: Maybe (Verbose) }
 ```
 
 ##### Instances
@@ -1911,7 +1911,7 @@ Constructs GetDataSourceInput from required parameters
 #### `newGetDataSourceInput'`
 
 ``` purescript
-newGetDataSourceInput' :: EntityId -> ({ "DataSourceId" :: EntityId, "Verbose" :: NullOrUndefined (Verbose) } -> { "DataSourceId" :: EntityId, "Verbose" :: NullOrUndefined (Verbose) }) -> GetDataSourceInput
+newGetDataSourceInput' :: EntityId -> ({ "DataSourceId" :: EntityId, "Verbose" :: Maybe (Verbose) } -> { "DataSourceId" :: EntityId, "Verbose" :: Maybe (Verbose) }) -> GetDataSourceInput
 ```
 
 Constructs GetDataSourceInput's fields from required parameters
@@ -1920,7 +1920,7 @@ Constructs GetDataSourceInput's fields from required parameters
 
 ``` purescript
 newtype GetDataSourceOutput
-  = GetDataSourceOutput { "DataSourceId" :: NullOrUndefined (EntityId), "DataLocationS3" :: NullOrUndefined (S3Url), "DataRearrangement" :: NullOrUndefined (DataRearrangement), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "DataSizeInBytes" :: NullOrUndefined (LongType), "NumberOfFiles" :: NullOrUndefined (LongType), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata), "RDSMetadata" :: NullOrUndefined (RDSMetadata), "RoleARN" :: NullOrUndefined (RoleARN), "ComputeStatistics" :: NullOrUndefined (ComputeStatistics), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "DataSourceSchema" :: NullOrUndefined (DataSchema) }
+  = GetDataSourceOutput { "DataSourceId" :: Maybe (EntityId), "DataLocationS3" :: Maybe (S3Url), "DataRearrangement" :: Maybe (DataRearrangement), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "DataSizeInBytes" :: Maybe (LongType), "NumberOfFiles" :: Maybe (LongType), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "RedshiftMetadata" :: Maybe (RedshiftMetadata), "RDSMetadata" :: Maybe (RDSMetadata), "RoleARN" :: Maybe (RoleARN), "ComputeStatistics" :: Maybe (ComputeStatistics), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "DataSourceSchema" :: Maybe (DataSchema) }
 ```
 
 <p>Represents the output of a <code>GetDataSource</code> operation and describes a <code>DataSource</code>.</p>
@@ -1945,7 +1945,7 @@ Constructs GetDataSourceOutput from required parameters
 #### `newGetDataSourceOutput'`
 
 ``` purescript
-newGetDataSourceOutput' :: ({ "DataSourceId" :: NullOrUndefined (EntityId), "DataLocationS3" :: NullOrUndefined (S3Url), "DataRearrangement" :: NullOrUndefined (DataRearrangement), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "DataSizeInBytes" :: NullOrUndefined (LongType), "NumberOfFiles" :: NullOrUndefined (LongType), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata), "RDSMetadata" :: NullOrUndefined (RDSMetadata), "RoleARN" :: NullOrUndefined (RoleARN), "ComputeStatistics" :: NullOrUndefined (ComputeStatistics), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "DataSourceSchema" :: NullOrUndefined (DataSchema) } -> { "DataSourceId" :: NullOrUndefined (EntityId), "DataLocationS3" :: NullOrUndefined (S3Url), "DataRearrangement" :: NullOrUndefined (DataRearrangement), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "DataSizeInBytes" :: NullOrUndefined (LongType), "NumberOfFiles" :: NullOrUndefined (LongType), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata), "RDSMetadata" :: NullOrUndefined (RDSMetadata), "RoleARN" :: NullOrUndefined (RoleARN), "ComputeStatistics" :: NullOrUndefined (ComputeStatistics), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "DataSourceSchema" :: NullOrUndefined (DataSchema) }) -> GetDataSourceOutput
+newGetDataSourceOutput' :: ({ "DataSourceId" :: Maybe (EntityId), "DataLocationS3" :: Maybe (S3Url), "DataRearrangement" :: Maybe (DataRearrangement), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "DataSizeInBytes" :: Maybe (LongType), "NumberOfFiles" :: Maybe (LongType), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "RedshiftMetadata" :: Maybe (RedshiftMetadata), "RDSMetadata" :: Maybe (RDSMetadata), "RoleARN" :: Maybe (RoleARN), "ComputeStatistics" :: Maybe (ComputeStatistics), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "DataSourceSchema" :: Maybe (DataSchema) } -> { "DataSourceId" :: Maybe (EntityId), "DataLocationS3" :: Maybe (S3Url), "DataRearrangement" :: Maybe (DataRearrangement), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "DataSizeInBytes" :: Maybe (LongType), "NumberOfFiles" :: Maybe (LongType), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "RedshiftMetadata" :: Maybe (RedshiftMetadata), "RDSMetadata" :: Maybe (RDSMetadata), "RoleARN" :: Maybe (RoleARN), "ComputeStatistics" :: Maybe (ComputeStatistics), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "DataSourceSchema" :: Maybe (DataSchema) }) -> GetDataSourceOutput
 ```
 
 Constructs GetDataSourceOutput's fields from required parameters
@@ -1986,7 +1986,7 @@ Constructs GetEvaluationInput's fields from required parameters
 
 ``` purescript
 newtype GetEvaluationOutput
-  = GetEvaluationOutput { "EvaluationId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "EvaluationDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) }
+  = GetEvaluationOutput { "EvaluationId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "EvaluationDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "PerformanceMetrics" :: Maybe (PerformanceMetrics), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) }
 ```
 
 <p>Represents the output of a <code>GetEvaluation</code> operation and describes an <code>Evaluation</code>.</p>
@@ -2011,7 +2011,7 @@ Constructs GetEvaluationOutput from required parameters
 #### `newGetEvaluationOutput'`
 
 ``` purescript
-newGetEvaluationOutput' :: ({ "EvaluationId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "EvaluationDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) } -> { "EvaluationId" :: NullOrUndefined (EntityId), "MLModelId" :: NullOrUndefined (EntityId), "EvaluationDataSourceId" :: NullOrUndefined (EntityId), "InputDataLocationS3" :: NullOrUndefined (S3Url), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (EntityName), "Status" :: NullOrUndefined (EntityStatus), "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) }) -> GetEvaluationOutput
+newGetEvaluationOutput' :: ({ "EvaluationId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "EvaluationDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "PerformanceMetrics" :: Maybe (PerformanceMetrics), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) } -> { "EvaluationId" :: Maybe (EntityId), "MLModelId" :: Maybe (EntityId), "EvaluationDataSourceId" :: Maybe (EntityId), "InputDataLocationS3" :: Maybe (S3Url), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (EntityName), "Status" :: Maybe (EntityStatus), "PerformanceMetrics" :: Maybe (PerformanceMetrics), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) }) -> GetEvaluationOutput
 ```
 
 Constructs GetEvaluationOutput's fields from required parameters
@@ -2020,7 +2020,7 @@ Constructs GetEvaluationOutput's fields from required parameters
 
 ``` purescript
 newtype GetMLModelInput
-  = GetMLModelInput { "MLModelId" :: EntityId, "Verbose" :: NullOrUndefined (Verbose) }
+  = GetMLModelInput { "MLModelId" :: EntityId, "Verbose" :: Maybe (Verbose) }
 ```
 
 ##### Instances
@@ -2043,7 +2043,7 @@ Constructs GetMLModelInput from required parameters
 #### `newGetMLModelInput'`
 
 ``` purescript
-newGetMLModelInput' :: EntityId -> ({ "MLModelId" :: EntityId, "Verbose" :: NullOrUndefined (Verbose) } -> { "MLModelId" :: EntityId, "Verbose" :: NullOrUndefined (Verbose) }) -> GetMLModelInput
+newGetMLModelInput' :: EntityId -> ({ "MLModelId" :: EntityId, "Verbose" :: Maybe (Verbose) } -> { "MLModelId" :: EntityId, "Verbose" :: Maybe (Verbose) }) -> GetMLModelInput
 ```
 
 Constructs GetMLModelInput's fields from required parameters
@@ -2052,7 +2052,7 @@ Constructs GetMLModelInput's fields from required parameters
 
 ``` purescript
 newtype GetMLModelOutput
-  = GetMLModelOutput { "MLModelId" :: NullOrUndefined (EntityId), "TrainingDataSourceId" :: NullOrUndefined (EntityId), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (MLModelName), "Status" :: NullOrUndefined (EntityStatus), "SizeInBytes" :: NullOrUndefined (LongType), "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo), "TrainingParameters" :: NullOrUndefined (TrainingParameters), "InputDataLocationS3" :: NullOrUndefined (S3Url), "MLModelType" :: NullOrUndefined (MLModelType), "ScoreThreshold" :: NullOrUndefined (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "Recipe" :: NullOrUndefined (Recipe), "Schema" :: NullOrUndefined (DataSchema) }
+  = GetMLModelOutput { "MLModelId" :: Maybe (EntityId), "TrainingDataSourceId" :: Maybe (EntityId), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (MLModelName), "Status" :: Maybe (EntityStatus), "SizeInBytes" :: Maybe (LongType), "EndpointInfo" :: Maybe (RealtimeEndpointInfo), "TrainingParameters" :: Maybe (TrainingParameters), "InputDataLocationS3" :: Maybe (S3Url), "MLModelType" :: Maybe (MLModelType), "ScoreThreshold" :: Maybe (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "Recipe" :: Maybe (Recipe), "Schema" :: Maybe (DataSchema) }
 ```
 
 <p>Represents the output of a <code>GetMLModel</code> operation, and provides detailed information about a <code>MLModel</code>.</p>
@@ -2077,7 +2077,7 @@ Constructs GetMLModelOutput from required parameters
 #### `newGetMLModelOutput'`
 
 ``` purescript
-newGetMLModelOutput' :: ({ "MLModelId" :: NullOrUndefined (EntityId), "TrainingDataSourceId" :: NullOrUndefined (EntityId), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (MLModelName), "Status" :: NullOrUndefined (EntityStatus), "SizeInBytes" :: NullOrUndefined (LongType), "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo), "TrainingParameters" :: NullOrUndefined (TrainingParameters), "InputDataLocationS3" :: NullOrUndefined (S3Url), "MLModelType" :: NullOrUndefined (MLModelType), "ScoreThreshold" :: NullOrUndefined (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "Recipe" :: NullOrUndefined (Recipe), "Schema" :: NullOrUndefined (DataSchema) } -> { "MLModelId" :: NullOrUndefined (EntityId), "TrainingDataSourceId" :: NullOrUndefined (EntityId), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (MLModelName), "Status" :: NullOrUndefined (EntityStatus), "SizeInBytes" :: NullOrUndefined (LongType), "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo), "TrainingParameters" :: NullOrUndefined (TrainingParameters), "InputDataLocationS3" :: NullOrUndefined (S3Url), "MLModelType" :: NullOrUndefined (MLModelType), "ScoreThreshold" :: NullOrUndefined (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime), "LogUri" :: NullOrUndefined (PresignedS3Url), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime), "Recipe" :: NullOrUndefined (Recipe), "Schema" :: NullOrUndefined (DataSchema) }) -> GetMLModelOutput
+newGetMLModelOutput' :: ({ "MLModelId" :: Maybe (EntityId), "TrainingDataSourceId" :: Maybe (EntityId), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (MLModelName), "Status" :: Maybe (EntityStatus), "SizeInBytes" :: Maybe (LongType), "EndpointInfo" :: Maybe (RealtimeEndpointInfo), "TrainingParameters" :: Maybe (TrainingParameters), "InputDataLocationS3" :: Maybe (S3Url), "MLModelType" :: Maybe (MLModelType), "ScoreThreshold" :: Maybe (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "Recipe" :: Maybe (Recipe), "Schema" :: Maybe (DataSchema) } -> { "MLModelId" :: Maybe (EntityId), "TrainingDataSourceId" :: Maybe (EntityId), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (MLModelName), "Status" :: Maybe (EntityStatus), "SizeInBytes" :: Maybe (LongType), "EndpointInfo" :: Maybe (RealtimeEndpointInfo), "TrainingParameters" :: Maybe (TrainingParameters), "InputDataLocationS3" :: Maybe (S3Url), "MLModelType" :: Maybe (MLModelType), "ScoreThreshold" :: Maybe (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime), "LogUri" :: Maybe (PresignedS3Url), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime), "Recipe" :: Maybe (Recipe), "Schema" :: Maybe (DataSchema) }) -> GetMLModelOutput
 ```
 
 Constructs GetMLModelOutput's fields from required parameters
@@ -2086,7 +2086,7 @@ Constructs GetMLModelOutput's fields from required parameters
 
 ``` purescript
 newtype IdempotentParameterMismatchException
-  = IdempotentParameterMismatchException { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }
+  = IdempotentParameterMismatchException { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }
 ```
 
 <p>A second request to use or change an object was not allowed. This can result from retrying a request using a parameter that was not present in the original request.</p>
@@ -2111,7 +2111,7 @@ Constructs IdempotentParameterMismatchException from required parameters
 #### `newIdempotentParameterMismatchException'`
 
 ``` purescript
-newIdempotentParameterMismatchException' :: ({ message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) } -> { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }) -> IdempotentParameterMismatchException
+newIdempotentParameterMismatchException' :: ({ message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) } -> { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }) -> IdempotentParameterMismatchException
 ```
 
 Constructs IdempotentParameterMismatchException's fields from required parameters
@@ -2138,7 +2138,7 @@ Encode IntegerType
 
 ``` purescript
 newtype InternalServerException
-  = InternalServerException { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }
+  = InternalServerException { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }
 ```
 
 <p>An error on the server occurred when trying to process a request.</p>
@@ -2163,7 +2163,7 @@ Constructs InternalServerException from required parameters
 #### `newInternalServerException'`
 
 ``` purescript
-newInternalServerException' :: ({ message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) } -> { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }) -> InternalServerException
+newInternalServerException' :: ({ message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) } -> { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }) -> InternalServerException
 ```
 
 Constructs InternalServerException's fields from required parameters
@@ -2172,7 +2172,7 @@ Constructs InternalServerException's fields from required parameters
 
 ``` purescript
 newtype InvalidInputException
-  = InvalidInputException { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }
+  = InvalidInputException { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }
 ```
 
 <p>An error on the client occurred. Typically, the cause is an invalid input value.</p>
@@ -2197,7 +2197,7 @@ Constructs InvalidInputException from required parameters
 #### `newInvalidInputException'`
 
 ``` purescript
-newInvalidInputException' :: ({ message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) } -> { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }) -> InvalidInputException
+newInvalidInputException' :: ({ message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) } -> { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }) -> InvalidInputException
 ```
 
 Constructs InvalidInputException's fields from required parameters
@@ -2206,7 +2206,7 @@ Constructs InvalidInputException's fields from required parameters
 
 ``` purescript
 newtype InvalidTagException
-  = InvalidTagException { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidTagException { message :: Maybe (ErrorMessage) }
 ```
 
 ##### Instances
@@ -2229,7 +2229,7 @@ Constructs InvalidTagException from required parameters
 #### `newInvalidTagException'`
 
 ``` purescript
-newInvalidTagException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidTagException
+newInvalidTagException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidTagException
 ```
 
 Constructs InvalidTagException's fields from required parameters
@@ -2254,7 +2254,7 @@ Encode Label
 
 ``` purescript
 newtype LimitExceededException
-  = LimitExceededException { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }
+  = LimitExceededException { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }
 ```
 
 <p>The subscriber exceeded the maximum number of operations. This exception can occur when listing objects such as <code>DataSource</code>.</p>
@@ -2279,7 +2279,7 @@ Constructs LimitExceededException from required parameters
 #### `newLimitExceededException'`
 
 ``` purescript
-newLimitExceededException' :: ({ message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) } -> { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }) -> LimitExceededException
+newLimitExceededException' :: ({ message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) } -> { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }) -> LimitExceededException
 ```
 
 Constructs LimitExceededException's fields from required parameters
@@ -2306,7 +2306,7 @@ Encode LongType
 
 ``` purescript
 newtype MLModel
-  = MLModel { "MLModelId" :: NullOrUndefined (EntityId), "TrainingDataSourceId" :: NullOrUndefined (EntityId), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (MLModelName), "Status" :: NullOrUndefined (EntityStatus), "SizeInBytes" :: NullOrUndefined (LongType), "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo), "TrainingParameters" :: NullOrUndefined (TrainingParameters), "InputDataLocationS3" :: NullOrUndefined (S3Url), "Algorithm" :: NullOrUndefined (Algorithm), "MLModelType" :: NullOrUndefined (MLModelType), "ScoreThreshold" :: NullOrUndefined (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) }
+  = MLModel { "MLModelId" :: Maybe (EntityId), "TrainingDataSourceId" :: Maybe (EntityId), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (MLModelName), "Status" :: Maybe (EntityStatus), "SizeInBytes" :: Maybe (LongType), "EndpointInfo" :: Maybe (RealtimeEndpointInfo), "TrainingParameters" :: Maybe (TrainingParameters), "InputDataLocationS3" :: Maybe (S3Url), "Algorithm" :: Maybe (Algorithm), "MLModelType" :: Maybe (MLModelType), "ScoreThreshold" :: Maybe (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) }
 ```
 
 <p> Represents the output of a <code>GetMLModel</code> operation. </p> <p>The content consists of the detailed metadata and the current status of the <code>MLModel</code>.</p>
@@ -2331,7 +2331,7 @@ Constructs MLModel from required parameters
 #### `newMLModel'`
 
 ``` purescript
-newMLModel' :: ({ "MLModelId" :: NullOrUndefined (EntityId), "TrainingDataSourceId" :: NullOrUndefined (EntityId), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (MLModelName), "Status" :: NullOrUndefined (EntityStatus), "SizeInBytes" :: NullOrUndefined (LongType), "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo), "TrainingParameters" :: NullOrUndefined (TrainingParameters), "InputDataLocationS3" :: NullOrUndefined (S3Url), "Algorithm" :: NullOrUndefined (Algorithm), "MLModelType" :: NullOrUndefined (MLModelType), "ScoreThreshold" :: NullOrUndefined (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) } -> { "MLModelId" :: NullOrUndefined (EntityId), "TrainingDataSourceId" :: NullOrUndefined (EntityId), "CreatedByIamUser" :: NullOrUndefined (AwsUserArn), "CreatedAt" :: NullOrUndefined (EpochTime), "LastUpdatedAt" :: NullOrUndefined (EpochTime), "Name" :: NullOrUndefined (MLModelName), "Status" :: NullOrUndefined (EntityStatus), "SizeInBytes" :: NullOrUndefined (LongType), "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo), "TrainingParameters" :: NullOrUndefined (TrainingParameters), "InputDataLocationS3" :: NullOrUndefined (S3Url), "Algorithm" :: NullOrUndefined (Algorithm), "MLModelType" :: NullOrUndefined (MLModelType), "ScoreThreshold" :: NullOrUndefined (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime), "Message" :: NullOrUndefined (Message), "ComputeTime" :: NullOrUndefined (LongType), "FinishedAt" :: NullOrUndefined (EpochTime), "StartedAt" :: NullOrUndefined (EpochTime) }) -> MLModel
+newMLModel' :: ({ "MLModelId" :: Maybe (EntityId), "TrainingDataSourceId" :: Maybe (EntityId), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (MLModelName), "Status" :: Maybe (EntityStatus), "SizeInBytes" :: Maybe (LongType), "EndpointInfo" :: Maybe (RealtimeEndpointInfo), "TrainingParameters" :: Maybe (TrainingParameters), "InputDataLocationS3" :: Maybe (S3Url), "Algorithm" :: Maybe (Algorithm), "MLModelType" :: Maybe (MLModelType), "ScoreThreshold" :: Maybe (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) } -> { "MLModelId" :: Maybe (EntityId), "TrainingDataSourceId" :: Maybe (EntityId), "CreatedByIamUser" :: Maybe (AwsUserArn), "CreatedAt" :: Maybe (EpochTime), "LastUpdatedAt" :: Maybe (EpochTime), "Name" :: Maybe (MLModelName), "Status" :: Maybe (EntityStatus), "SizeInBytes" :: Maybe (LongType), "EndpointInfo" :: Maybe (RealtimeEndpointInfo), "TrainingParameters" :: Maybe (TrainingParameters), "InputDataLocationS3" :: Maybe (S3Url), "Algorithm" :: Maybe (Algorithm), "MLModelType" :: Maybe (MLModelType), "ScoreThreshold" :: Maybe (ScoreThreshold), "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime), "Message" :: Maybe (Message), "ComputeTime" :: Maybe (LongType), "FinishedAt" :: Maybe (EpochTime), "StartedAt" :: Maybe (EpochTime) }) -> MLModel
 ```
 
 Constructs MLModel's fields from required parameters
@@ -2438,7 +2438,7 @@ Encode PageLimit
 
 ``` purescript
 newtype PerformanceMetrics
-  = PerformanceMetrics { "Properties" :: NullOrUndefined (PerformanceMetricsProperties) }
+  = PerformanceMetrics { "Properties" :: Maybe (PerformanceMetricsProperties) }
 ```
 
 <p>Measurements of how well the <code>MLModel</code> performed on known observations. One of the following metrics is returned, based on the type of the <code>MLModel</code>: </p> <ul> <li> <p>BinaryAUC: The binary <code>MLModel</code> uses the Area Under the Curve (AUC) technique to measure performance. </p> </li> <li> <p>RegressionRMSE: The regression <code>MLModel</code> uses the Root Mean Square Error (RMSE) technique to measure performance. RMSE measures the difference between predicted and actual values for a single variable.</p> </li> <li> <p>MulticlassAvgFScore: The multiclass <code>MLModel</code> uses the F1 score technique to measure performance. </p> </li> </ul> <p> For more information about performance metrics, please see the <a href="http://docs.aws.amazon.com/machine-learning/latest/dg">Amazon Machine Learning Developer Guide</a>. </p>
@@ -2463,7 +2463,7 @@ Constructs PerformanceMetrics from required parameters
 #### `newPerformanceMetrics'`
 
 ``` purescript
-newPerformanceMetrics' :: ({ "Properties" :: NullOrUndefined (PerformanceMetricsProperties) } -> { "Properties" :: NullOrUndefined (PerformanceMetricsProperties) }) -> PerformanceMetrics
+newPerformanceMetrics' :: ({ "Properties" :: Maybe (PerformanceMetricsProperties) } -> { "Properties" :: Maybe (PerformanceMetricsProperties) }) -> PerformanceMetrics
 ```
 
 Constructs PerformanceMetrics's fields from required parameters
@@ -2552,7 +2552,7 @@ Constructs PredictInput's fields from required parameters
 
 ``` purescript
 newtype PredictOutput
-  = PredictOutput { "Prediction" :: NullOrUndefined (Prediction) }
+  = PredictOutput { "Prediction" :: Maybe (Prediction) }
 ```
 
 ##### Instances
@@ -2575,7 +2575,7 @@ Constructs PredictOutput from required parameters
 #### `newPredictOutput'`
 
 ``` purescript
-newPredictOutput' :: ({ "Prediction" :: NullOrUndefined (Prediction) } -> { "Prediction" :: NullOrUndefined (Prediction) }) -> PredictOutput
+newPredictOutput' :: ({ "Prediction" :: Maybe (Prediction) } -> { "Prediction" :: Maybe (Prediction) }) -> PredictOutput
 ```
 
 Constructs PredictOutput's fields from required parameters
@@ -2584,7 +2584,7 @@ Constructs PredictOutput's fields from required parameters
 
 ``` purescript
 newtype Prediction
-  = Prediction { predictedLabel :: NullOrUndefined (Label), predictedValue :: NullOrUndefined (FloatLabel'), predictedScores :: NullOrUndefined (ScoreValuePerLabelMap), details :: NullOrUndefined (DetailsMap) }
+  = Prediction { predictedLabel :: Maybe (Label), predictedValue :: Maybe (FloatLabel'), predictedScores :: Maybe (ScoreValuePerLabelMap), details :: Maybe (DetailsMap) }
 ```
 
 <p>The output from a <code>Predict</code> operation: </p> <ul> <li> <p> <code>Details</code> - Contains the following attributes: <code>DetailsAttributes.PREDICTIVE_MODEL_TYPE - REGRESSION | BINARY | MULTICLASS</code> <code>DetailsAttributes.ALGORITHM - SGD</code> </p> </li> <li> <p> <code>PredictedLabel</code> - Present for either a <code>BINARY</code> or <code>MULTICLASS</code> <code>MLModel</code> request. </p> </li> <li> <p> <code>PredictedScores</code> - Contains the raw classification score corresponding to each label. </p> </li> <li> <p> <code>PredictedValue</code> - Present for a <code>REGRESSION</code> <code>MLModel</code> request. </p> </li> </ul>
@@ -2609,7 +2609,7 @@ Constructs Prediction from required parameters
 #### `newPrediction'`
 
 ``` purescript
-newPrediction' :: ({ predictedLabel :: NullOrUndefined (Label), predictedValue :: NullOrUndefined (FloatLabel'), predictedScores :: NullOrUndefined (ScoreValuePerLabelMap), details :: NullOrUndefined (DetailsMap) } -> { predictedLabel :: NullOrUndefined (Label), predictedValue :: NullOrUndefined (FloatLabel'), predictedScores :: NullOrUndefined (ScoreValuePerLabelMap), details :: NullOrUndefined (DetailsMap) }) -> Prediction
+newPrediction' :: ({ predictedLabel :: Maybe (Label), predictedValue :: Maybe (FloatLabel'), predictedScores :: Maybe (ScoreValuePerLabelMap), details :: Maybe (DetailsMap) } -> { predictedLabel :: Maybe (Label), predictedValue :: Maybe (FloatLabel'), predictedScores :: Maybe (ScoreValuePerLabelMap), details :: Maybe (DetailsMap) }) -> Prediction
 ```
 
 Constructs Prediction's fields from required parameters
@@ -2618,7 +2618,7 @@ Constructs Prediction's fields from required parameters
 
 ``` purescript
 newtype PredictorNotMountedException
-  = PredictorNotMountedException { message :: NullOrUndefined (ErrorMessage) }
+  = PredictorNotMountedException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The exception is thrown when a predict request is made to an unmounted <code>MLModel</code>.</p>
@@ -2643,7 +2643,7 @@ Constructs PredictorNotMountedException from required parameters
 #### `newPredictorNotMountedException'`
 
 ``` purescript
-newPredictorNotMountedException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> PredictorNotMountedException
+newPredictorNotMountedException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> PredictorNotMountedException
 ```
 
 Constructs PredictorNotMountedException's fields from required parameters
@@ -2668,7 +2668,7 @@ Encode PresignedS3Url
 
 ``` purescript
 newtype RDSDataSpec
-  = RDSDataSpec { "DatabaseInformation" :: RDSDatabase, "SelectSqlQuery" :: RDSSelectSqlQuery, "DatabaseCredentials" :: RDSDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: NullOrUndefined (DataRearrangement), "DataSchema" :: NullOrUndefined (DataSchema), "DataSchemaUri" :: NullOrUndefined (S3Url), "ResourceRole" :: EDPResourceRole, "ServiceRole" :: EDPServiceRole, "SubnetId" :: EDPSubnetId, "SecurityGroupIds" :: EDPSecurityGroupIds }
+  = RDSDataSpec { "DatabaseInformation" :: RDSDatabase, "SelectSqlQuery" :: RDSSelectSqlQuery, "DatabaseCredentials" :: RDSDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: Maybe (DataRearrangement), "DataSchema" :: Maybe (DataSchema), "DataSchemaUri" :: Maybe (S3Url), "ResourceRole" :: EDPResourceRole, "ServiceRole" :: EDPServiceRole, "SubnetId" :: EDPSubnetId, "SecurityGroupIds" :: EDPSecurityGroupIds }
 ```
 
 <p>The data specification of an Amazon Relational Database Service (Amazon RDS) <code>DataSource</code>.</p>
@@ -2693,7 +2693,7 @@ Constructs RDSDataSpec from required parameters
 #### `newRDSDataSpec'`
 
 ``` purescript
-newRDSDataSpec' :: RDSDatabaseCredentials -> RDSDatabase -> EDPResourceRole -> S3Url -> EDPSecurityGroupIds -> RDSSelectSqlQuery -> EDPServiceRole -> EDPSubnetId -> ({ "DatabaseInformation" :: RDSDatabase, "SelectSqlQuery" :: RDSSelectSqlQuery, "DatabaseCredentials" :: RDSDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: NullOrUndefined (DataRearrangement), "DataSchema" :: NullOrUndefined (DataSchema), "DataSchemaUri" :: NullOrUndefined (S3Url), "ResourceRole" :: EDPResourceRole, "ServiceRole" :: EDPServiceRole, "SubnetId" :: EDPSubnetId, "SecurityGroupIds" :: EDPSecurityGroupIds } -> { "DatabaseInformation" :: RDSDatabase, "SelectSqlQuery" :: RDSSelectSqlQuery, "DatabaseCredentials" :: RDSDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: NullOrUndefined (DataRearrangement), "DataSchema" :: NullOrUndefined (DataSchema), "DataSchemaUri" :: NullOrUndefined (S3Url), "ResourceRole" :: EDPResourceRole, "ServiceRole" :: EDPServiceRole, "SubnetId" :: EDPSubnetId, "SecurityGroupIds" :: EDPSecurityGroupIds }) -> RDSDataSpec
+newRDSDataSpec' :: RDSDatabaseCredentials -> RDSDatabase -> EDPResourceRole -> S3Url -> EDPSecurityGroupIds -> RDSSelectSqlQuery -> EDPServiceRole -> EDPSubnetId -> ({ "DatabaseInformation" :: RDSDatabase, "SelectSqlQuery" :: RDSSelectSqlQuery, "DatabaseCredentials" :: RDSDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: Maybe (DataRearrangement), "DataSchema" :: Maybe (DataSchema), "DataSchemaUri" :: Maybe (S3Url), "ResourceRole" :: EDPResourceRole, "ServiceRole" :: EDPServiceRole, "SubnetId" :: EDPSubnetId, "SecurityGroupIds" :: EDPSecurityGroupIds } -> { "DatabaseInformation" :: RDSDatabase, "SelectSqlQuery" :: RDSSelectSqlQuery, "DatabaseCredentials" :: RDSDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: Maybe (DataRearrangement), "DataSchema" :: Maybe (DataSchema), "DataSchemaUri" :: Maybe (S3Url), "ResourceRole" :: EDPResourceRole, "ServiceRole" :: EDPServiceRole, "SubnetId" :: EDPSubnetId, "SecurityGroupIds" :: EDPSecurityGroupIds }) -> RDSDataSpec
 ```
 
 Constructs RDSDataSpec's fields from required parameters
@@ -2842,7 +2842,7 @@ Encode RDSInstanceIdentifier
 
 ``` purescript
 newtype RDSMetadata
-  = RDSMetadata { "Database" :: NullOrUndefined (RDSDatabase), "DatabaseUserName" :: NullOrUndefined (RDSDatabaseUsername), "SelectSqlQuery" :: NullOrUndefined (RDSSelectSqlQuery), "ResourceRole" :: NullOrUndefined (EDPResourceRole), "ServiceRole" :: NullOrUndefined (EDPServiceRole), "DataPipelineId" :: NullOrUndefined (EDPPipelineId) }
+  = RDSMetadata { "Database" :: Maybe (RDSDatabase), "DatabaseUserName" :: Maybe (RDSDatabaseUsername), "SelectSqlQuery" :: Maybe (RDSSelectSqlQuery), "ResourceRole" :: Maybe (EDPResourceRole), "ServiceRole" :: Maybe (EDPServiceRole), "DataPipelineId" :: Maybe (EDPPipelineId) }
 ```
 
 <p>The datasource details that are specific to Amazon RDS.</p>
@@ -2867,7 +2867,7 @@ Constructs RDSMetadata from required parameters
 #### `newRDSMetadata'`
 
 ``` purescript
-newRDSMetadata' :: ({ "Database" :: NullOrUndefined (RDSDatabase), "DatabaseUserName" :: NullOrUndefined (RDSDatabaseUsername), "SelectSqlQuery" :: NullOrUndefined (RDSSelectSqlQuery), "ResourceRole" :: NullOrUndefined (EDPResourceRole), "ServiceRole" :: NullOrUndefined (EDPServiceRole), "DataPipelineId" :: NullOrUndefined (EDPPipelineId) } -> { "Database" :: NullOrUndefined (RDSDatabase), "DatabaseUserName" :: NullOrUndefined (RDSDatabaseUsername), "SelectSqlQuery" :: NullOrUndefined (RDSSelectSqlQuery), "ResourceRole" :: NullOrUndefined (EDPResourceRole), "ServiceRole" :: NullOrUndefined (EDPServiceRole), "DataPipelineId" :: NullOrUndefined (EDPPipelineId) }) -> RDSMetadata
+newRDSMetadata' :: ({ "Database" :: Maybe (RDSDatabase), "DatabaseUserName" :: Maybe (RDSDatabaseUsername), "SelectSqlQuery" :: Maybe (RDSSelectSqlQuery), "ResourceRole" :: Maybe (EDPResourceRole), "ServiceRole" :: Maybe (EDPServiceRole), "DataPipelineId" :: Maybe (EDPPipelineId) } -> { "Database" :: Maybe (RDSDatabase), "DatabaseUserName" :: Maybe (RDSDatabaseUsername), "SelectSqlQuery" :: Maybe (RDSSelectSqlQuery), "ResourceRole" :: Maybe (EDPResourceRole), "ServiceRole" :: Maybe (EDPServiceRole), "DataPipelineId" :: Maybe (EDPPipelineId) }) -> RDSMetadata
 ```
 
 Constructs RDSMetadata's fields from required parameters
@@ -2894,7 +2894,7 @@ Encode RDSSelectSqlQuery
 
 ``` purescript
 newtype RealtimeEndpointInfo
-  = RealtimeEndpointInfo { "PeakRequestsPerSecond" :: NullOrUndefined (IntegerType), "CreatedAt" :: NullOrUndefined (EpochTime), "EndpointUrl" :: NullOrUndefined (VipURL), "EndpointStatus" :: NullOrUndefined (RealtimeEndpointStatus) }
+  = RealtimeEndpointInfo { "PeakRequestsPerSecond" :: Maybe (IntegerType), "CreatedAt" :: Maybe (EpochTime), "EndpointUrl" :: Maybe (VipURL), "EndpointStatus" :: Maybe (RealtimeEndpointStatus) }
 ```
 
 <p> Describes the real-time endpoint information for an <code>MLModel</code>.</p>
@@ -2919,7 +2919,7 @@ Constructs RealtimeEndpointInfo from required parameters
 #### `newRealtimeEndpointInfo'`
 
 ``` purescript
-newRealtimeEndpointInfo' :: ({ "PeakRequestsPerSecond" :: NullOrUndefined (IntegerType), "CreatedAt" :: NullOrUndefined (EpochTime), "EndpointUrl" :: NullOrUndefined (VipURL), "EndpointStatus" :: NullOrUndefined (RealtimeEndpointStatus) } -> { "PeakRequestsPerSecond" :: NullOrUndefined (IntegerType), "CreatedAt" :: NullOrUndefined (EpochTime), "EndpointUrl" :: NullOrUndefined (VipURL), "EndpointStatus" :: NullOrUndefined (RealtimeEndpointStatus) }) -> RealtimeEndpointInfo
+newRealtimeEndpointInfo' :: ({ "PeakRequestsPerSecond" :: Maybe (IntegerType), "CreatedAt" :: Maybe (EpochTime), "EndpointUrl" :: Maybe (VipURL), "EndpointStatus" :: Maybe (RealtimeEndpointStatus) } -> { "PeakRequestsPerSecond" :: Maybe (IntegerType), "CreatedAt" :: Maybe (EpochTime), "EndpointUrl" :: Maybe (VipURL), "EndpointStatus" :: Maybe (RealtimeEndpointStatus) }) -> RealtimeEndpointInfo
 ```
 
 Constructs RealtimeEndpointInfo's fields from required parameters
@@ -2996,7 +2996,7 @@ Encode RedshiftClusterIdentifier
 
 ``` purescript
 newtype RedshiftDataSpec
-  = RedshiftDataSpec { "DatabaseInformation" :: RedshiftDatabase, "SelectSqlQuery" :: RedshiftSelectSqlQuery, "DatabaseCredentials" :: RedshiftDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: NullOrUndefined (DataRearrangement), "DataSchema" :: NullOrUndefined (DataSchema), "DataSchemaUri" :: NullOrUndefined (S3Url) }
+  = RedshiftDataSpec { "DatabaseInformation" :: RedshiftDatabase, "SelectSqlQuery" :: RedshiftSelectSqlQuery, "DatabaseCredentials" :: RedshiftDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: Maybe (DataRearrangement), "DataSchema" :: Maybe (DataSchema), "DataSchemaUri" :: Maybe (S3Url) }
 ```
 
 <p>Describes the data specification of an Amazon Redshift <code>DataSource</code>.</p>
@@ -3021,7 +3021,7 @@ Constructs RedshiftDataSpec from required parameters
 #### `newRedshiftDataSpec'`
 
 ``` purescript
-newRedshiftDataSpec' :: RedshiftDatabaseCredentials -> RedshiftDatabase -> S3Url -> RedshiftSelectSqlQuery -> ({ "DatabaseInformation" :: RedshiftDatabase, "SelectSqlQuery" :: RedshiftSelectSqlQuery, "DatabaseCredentials" :: RedshiftDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: NullOrUndefined (DataRearrangement), "DataSchema" :: NullOrUndefined (DataSchema), "DataSchemaUri" :: NullOrUndefined (S3Url) } -> { "DatabaseInformation" :: RedshiftDatabase, "SelectSqlQuery" :: RedshiftSelectSqlQuery, "DatabaseCredentials" :: RedshiftDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: NullOrUndefined (DataRearrangement), "DataSchema" :: NullOrUndefined (DataSchema), "DataSchemaUri" :: NullOrUndefined (S3Url) }) -> RedshiftDataSpec
+newRedshiftDataSpec' :: RedshiftDatabaseCredentials -> RedshiftDatabase -> S3Url -> RedshiftSelectSqlQuery -> ({ "DatabaseInformation" :: RedshiftDatabase, "SelectSqlQuery" :: RedshiftSelectSqlQuery, "DatabaseCredentials" :: RedshiftDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: Maybe (DataRearrangement), "DataSchema" :: Maybe (DataSchema), "DataSchemaUri" :: Maybe (S3Url) } -> { "DatabaseInformation" :: RedshiftDatabase, "SelectSqlQuery" :: RedshiftSelectSqlQuery, "DatabaseCredentials" :: RedshiftDatabaseCredentials, "S3StagingLocation" :: S3Url, "DataRearrangement" :: Maybe (DataRearrangement), "DataSchema" :: Maybe (DataSchema), "DataSchemaUri" :: Maybe (S3Url) }) -> RedshiftDataSpec
 ```
 
 Constructs RedshiftDataSpec's fields from required parameters
@@ -3152,7 +3152,7 @@ Encode RedshiftDatabaseUsername
 
 ``` purescript
 newtype RedshiftMetadata
-  = RedshiftMetadata { "RedshiftDatabase" :: NullOrUndefined (RedshiftDatabase), "DatabaseUserName" :: NullOrUndefined (RedshiftDatabaseUsername), "SelectSqlQuery" :: NullOrUndefined (RedshiftSelectSqlQuery) }
+  = RedshiftMetadata { "RedshiftDatabase" :: Maybe (RedshiftDatabase), "DatabaseUserName" :: Maybe (RedshiftDatabaseUsername), "SelectSqlQuery" :: Maybe (RedshiftSelectSqlQuery) }
 ```
 
 <p>Describes the <code>DataSource</code> details specific to Amazon Redshift.</p>
@@ -3177,7 +3177,7 @@ Constructs RedshiftMetadata from required parameters
 #### `newRedshiftMetadata'`
 
 ``` purescript
-newRedshiftMetadata' :: ({ "RedshiftDatabase" :: NullOrUndefined (RedshiftDatabase), "DatabaseUserName" :: NullOrUndefined (RedshiftDatabaseUsername), "SelectSqlQuery" :: NullOrUndefined (RedshiftSelectSqlQuery) } -> { "RedshiftDatabase" :: NullOrUndefined (RedshiftDatabase), "DatabaseUserName" :: NullOrUndefined (RedshiftDatabaseUsername), "SelectSqlQuery" :: NullOrUndefined (RedshiftSelectSqlQuery) }) -> RedshiftMetadata
+newRedshiftMetadata' :: ({ "RedshiftDatabase" :: Maybe (RedshiftDatabase), "DatabaseUserName" :: Maybe (RedshiftDatabaseUsername), "SelectSqlQuery" :: Maybe (RedshiftSelectSqlQuery) } -> { "RedshiftDatabase" :: Maybe (RedshiftDatabase), "DatabaseUserName" :: Maybe (RedshiftDatabaseUsername), "SelectSqlQuery" :: Maybe (RedshiftSelectSqlQuery) }) -> RedshiftMetadata
 ```
 
 Constructs RedshiftMetadata's fields from required parameters
@@ -3204,7 +3204,7 @@ Encode RedshiftSelectSqlQuery
 
 ``` purescript
 newtype ResourceNotFoundException
-  = ResourceNotFoundException { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }
+  = ResourceNotFoundException { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }
 ```
 
 <p>A specified resource cannot be located.</p>
@@ -3229,7 +3229,7 @@ Constructs ResourceNotFoundException from required parameters
 #### `newResourceNotFoundException'`
 
 ``` purescript
-newResourceNotFoundException' :: ({ message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) } -> { message :: NullOrUndefined (ErrorMessage), code :: NullOrUndefined (ErrorCode) }) -> ResourceNotFoundException
+newResourceNotFoundException' :: ({ message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) } -> { message :: Maybe (ErrorMessage), code :: Maybe (ErrorCode) }) -> ResourceNotFoundException
 ```
 
 Constructs ResourceNotFoundException's fields from required parameters
@@ -3256,7 +3256,7 @@ Encode RoleARN
 
 ``` purescript
 newtype S3DataSpec
-  = S3DataSpec { "DataLocationS3" :: S3Url, "DataRearrangement" :: NullOrUndefined (DataRearrangement), "DataSchema" :: NullOrUndefined (DataSchema), "DataSchemaLocationS3" :: NullOrUndefined (S3Url) }
+  = S3DataSpec { "DataLocationS3" :: S3Url, "DataRearrangement" :: Maybe (DataRearrangement), "DataSchema" :: Maybe (DataSchema), "DataSchemaLocationS3" :: Maybe (S3Url) }
 ```
 
 <p> Describes the data specification of a <code>DataSource</code>.</p>
@@ -3281,7 +3281,7 @@ Constructs S3DataSpec from required parameters
 #### `newS3DataSpec'`
 
 ``` purescript
-newS3DataSpec' :: S3Url -> ({ "DataLocationS3" :: S3Url, "DataRearrangement" :: NullOrUndefined (DataRearrangement), "DataSchema" :: NullOrUndefined (DataSchema), "DataSchemaLocationS3" :: NullOrUndefined (S3Url) } -> { "DataLocationS3" :: S3Url, "DataRearrangement" :: NullOrUndefined (DataRearrangement), "DataSchema" :: NullOrUndefined (DataSchema), "DataSchemaLocationS3" :: NullOrUndefined (S3Url) }) -> S3DataSpec
+newS3DataSpec' :: S3Url -> ({ "DataLocationS3" :: S3Url, "DataRearrangement" :: Maybe (DataRearrangement), "DataSchema" :: Maybe (DataSchema), "DataSchemaLocationS3" :: Maybe (S3Url) } -> { "DataLocationS3" :: S3Url, "DataRearrangement" :: Maybe (DataRearrangement), "DataSchema" :: Maybe (DataSchema), "DataSchemaLocationS3" :: Maybe (S3Url) }) -> S3DataSpec
 ```
 
 Constructs S3DataSpec's fields from required parameters
@@ -3394,7 +3394,7 @@ Encode StringType
 
 ``` purescript
 newtype Tag
-  = Tag { "Key" :: NullOrUndefined (TagKey), "Value" :: NullOrUndefined (TagValue) }
+  = Tag { "Key" :: Maybe (TagKey), "Value" :: Maybe (TagValue) }
 ```
 
 <p>A custom key-value pair associated with an ML object, such as an ML model.</p>
@@ -3419,7 +3419,7 @@ Constructs Tag from required parameters
 #### `newTag'`
 
 ``` purescript
-newTag' :: ({ "Key" :: NullOrUndefined (TagKey), "Value" :: NullOrUndefined (TagValue) } -> { "Key" :: NullOrUndefined (TagKey), "Value" :: NullOrUndefined (TagValue) }) -> Tag
+newTag' :: ({ "Key" :: Maybe (TagKey), "Value" :: Maybe (TagValue) } -> { "Key" :: Maybe (TagKey), "Value" :: Maybe (TagValue) }) -> Tag
 ```
 
 Constructs Tag's fields from required parameters
@@ -3460,7 +3460,7 @@ Encode TagKeyList
 
 ``` purescript
 newtype TagLimitExceededException
-  = TagLimitExceededException { message :: NullOrUndefined (ErrorMessage) }
+  = TagLimitExceededException { message :: Maybe (ErrorMessage) }
 ```
 
 ##### Instances
@@ -3483,7 +3483,7 @@ Constructs TagLimitExceededException from required parameters
 #### `newTagLimitExceededException'`
 
 ``` purescript
-newTagLimitExceededException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> TagLimitExceededException
+newTagLimitExceededException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> TagLimitExceededException
 ```
 
 Constructs TagLimitExceededException's fields from required parameters
@@ -3588,7 +3588,7 @@ Constructs UpdateBatchPredictionInput's fields from required parameters
 
 ``` purescript
 newtype UpdateBatchPredictionOutput
-  = UpdateBatchPredictionOutput { "BatchPredictionId" :: NullOrUndefined (EntityId) }
+  = UpdateBatchPredictionOutput { "BatchPredictionId" :: Maybe (EntityId) }
 ```
 
 <p>Represents the output of an <code>UpdateBatchPrediction</code> operation.</p> <p>You can see the updated content by using the <code>GetBatchPrediction</code> operation.</p>
@@ -3613,7 +3613,7 @@ Constructs UpdateBatchPredictionOutput from required parameters
 #### `newUpdateBatchPredictionOutput'`
 
 ``` purescript
-newUpdateBatchPredictionOutput' :: ({ "BatchPredictionId" :: NullOrUndefined (EntityId) } -> { "BatchPredictionId" :: NullOrUndefined (EntityId) }) -> UpdateBatchPredictionOutput
+newUpdateBatchPredictionOutput' :: ({ "BatchPredictionId" :: Maybe (EntityId) } -> { "BatchPredictionId" :: Maybe (EntityId) }) -> UpdateBatchPredictionOutput
 ```
 
 Constructs UpdateBatchPredictionOutput's fields from required parameters
@@ -3654,7 +3654,7 @@ Constructs UpdateDataSourceInput's fields from required parameters
 
 ``` purescript
 newtype UpdateDataSourceOutput
-  = UpdateDataSourceOutput { "DataSourceId" :: NullOrUndefined (EntityId) }
+  = UpdateDataSourceOutput { "DataSourceId" :: Maybe (EntityId) }
 ```
 
 <p>Represents the output of an <code>UpdateDataSource</code> operation.</p> <p>You can see the updated content by using the <code>GetBatchPrediction</code> operation.</p>
@@ -3679,7 +3679,7 @@ Constructs UpdateDataSourceOutput from required parameters
 #### `newUpdateDataSourceOutput'`
 
 ``` purescript
-newUpdateDataSourceOutput' :: ({ "DataSourceId" :: NullOrUndefined (EntityId) } -> { "DataSourceId" :: NullOrUndefined (EntityId) }) -> UpdateDataSourceOutput
+newUpdateDataSourceOutput' :: ({ "DataSourceId" :: Maybe (EntityId) } -> { "DataSourceId" :: Maybe (EntityId) }) -> UpdateDataSourceOutput
 ```
 
 Constructs UpdateDataSourceOutput's fields from required parameters
@@ -3720,7 +3720,7 @@ Constructs UpdateEvaluationInput's fields from required parameters
 
 ``` purescript
 newtype UpdateEvaluationOutput
-  = UpdateEvaluationOutput { "EvaluationId" :: NullOrUndefined (EntityId) }
+  = UpdateEvaluationOutput { "EvaluationId" :: Maybe (EntityId) }
 ```
 
 <p>Represents the output of an <code>UpdateEvaluation</code> operation.</p> <p>You can see the updated content by using the <code>GetEvaluation</code> operation.</p>
@@ -3745,7 +3745,7 @@ Constructs UpdateEvaluationOutput from required parameters
 #### `newUpdateEvaluationOutput'`
 
 ``` purescript
-newUpdateEvaluationOutput' :: ({ "EvaluationId" :: NullOrUndefined (EntityId) } -> { "EvaluationId" :: NullOrUndefined (EntityId) }) -> UpdateEvaluationOutput
+newUpdateEvaluationOutput' :: ({ "EvaluationId" :: Maybe (EntityId) } -> { "EvaluationId" :: Maybe (EntityId) }) -> UpdateEvaluationOutput
 ```
 
 Constructs UpdateEvaluationOutput's fields from required parameters
@@ -3754,7 +3754,7 @@ Constructs UpdateEvaluationOutput's fields from required parameters
 
 ``` purescript
 newtype UpdateMLModelInput
-  = UpdateMLModelInput { "MLModelId" :: EntityId, "MLModelName" :: NullOrUndefined (EntityName), "ScoreThreshold" :: NullOrUndefined (ScoreThreshold) }
+  = UpdateMLModelInput { "MLModelId" :: EntityId, "MLModelName" :: Maybe (EntityName), "ScoreThreshold" :: Maybe (ScoreThreshold) }
 ```
 
 ##### Instances
@@ -3777,7 +3777,7 @@ Constructs UpdateMLModelInput from required parameters
 #### `newUpdateMLModelInput'`
 
 ``` purescript
-newUpdateMLModelInput' :: EntityId -> ({ "MLModelId" :: EntityId, "MLModelName" :: NullOrUndefined (EntityName), "ScoreThreshold" :: NullOrUndefined (ScoreThreshold) } -> { "MLModelId" :: EntityId, "MLModelName" :: NullOrUndefined (EntityName), "ScoreThreshold" :: NullOrUndefined (ScoreThreshold) }) -> UpdateMLModelInput
+newUpdateMLModelInput' :: EntityId -> ({ "MLModelId" :: EntityId, "MLModelName" :: Maybe (EntityName), "ScoreThreshold" :: Maybe (ScoreThreshold) } -> { "MLModelId" :: EntityId, "MLModelName" :: Maybe (EntityName), "ScoreThreshold" :: Maybe (ScoreThreshold) }) -> UpdateMLModelInput
 ```
 
 Constructs UpdateMLModelInput's fields from required parameters
@@ -3786,7 +3786,7 @@ Constructs UpdateMLModelInput's fields from required parameters
 
 ``` purescript
 newtype UpdateMLModelOutput
-  = UpdateMLModelOutput { "MLModelId" :: NullOrUndefined (EntityId) }
+  = UpdateMLModelOutput { "MLModelId" :: Maybe (EntityId) }
 ```
 
 <p>Represents the output of an <code>UpdateMLModel</code> operation.</p> <p>You can see the updated content by using the <code>GetMLModel</code> operation.</p>
@@ -3811,7 +3811,7 @@ Constructs UpdateMLModelOutput from required parameters
 #### `newUpdateMLModelOutput'`
 
 ``` purescript
-newUpdateMLModelOutput' :: ({ "MLModelId" :: NullOrUndefined (EntityId) } -> { "MLModelId" :: NullOrUndefined (EntityId) }) -> UpdateMLModelOutput
+newUpdateMLModelOutput' :: ({ "MLModelId" :: Maybe (EntityId) } -> { "MLModelId" :: Maybe (EntityId) }) -> UpdateMLModelOutput
 ```
 
 Constructs UpdateMLModelOutput's fields from required parameters

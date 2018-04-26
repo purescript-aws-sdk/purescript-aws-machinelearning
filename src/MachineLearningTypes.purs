@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -42,8 +41,8 @@ newAddTagsInput' _ResourceId _ResourceType _Tags customize = (AddTagsInput <<< c
 
 -- | <p>Amazon ML returns the following elements. </p>
 newtype AddTagsOutput = AddTagsOutput 
-  { "ResourceId" :: NullOrUndefined (EntityId)
-  , "ResourceType" :: NullOrUndefined (TaggableResourceType)
+  { "ResourceId" :: Maybe (EntityId)
+  , "ResourceType" :: Maybe (TaggableResourceType)
   }
 derive instance newtypeAddTagsOutput :: Newtype AddTagsOutput _
 derive instance repGenericAddTagsOutput :: Generic AddTagsOutput _
@@ -53,12 +52,12 @@ instance encodeAddTagsOutput :: Encode AddTagsOutput where encode = genericEncod
 
 -- | Constructs AddTagsOutput from required parameters
 newAddTagsOutput :: AddTagsOutput
-newAddTagsOutput  = AddTagsOutput { "ResourceId": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing) }
+newAddTagsOutput  = AddTagsOutput { "ResourceId": Nothing, "ResourceType": Nothing }
 
 -- | Constructs AddTagsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAddTagsOutput' :: ( { "ResourceId" :: NullOrUndefined (EntityId) , "ResourceType" :: NullOrUndefined (TaggableResourceType) } -> {"ResourceId" :: NullOrUndefined (EntityId) , "ResourceType" :: NullOrUndefined (TaggableResourceType) } ) -> AddTagsOutput
-newAddTagsOutput'  customize = (AddTagsOutput <<< customize) { "ResourceId": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing) }
+newAddTagsOutput' :: ( { "ResourceId" :: Maybe (EntityId) , "ResourceType" :: Maybe (TaggableResourceType) } -> {"ResourceId" :: Maybe (EntityId) , "ResourceType" :: Maybe (TaggableResourceType) } ) -> AddTagsOutput
+newAddTagsOutput'  customize = (AddTagsOutput <<< customize) { "ResourceId": Nothing, "ResourceType": Nothing }
 
 
 
@@ -84,22 +83,22 @@ instance encodeAwsUserArn :: Encode AwsUserArn where encode = genericEncode opti
 
 -- | <p> Represents the output of a <code>GetBatchPrediction</code> operation.</p> <p> The content consists of the detailed metadata, the status, and the data file information of a <code>Batch Prediction</code>.</p>
 newtype BatchPrediction = BatchPrediction 
-  { "BatchPredictionId" :: NullOrUndefined (EntityId)
-  , "MLModelId" :: NullOrUndefined (EntityId)
-  , "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId)
-  , "InputDataLocationS3" :: NullOrUndefined (S3Url)
-  , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn)
-  , "CreatedAt" :: NullOrUndefined (EpochTime)
-  , "LastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "Name" :: NullOrUndefined (EntityName)
-  , "Status" :: NullOrUndefined (EntityStatus)
-  , "OutputUri" :: NullOrUndefined (S3Url)
-  , "Message" :: NullOrUndefined (Message)
-  , "ComputeTime" :: NullOrUndefined (LongType)
-  , "FinishedAt" :: NullOrUndefined (EpochTime)
-  , "StartedAt" :: NullOrUndefined (EpochTime)
-  , "TotalRecordCount" :: NullOrUndefined (LongType)
-  , "InvalidRecordCount" :: NullOrUndefined (LongType)
+  { "BatchPredictionId" :: Maybe (EntityId)
+  , "MLModelId" :: Maybe (EntityId)
+  , "BatchPredictionDataSourceId" :: Maybe (EntityId)
+  , "InputDataLocationS3" :: Maybe (S3Url)
+  , "CreatedByIamUser" :: Maybe (AwsUserArn)
+  , "CreatedAt" :: Maybe (EpochTime)
+  , "LastUpdatedAt" :: Maybe (EpochTime)
+  , "Name" :: Maybe (EntityName)
+  , "Status" :: Maybe (EntityStatus)
+  , "OutputUri" :: Maybe (S3Url)
+  , "Message" :: Maybe (Message)
+  , "ComputeTime" :: Maybe (LongType)
+  , "FinishedAt" :: Maybe (EpochTime)
+  , "StartedAt" :: Maybe (EpochTime)
+  , "TotalRecordCount" :: Maybe (LongType)
+  , "InvalidRecordCount" :: Maybe (LongType)
   }
 derive instance newtypeBatchPrediction :: Newtype BatchPrediction _
 derive instance repGenericBatchPrediction :: Generic BatchPrediction _
@@ -109,12 +108,12 @@ instance encodeBatchPrediction :: Encode BatchPrediction where encode = genericE
 
 -- | Constructs BatchPrediction from required parameters
 newBatchPrediction :: BatchPrediction
-newBatchPrediction  = BatchPrediction { "BatchPredictionDataSourceId": (NullOrUndefined Nothing), "BatchPredictionId": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "InvalidRecordCount": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "OutputUri": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TotalRecordCount": (NullOrUndefined Nothing) }
+newBatchPrediction  = BatchPrediction { "BatchPredictionDataSourceId": Nothing, "BatchPredictionId": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "InvalidRecordCount": Nothing, "LastUpdatedAt": Nothing, "MLModelId": Nothing, "Message": Nothing, "Name": Nothing, "OutputUri": Nothing, "StartedAt": Nothing, "Status": Nothing, "TotalRecordCount": Nothing }
 
 -- | Constructs BatchPrediction's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBatchPrediction' :: ( { "BatchPredictionId" :: NullOrUndefined (EntityId) , "MLModelId" :: NullOrUndefined (EntityId) , "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "OutputUri" :: NullOrUndefined (S3Url) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) , "TotalRecordCount" :: NullOrUndefined (LongType) , "InvalidRecordCount" :: NullOrUndefined (LongType) } -> {"BatchPredictionId" :: NullOrUndefined (EntityId) , "MLModelId" :: NullOrUndefined (EntityId) , "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "OutputUri" :: NullOrUndefined (S3Url) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) , "TotalRecordCount" :: NullOrUndefined (LongType) , "InvalidRecordCount" :: NullOrUndefined (LongType) } ) -> BatchPrediction
-newBatchPrediction'  customize = (BatchPrediction <<< customize) { "BatchPredictionDataSourceId": (NullOrUndefined Nothing), "BatchPredictionId": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "InvalidRecordCount": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "OutputUri": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TotalRecordCount": (NullOrUndefined Nothing) }
+newBatchPrediction' :: ( { "BatchPredictionId" :: Maybe (EntityId) , "MLModelId" :: Maybe (EntityId) , "BatchPredictionDataSourceId" :: Maybe (EntityId) , "InputDataLocationS3" :: Maybe (S3Url) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "OutputUri" :: Maybe (S3Url) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) , "TotalRecordCount" :: Maybe (LongType) , "InvalidRecordCount" :: Maybe (LongType) } -> {"BatchPredictionId" :: Maybe (EntityId) , "MLModelId" :: Maybe (EntityId) , "BatchPredictionDataSourceId" :: Maybe (EntityId) , "InputDataLocationS3" :: Maybe (S3Url) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "OutputUri" :: Maybe (S3Url) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) , "TotalRecordCount" :: Maybe (LongType) , "InvalidRecordCount" :: Maybe (LongType) } ) -> BatchPrediction
+newBatchPrediction'  customize = (BatchPrediction <<< customize) { "BatchPredictionDataSourceId": Nothing, "BatchPredictionId": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "InvalidRecordCount": Nothing, "LastUpdatedAt": Nothing, "MLModelId": Nothing, "Message": Nothing, "Name": Nothing, "OutputUri": Nothing, "StartedAt": Nothing, "Status": Nothing, "TotalRecordCount": Nothing }
 
 
 
@@ -158,7 +157,7 @@ instance encodeComputeStatistics :: Encode ComputeStatistics where encode = gene
 
 newtype CreateBatchPredictionInput = CreateBatchPredictionInput 
   { "BatchPredictionId" :: (EntityId)
-  , "BatchPredictionName" :: NullOrUndefined (EntityName)
+  , "BatchPredictionName" :: Maybe (EntityName)
   , "MLModelId" :: (EntityId)
   , "BatchPredictionDataSourceId" :: (EntityId)
   , "OutputUri" :: (S3Url)
@@ -171,18 +170,18 @@ instance encodeCreateBatchPredictionInput :: Encode CreateBatchPredictionInput w
 
 -- | Constructs CreateBatchPredictionInput from required parameters
 newCreateBatchPredictionInput :: EntityId -> EntityId -> EntityId -> S3Url -> CreateBatchPredictionInput
-newCreateBatchPredictionInput _BatchPredictionDataSourceId _BatchPredictionId _MLModelId _OutputUri = CreateBatchPredictionInput { "BatchPredictionDataSourceId": _BatchPredictionDataSourceId, "BatchPredictionId": _BatchPredictionId, "MLModelId": _MLModelId, "OutputUri": _OutputUri, "BatchPredictionName": (NullOrUndefined Nothing) }
+newCreateBatchPredictionInput _BatchPredictionDataSourceId _BatchPredictionId _MLModelId _OutputUri = CreateBatchPredictionInput { "BatchPredictionDataSourceId": _BatchPredictionDataSourceId, "BatchPredictionId": _BatchPredictionId, "MLModelId": _MLModelId, "OutputUri": _OutputUri, "BatchPredictionName": Nothing }
 
 -- | Constructs CreateBatchPredictionInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateBatchPredictionInput' :: EntityId -> EntityId -> EntityId -> S3Url -> ( { "BatchPredictionId" :: (EntityId) , "BatchPredictionName" :: NullOrUndefined (EntityName) , "MLModelId" :: (EntityId) , "BatchPredictionDataSourceId" :: (EntityId) , "OutputUri" :: (S3Url) } -> {"BatchPredictionId" :: (EntityId) , "BatchPredictionName" :: NullOrUndefined (EntityName) , "MLModelId" :: (EntityId) , "BatchPredictionDataSourceId" :: (EntityId) , "OutputUri" :: (S3Url) } ) -> CreateBatchPredictionInput
-newCreateBatchPredictionInput' _BatchPredictionDataSourceId _BatchPredictionId _MLModelId _OutputUri customize = (CreateBatchPredictionInput <<< customize) { "BatchPredictionDataSourceId": _BatchPredictionDataSourceId, "BatchPredictionId": _BatchPredictionId, "MLModelId": _MLModelId, "OutputUri": _OutputUri, "BatchPredictionName": (NullOrUndefined Nothing) }
+newCreateBatchPredictionInput' :: EntityId -> EntityId -> EntityId -> S3Url -> ( { "BatchPredictionId" :: (EntityId) , "BatchPredictionName" :: Maybe (EntityName) , "MLModelId" :: (EntityId) , "BatchPredictionDataSourceId" :: (EntityId) , "OutputUri" :: (S3Url) } -> {"BatchPredictionId" :: (EntityId) , "BatchPredictionName" :: Maybe (EntityName) , "MLModelId" :: (EntityId) , "BatchPredictionDataSourceId" :: (EntityId) , "OutputUri" :: (S3Url) } ) -> CreateBatchPredictionInput
+newCreateBatchPredictionInput' _BatchPredictionDataSourceId _BatchPredictionId _MLModelId _OutputUri customize = (CreateBatchPredictionInput <<< customize) { "BatchPredictionDataSourceId": _BatchPredictionDataSourceId, "BatchPredictionId": _BatchPredictionId, "MLModelId": _MLModelId, "OutputUri": _OutputUri, "BatchPredictionName": Nothing }
 
 
 
 -- | <p> Represents the output of a <code>CreateBatchPrediction</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateBatchPrediction</code> operation is asynchronous. You can poll for status updates by using the <code>&gt;GetBatchPrediction</code> operation and checking the <code>Status</code> parameter of the result. </p>
 newtype CreateBatchPredictionOutput = CreateBatchPredictionOutput 
-  { "BatchPredictionId" :: NullOrUndefined (EntityId)
+  { "BatchPredictionId" :: Maybe (EntityId)
   }
 derive instance newtypeCreateBatchPredictionOutput :: Newtype CreateBatchPredictionOutput _
 derive instance repGenericCreateBatchPredictionOutput :: Generic CreateBatchPredictionOutput _
@@ -192,21 +191,21 @@ instance encodeCreateBatchPredictionOutput :: Encode CreateBatchPredictionOutput
 
 -- | Constructs CreateBatchPredictionOutput from required parameters
 newCreateBatchPredictionOutput :: CreateBatchPredictionOutput
-newCreateBatchPredictionOutput  = CreateBatchPredictionOutput { "BatchPredictionId": (NullOrUndefined Nothing) }
+newCreateBatchPredictionOutput  = CreateBatchPredictionOutput { "BatchPredictionId": Nothing }
 
 -- | Constructs CreateBatchPredictionOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateBatchPredictionOutput' :: ( { "BatchPredictionId" :: NullOrUndefined (EntityId) } -> {"BatchPredictionId" :: NullOrUndefined (EntityId) } ) -> CreateBatchPredictionOutput
-newCreateBatchPredictionOutput'  customize = (CreateBatchPredictionOutput <<< customize) { "BatchPredictionId": (NullOrUndefined Nothing) }
+newCreateBatchPredictionOutput' :: ( { "BatchPredictionId" :: Maybe (EntityId) } -> {"BatchPredictionId" :: Maybe (EntityId) } ) -> CreateBatchPredictionOutput
+newCreateBatchPredictionOutput'  customize = (CreateBatchPredictionOutput <<< customize) { "BatchPredictionId": Nothing }
 
 
 
 newtype CreateDataSourceFromRDSInput = CreateDataSourceFromRDSInput 
   { "DataSourceId" :: (EntityId)
-  , "DataSourceName" :: NullOrUndefined (EntityName)
+  , "DataSourceName" :: Maybe (EntityName)
   , "RDSData" :: (RDSDataSpec)
   , "RoleARN" :: (RoleARN)
-  , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics)
+  , "ComputeStatistics" :: Maybe (ComputeStatistics)
   }
 derive instance newtypeCreateDataSourceFromRDSInput :: Newtype CreateDataSourceFromRDSInput _
 derive instance repGenericCreateDataSourceFromRDSInput :: Generic CreateDataSourceFromRDSInput _
@@ -216,18 +215,18 @@ instance encodeCreateDataSourceFromRDSInput :: Encode CreateDataSourceFromRDSInp
 
 -- | Constructs CreateDataSourceFromRDSInput from required parameters
 newCreateDataSourceFromRDSInput :: EntityId -> RDSDataSpec -> RoleARN -> CreateDataSourceFromRDSInput
-newCreateDataSourceFromRDSInput _DataSourceId _RDSData _RoleARN = CreateDataSourceFromRDSInput { "DataSourceId": _DataSourceId, "RDSData": _RDSData, "RoleARN": _RoleARN, "ComputeStatistics": (NullOrUndefined Nothing), "DataSourceName": (NullOrUndefined Nothing) }
+newCreateDataSourceFromRDSInput _DataSourceId _RDSData _RoleARN = CreateDataSourceFromRDSInput { "DataSourceId": _DataSourceId, "RDSData": _RDSData, "RoleARN": _RoleARN, "ComputeStatistics": Nothing, "DataSourceName": Nothing }
 
 -- | Constructs CreateDataSourceFromRDSInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDataSourceFromRDSInput' :: EntityId -> RDSDataSpec -> RoleARN -> ( { "DataSourceId" :: (EntityId) , "DataSourceName" :: NullOrUndefined (EntityName) , "RDSData" :: (RDSDataSpec) , "RoleARN" :: (RoleARN) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) } -> {"DataSourceId" :: (EntityId) , "DataSourceName" :: NullOrUndefined (EntityName) , "RDSData" :: (RDSDataSpec) , "RoleARN" :: (RoleARN) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) } ) -> CreateDataSourceFromRDSInput
-newCreateDataSourceFromRDSInput' _DataSourceId _RDSData _RoleARN customize = (CreateDataSourceFromRDSInput <<< customize) { "DataSourceId": _DataSourceId, "RDSData": _RDSData, "RoleARN": _RoleARN, "ComputeStatistics": (NullOrUndefined Nothing), "DataSourceName": (NullOrUndefined Nothing) }
+newCreateDataSourceFromRDSInput' :: EntityId -> RDSDataSpec -> RoleARN -> ( { "DataSourceId" :: (EntityId) , "DataSourceName" :: Maybe (EntityName) , "RDSData" :: (RDSDataSpec) , "RoleARN" :: (RoleARN) , "ComputeStatistics" :: Maybe (ComputeStatistics) } -> {"DataSourceId" :: (EntityId) , "DataSourceName" :: Maybe (EntityName) , "RDSData" :: (RDSDataSpec) , "RoleARN" :: (RoleARN) , "ComputeStatistics" :: Maybe (ComputeStatistics) } ) -> CreateDataSourceFromRDSInput
+newCreateDataSourceFromRDSInput' _DataSourceId _RDSData _RoleARN customize = (CreateDataSourceFromRDSInput <<< customize) { "DataSourceId": _DataSourceId, "RDSData": _RDSData, "RoleARN": _RoleARN, "ComputeStatistics": Nothing, "DataSourceName": Nothing }
 
 
 
 -- | <p> Represents the output of a <code>CreateDataSourceFromRDS</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateDataSourceFromRDS</code>&gt; operation is asynchronous. You can poll for updates by using the <code>GetBatchPrediction</code> operation and checking the <code>Status</code> parameter. You can inspect the <code>Message</code> when <code>Status</code> shows up as <code>FAILED</code>. You can also check the progress of the copy operation by going to the <code>DataPipeline</code> console and looking up the pipeline using the <code>pipelineId </code> from the describe call.</p>
 newtype CreateDataSourceFromRDSOutput = CreateDataSourceFromRDSOutput 
-  { "DataSourceId" :: NullOrUndefined (EntityId)
+  { "DataSourceId" :: Maybe (EntityId)
   }
 derive instance newtypeCreateDataSourceFromRDSOutput :: Newtype CreateDataSourceFromRDSOutput _
 derive instance repGenericCreateDataSourceFromRDSOutput :: Generic CreateDataSourceFromRDSOutput _
@@ -237,21 +236,21 @@ instance encodeCreateDataSourceFromRDSOutput :: Encode CreateDataSourceFromRDSOu
 
 -- | Constructs CreateDataSourceFromRDSOutput from required parameters
 newCreateDataSourceFromRDSOutput :: CreateDataSourceFromRDSOutput
-newCreateDataSourceFromRDSOutput  = CreateDataSourceFromRDSOutput { "DataSourceId": (NullOrUndefined Nothing) }
+newCreateDataSourceFromRDSOutput  = CreateDataSourceFromRDSOutput { "DataSourceId": Nothing }
 
 -- | Constructs CreateDataSourceFromRDSOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDataSourceFromRDSOutput' :: ( { "DataSourceId" :: NullOrUndefined (EntityId) } -> {"DataSourceId" :: NullOrUndefined (EntityId) } ) -> CreateDataSourceFromRDSOutput
-newCreateDataSourceFromRDSOutput'  customize = (CreateDataSourceFromRDSOutput <<< customize) { "DataSourceId": (NullOrUndefined Nothing) }
+newCreateDataSourceFromRDSOutput' :: ( { "DataSourceId" :: Maybe (EntityId) } -> {"DataSourceId" :: Maybe (EntityId) } ) -> CreateDataSourceFromRDSOutput
+newCreateDataSourceFromRDSOutput'  customize = (CreateDataSourceFromRDSOutput <<< customize) { "DataSourceId": Nothing }
 
 
 
 newtype CreateDataSourceFromRedshiftInput = CreateDataSourceFromRedshiftInput 
   { "DataSourceId" :: (EntityId)
-  , "DataSourceName" :: NullOrUndefined (EntityName)
+  , "DataSourceName" :: Maybe (EntityName)
   , "DataSpec" :: (RedshiftDataSpec)
   , "RoleARN" :: (RoleARN)
-  , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics)
+  , "ComputeStatistics" :: Maybe (ComputeStatistics)
   }
 derive instance newtypeCreateDataSourceFromRedshiftInput :: Newtype CreateDataSourceFromRedshiftInput _
 derive instance repGenericCreateDataSourceFromRedshiftInput :: Generic CreateDataSourceFromRedshiftInput _
@@ -261,18 +260,18 @@ instance encodeCreateDataSourceFromRedshiftInput :: Encode CreateDataSourceFromR
 
 -- | Constructs CreateDataSourceFromRedshiftInput from required parameters
 newCreateDataSourceFromRedshiftInput :: EntityId -> RedshiftDataSpec -> RoleARN -> CreateDataSourceFromRedshiftInput
-newCreateDataSourceFromRedshiftInput _DataSourceId _DataSpec _RoleARN = CreateDataSourceFromRedshiftInput { "DataSourceId": _DataSourceId, "DataSpec": _DataSpec, "RoleARN": _RoleARN, "ComputeStatistics": (NullOrUndefined Nothing), "DataSourceName": (NullOrUndefined Nothing) }
+newCreateDataSourceFromRedshiftInput _DataSourceId _DataSpec _RoleARN = CreateDataSourceFromRedshiftInput { "DataSourceId": _DataSourceId, "DataSpec": _DataSpec, "RoleARN": _RoleARN, "ComputeStatistics": Nothing, "DataSourceName": Nothing }
 
 -- | Constructs CreateDataSourceFromRedshiftInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDataSourceFromRedshiftInput' :: EntityId -> RedshiftDataSpec -> RoleARN -> ( { "DataSourceId" :: (EntityId) , "DataSourceName" :: NullOrUndefined (EntityName) , "DataSpec" :: (RedshiftDataSpec) , "RoleARN" :: (RoleARN) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) } -> {"DataSourceId" :: (EntityId) , "DataSourceName" :: NullOrUndefined (EntityName) , "DataSpec" :: (RedshiftDataSpec) , "RoleARN" :: (RoleARN) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) } ) -> CreateDataSourceFromRedshiftInput
-newCreateDataSourceFromRedshiftInput' _DataSourceId _DataSpec _RoleARN customize = (CreateDataSourceFromRedshiftInput <<< customize) { "DataSourceId": _DataSourceId, "DataSpec": _DataSpec, "RoleARN": _RoleARN, "ComputeStatistics": (NullOrUndefined Nothing), "DataSourceName": (NullOrUndefined Nothing) }
+newCreateDataSourceFromRedshiftInput' :: EntityId -> RedshiftDataSpec -> RoleARN -> ( { "DataSourceId" :: (EntityId) , "DataSourceName" :: Maybe (EntityName) , "DataSpec" :: (RedshiftDataSpec) , "RoleARN" :: (RoleARN) , "ComputeStatistics" :: Maybe (ComputeStatistics) } -> {"DataSourceId" :: (EntityId) , "DataSourceName" :: Maybe (EntityName) , "DataSpec" :: (RedshiftDataSpec) , "RoleARN" :: (RoleARN) , "ComputeStatistics" :: Maybe (ComputeStatistics) } ) -> CreateDataSourceFromRedshiftInput
+newCreateDataSourceFromRedshiftInput' _DataSourceId _DataSpec _RoleARN customize = (CreateDataSourceFromRedshiftInput <<< customize) { "DataSourceId": _DataSourceId, "DataSpec": _DataSpec, "RoleARN": _RoleARN, "ComputeStatistics": Nothing, "DataSourceName": Nothing }
 
 
 
 -- | <p> Represents the output of a <code>CreateDataSourceFromRedshift</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateDataSourceFromRedshift</code> operation is asynchronous. You can poll for updates by using the <code>GetBatchPrediction</code> operation and checking the <code>Status</code> parameter. </p>
 newtype CreateDataSourceFromRedshiftOutput = CreateDataSourceFromRedshiftOutput 
-  { "DataSourceId" :: NullOrUndefined (EntityId)
+  { "DataSourceId" :: Maybe (EntityId)
   }
 derive instance newtypeCreateDataSourceFromRedshiftOutput :: Newtype CreateDataSourceFromRedshiftOutput _
 derive instance repGenericCreateDataSourceFromRedshiftOutput :: Generic CreateDataSourceFromRedshiftOutput _
@@ -282,20 +281,20 @@ instance encodeCreateDataSourceFromRedshiftOutput :: Encode CreateDataSourceFrom
 
 -- | Constructs CreateDataSourceFromRedshiftOutput from required parameters
 newCreateDataSourceFromRedshiftOutput :: CreateDataSourceFromRedshiftOutput
-newCreateDataSourceFromRedshiftOutput  = CreateDataSourceFromRedshiftOutput { "DataSourceId": (NullOrUndefined Nothing) }
+newCreateDataSourceFromRedshiftOutput  = CreateDataSourceFromRedshiftOutput { "DataSourceId": Nothing }
 
 -- | Constructs CreateDataSourceFromRedshiftOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDataSourceFromRedshiftOutput' :: ( { "DataSourceId" :: NullOrUndefined (EntityId) } -> {"DataSourceId" :: NullOrUndefined (EntityId) } ) -> CreateDataSourceFromRedshiftOutput
-newCreateDataSourceFromRedshiftOutput'  customize = (CreateDataSourceFromRedshiftOutput <<< customize) { "DataSourceId": (NullOrUndefined Nothing) }
+newCreateDataSourceFromRedshiftOutput' :: ( { "DataSourceId" :: Maybe (EntityId) } -> {"DataSourceId" :: Maybe (EntityId) } ) -> CreateDataSourceFromRedshiftOutput
+newCreateDataSourceFromRedshiftOutput'  customize = (CreateDataSourceFromRedshiftOutput <<< customize) { "DataSourceId": Nothing }
 
 
 
 newtype CreateDataSourceFromS3Input = CreateDataSourceFromS3Input 
   { "DataSourceId" :: (EntityId)
-  , "DataSourceName" :: NullOrUndefined (EntityName)
+  , "DataSourceName" :: Maybe (EntityName)
   , "DataSpec" :: (S3DataSpec)
-  , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics)
+  , "ComputeStatistics" :: Maybe (ComputeStatistics)
   }
 derive instance newtypeCreateDataSourceFromS3Input :: Newtype CreateDataSourceFromS3Input _
 derive instance repGenericCreateDataSourceFromS3Input :: Generic CreateDataSourceFromS3Input _
@@ -305,18 +304,18 @@ instance encodeCreateDataSourceFromS3Input :: Encode CreateDataSourceFromS3Input
 
 -- | Constructs CreateDataSourceFromS3Input from required parameters
 newCreateDataSourceFromS3Input :: EntityId -> S3DataSpec -> CreateDataSourceFromS3Input
-newCreateDataSourceFromS3Input _DataSourceId _DataSpec = CreateDataSourceFromS3Input { "DataSourceId": _DataSourceId, "DataSpec": _DataSpec, "ComputeStatistics": (NullOrUndefined Nothing), "DataSourceName": (NullOrUndefined Nothing) }
+newCreateDataSourceFromS3Input _DataSourceId _DataSpec = CreateDataSourceFromS3Input { "DataSourceId": _DataSourceId, "DataSpec": _DataSpec, "ComputeStatistics": Nothing, "DataSourceName": Nothing }
 
 -- | Constructs CreateDataSourceFromS3Input's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDataSourceFromS3Input' :: EntityId -> S3DataSpec -> ( { "DataSourceId" :: (EntityId) , "DataSourceName" :: NullOrUndefined (EntityName) , "DataSpec" :: (S3DataSpec) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) } -> {"DataSourceId" :: (EntityId) , "DataSourceName" :: NullOrUndefined (EntityName) , "DataSpec" :: (S3DataSpec) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) } ) -> CreateDataSourceFromS3Input
-newCreateDataSourceFromS3Input' _DataSourceId _DataSpec customize = (CreateDataSourceFromS3Input <<< customize) { "DataSourceId": _DataSourceId, "DataSpec": _DataSpec, "ComputeStatistics": (NullOrUndefined Nothing), "DataSourceName": (NullOrUndefined Nothing) }
+newCreateDataSourceFromS3Input' :: EntityId -> S3DataSpec -> ( { "DataSourceId" :: (EntityId) , "DataSourceName" :: Maybe (EntityName) , "DataSpec" :: (S3DataSpec) , "ComputeStatistics" :: Maybe (ComputeStatistics) } -> {"DataSourceId" :: (EntityId) , "DataSourceName" :: Maybe (EntityName) , "DataSpec" :: (S3DataSpec) , "ComputeStatistics" :: Maybe (ComputeStatistics) } ) -> CreateDataSourceFromS3Input
+newCreateDataSourceFromS3Input' _DataSourceId _DataSpec customize = (CreateDataSourceFromS3Input <<< customize) { "DataSourceId": _DataSourceId, "DataSpec": _DataSpec, "ComputeStatistics": Nothing, "DataSourceName": Nothing }
 
 
 
 -- | <p> Represents the output of a <code>CreateDataSourceFromS3</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateDataSourceFromS3</code> operation is asynchronous. You can poll for updates by using the <code>GetBatchPrediction</code> operation and checking the <code>Status</code> parameter. </p>
 newtype CreateDataSourceFromS3Output = CreateDataSourceFromS3Output 
-  { "DataSourceId" :: NullOrUndefined (EntityId)
+  { "DataSourceId" :: Maybe (EntityId)
   }
 derive instance newtypeCreateDataSourceFromS3Output :: Newtype CreateDataSourceFromS3Output _
 derive instance repGenericCreateDataSourceFromS3Output :: Generic CreateDataSourceFromS3Output _
@@ -326,18 +325,18 @@ instance encodeCreateDataSourceFromS3Output :: Encode CreateDataSourceFromS3Outp
 
 -- | Constructs CreateDataSourceFromS3Output from required parameters
 newCreateDataSourceFromS3Output :: CreateDataSourceFromS3Output
-newCreateDataSourceFromS3Output  = CreateDataSourceFromS3Output { "DataSourceId": (NullOrUndefined Nothing) }
+newCreateDataSourceFromS3Output  = CreateDataSourceFromS3Output { "DataSourceId": Nothing }
 
 -- | Constructs CreateDataSourceFromS3Output's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDataSourceFromS3Output' :: ( { "DataSourceId" :: NullOrUndefined (EntityId) } -> {"DataSourceId" :: NullOrUndefined (EntityId) } ) -> CreateDataSourceFromS3Output
-newCreateDataSourceFromS3Output'  customize = (CreateDataSourceFromS3Output <<< customize) { "DataSourceId": (NullOrUndefined Nothing) }
+newCreateDataSourceFromS3Output' :: ( { "DataSourceId" :: Maybe (EntityId) } -> {"DataSourceId" :: Maybe (EntityId) } ) -> CreateDataSourceFromS3Output
+newCreateDataSourceFromS3Output'  customize = (CreateDataSourceFromS3Output <<< customize) { "DataSourceId": Nothing }
 
 
 
 newtype CreateEvaluationInput = CreateEvaluationInput 
   { "EvaluationId" :: (EntityId)
-  , "EvaluationName" :: NullOrUndefined (EntityName)
+  , "EvaluationName" :: Maybe (EntityName)
   , "MLModelId" :: (EntityId)
   , "EvaluationDataSourceId" :: (EntityId)
   }
@@ -349,18 +348,18 @@ instance encodeCreateEvaluationInput :: Encode CreateEvaluationInput where encod
 
 -- | Constructs CreateEvaluationInput from required parameters
 newCreateEvaluationInput :: EntityId -> EntityId -> EntityId -> CreateEvaluationInput
-newCreateEvaluationInput _EvaluationDataSourceId _EvaluationId _MLModelId = CreateEvaluationInput { "EvaluationDataSourceId": _EvaluationDataSourceId, "EvaluationId": _EvaluationId, "MLModelId": _MLModelId, "EvaluationName": (NullOrUndefined Nothing) }
+newCreateEvaluationInput _EvaluationDataSourceId _EvaluationId _MLModelId = CreateEvaluationInput { "EvaluationDataSourceId": _EvaluationDataSourceId, "EvaluationId": _EvaluationId, "MLModelId": _MLModelId, "EvaluationName": Nothing }
 
 -- | Constructs CreateEvaluationInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateEvaluationInput' :: EntityId -> EntityId -> EntityId -> ( { "EvaluationId" :: (EntityId) , "EvaluationName" :: NullOrUndefined (EntityName) , "MLModelId" :: (EntityId) , "EvaluationDataSourceId" :: (EntityId) } -> {"EvaluationId" :: (EntityId) , "EvaluationName" :: NullOrUndefined (EntityName) , "MLModelId" :: (EntityId) , "EvaluationDataSourceId" :: (EntityId) } ) -> CreateEvaluationInput
-newCreateEvaluationInput' _EvaluationDataSourceId _EvaluationId _MLModelId customize = (CreateEvaluationInput <<< customize) { "EvaluationDataSourceId": _EvaluationDataSourceId, "EvaluationId": _EvaluationId, "MLModelId": _MLModelId, "EvaluationName": (NullOrUndefined Nothing) }
+newCreateEvaluationInput' :: EntityId -> EntityId -> EntityId -> ( { "EvaluationId" :: (EntityId) , "EvaluationName" :: Maybe (EntityName) , "MLModelId" :: (EntityId) , "EvaluationDataSourceId" :: (EntityId) } -> {"EvaluationId" :: (EntityId) , "EvaluationName" :: Maybe (EntityName) , "MLModelId" :: (EntityId) , "EvaluationDataSourceId" :: (EntityId) } ) -> CreateEvaluationInput
+newCreateEvaluationInput' _EvaluationDataSourceId _EvaluationId _MLModelId customize = (CreateEvaluationInput <<< customize) { "EvaluationDataSourceId": _EvaluationDataSourceId, "EvaluationId": _EvaluationId, "MLModelId": _MLModelId, "EvaluationName": Nothing }
 
 
 
 -- | <p> Represents the output of a <code>CreateEvaluation</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p><code>CreateEvaluation</code> operation is asynchronous. You can poll for status updates by using the <code>GetEvcaluation</code> operation and checking the <code>Status</code> parameter. </p>
 newtype CreateEvaluationOutput = CreateEvaluationOutput 
-  { "EvaluationId" :: NullOrUndefined (EntityId)
+  { "EvaluationId" :: Maybe (EntityId)
   }
 derive instance newtypeCreateEvaluationOutput :: Newtype CreateEvaluationOutput _
 derive instance repGenericCreateEvaluationOutput :: Generic CreateEvaluationOutput _
@@ -370,23 +369,23 @@ instance encodeCreateEvaluationOutput :: Encode CreateEvaluationOutput where enc
 
 -- | Constructs CreateEvaluationOutput from required parameters
 newCreateEvaluationOutput :: CreateEvaluationOutput
-newCreateEvaluationOutput  = CreateEvaluationOutput { "EvaluationId": (NullOrUndefined Nothing) }
+newCreateEvaluationOutput  = CreateEvaluationOutput { "EvaluationId": Nothing }
 
 -- | Constructs CreateEvaluationOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateEvaluationOutput' :: ( { "EvaluationId" :: NullOrUndefined (EntityId) } -> {"EvaluationId" :: NullOrUndefined (EntityId) } ) -> CreateEvaluationOutput
-newCreateEvaluationOutput'  customize = (CreateEvaluationOutput <<< customize) { "EvaluationId": (NullOrUndefined Nothing) }
+newCreateEvaluationOutput' :: ( { "EvaluationId" :: Maybe (EntityId) } -> {"EvaluationId" :: Maybe (EntityId) } ) -> CreateEvaluationOutput
+newCreateEvaluationOutput'  customize = (CreateEvaluationOutput <<< customize) { "EvaluationId": Nothing }
 
 
 
 newtype CreateMLModelInput = CreateMLModelInput 
   { "MLModelId" :: (EntityId)
-  , "MLModelName" :: NullOrUndefined (EntityName)
+  , "MLModelName" :: Maybe (EntityName)
   , "MLModelType" :: (MLModelType)
-  , "Parameters" :: NullOrUndefined (TrainingParameters)
+  , "Parameters" :: Maybe (TrainingParameters)
   , "TrainingDataSourceId" :: (EntityId)
-  , "Recipe" :: NullOrUndefined (Recipe)
-  , "RecipeUri" :: NullOrUndefined (S3Url)
+  , "Recipe" :: Maybe (Recipe)
+  , "RecipeUri" :: Maybe (S3Url)
   }
 derive instance newtypeCreateMLModelInput :: Newtype CreateMLModelInput _
 derive instance repGenericCreateMLModelInput :: Generic CreateMLModelInput _
@@ -396,18 +395,18 @@ instance encodeCreateMLModelInput :: Encode CreateMLModelInput where encode = ge
 
 -- | Constructs CreateMLModelInput from required parameters
 newCreateMLModelInput :: EntityId -> MLModelType -> EntityId -> CreateMLModelInput
-newCreateMLModelInput _MLModelId _MLModelType _TrainingDataSourceId = CreateMLModelInput { "MLModelId": _MLModelId, "MLModelType": _MLModelType, "TrainingDataSourceId": _TrainingDataSourceId, "MLModelName": (NullOrUndefined Nothing), "Parameters": (NullOrUndefined Nothing), "Recipe": (NullOrUndefined Nothing), "RecipeUri": (NullOrUndefined Nothing) }
+newCreateMLModelInput _MLModelId _MLModelType _TrainingDataSourceId = CreateMLModelInput { "MLModelId": _MLModelId, "MLModelType": _MLModelType, "TrainingDataSourceId": _TrainingDataSourceId, "MLModelName": Nothing, "Parameters": Nothing, "Recipe": Nothing, "RecipeUri": Nothing }
 
 -- | Constructs CreateMLModelInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateMLModelInput' :: EntityId -> MLModelType -> EntityId -> ( { "MLModelId" :: (EntityId) , "MLModelName" :: NullOrUndefined (EntityName) , "MLModelType" :: (MLModelType) , "Parameters" :: NullOrUndefined (TrainingParameters) , "TrainingDataSourceId" :: (EntityId) , "Recipe" :: NullOrUndefined (Recipe) , "RecipeUri" :: NullOrUndefined (S3Url) } -> {"MLModelId" :: (EntityId) , "MLModelName" :: NullOrUndefined (EntityName) , "MLModelType" :: (MLModelType) , "Parameters" :: NullOrUndefined (TrainingParameters) , "TrainingDataSourceId" :: (EntityId) , "Recipe" :: NullOrUndefined (Recipe) , "RecipeUri" :: NullOrUndefined (S3Url) } ) -> CreateMLModelInput
-newCreateMLModelInput' _MLModelId _MLModelType _TrainingDataSourceId customize = (CreateMLModelInput <<< customize) { "MLModelId": _MLModelId, "MLModelType": _MLModelType, "TrainingDataSourceId": _TrainingDataSourceId, "MLModelName": (NullOrUndefined Nothing), "Parameters": (NullOrUndefined Nothing), "Recipe": (NullOrUndefined Nothing), "RecipeUri": (NullOrUndefined Nothing) }
+newCreateMLModelInput' :: EntityId -> MLModelType -> EntityId -> ( { "MLModelId" :: (EntityId) , "MLModelName" :: Maybe (EntityName) , "MLModelType" :: (MLModelType) , "Parameters" :: Maybe (TrainingParameters) , "TrainingDataSourceId" :: (EntityId) , "Recipe" :: Maybe (Recipe) , "RecipeUri" :: Maybe (S3Url) } -> {"MLModelId" :: (EntityId) , "MLModelName" :: Maybe (EntityName) , "MLModelType" :: (MLModelType) , "Parameters" :: Maybe (TrainingParameters) , "TrainingDataSourceId" :: (EntityId) , "Recipe" :: Maybe (Recipe) , "RecipeUri" :: Maybe (S3Url) } ) -> CreateMLModelInput
+newCreateMLModelInput' _MLModelId _MLModelType _TrainingDataSourceId customize = (CreateMLModelInput <<< customize) { "MLModelId": _MLModelId, "MLModelType": _MLModelType, "TrainingDataSourceId": _TrainingDataSourceId, "MLModelName": Nothing, "Parameters": Nothing, "Recipe": Nothing, "RecipeUri": Nothing }
 
 
 
 -- | <p> Represents the output of a <code>CreateMLModel</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateMLModel</code> operation is asynchronous. You can poll for status updates by using the <code>GetMLModel</code> operation and checking the <code>Status</code> parameter. </p>
 newtype CreateMLModelOutput = CreateMLModelOutput 
-  { "MLModelId" :: NullOrUndefined (EntityId)
+  { "MLModelId" :: Maybe (EntityId)
   }
 derive instance newtypeCreateMLModelOutput :: Newtype CreateMLModelOutput _
 derive instance repGenericCreateMLModelOutput :: Generic CreateMLModelOutput _
@@ -417,12 +416,12 @@ instance encodeCreateMLModelOutput :: Encode CreateMLModelOutput where encode = 
 
 -- | Constructs CreateMLModelOutput from required parameters
 newCreateMLModelOutput :: CreateMLModelOutput
-newCreateMLModelOutput  = CreateMLModelOutput { "MLModelId": (NullOrUndefined Nothing) }
+newCreateMLModelOutput  = CreateMLModelOutput { "MLModelId": Nothing }
 
 -- | Constructs CreateMLModelOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateMLModelOutput' :: ( { "MLModelId" :: NullOrUndefined (EntityId) } -> {"MLModelId" :: NullOrUndefined (EntityId) } ) -> CreateMLModelOutput
-newCreateMLModelOutput'  customize = (CreateMLModelOutput <<< customize) { "MLModelId": (NullOrUndefined Nothing) }
+newCreateMLModelOutput' :: ( { "MLModelId" :: Maybe (EntityId) } -> {"MLModelId" :: Maybe (EntityId) } ) -> CreateMLModelOutput
+newCreateMLModelOutput'  customize = (CreateMLModelOutput <<< customize) { "MLModelId": Nothing }
 
 
 
@@ -448,8 +447,8 @@ newCreateRealtimeEndpointInput' _MLModelId customize = (CreateRealtimeEndpointIn
 
 -- | <p>Represents the output of an <code>CreateRealtimeEndpoint</code> operation.</p> <p>The result contains the <code>MLModelId</code> and the endpoint information for the <code>MLModel</code>.</p> <note> <p>The endpoint information includes the URI of the <code>MLModel</code>; that is, the location to send online prediction requests for the specified <code>MLModel</code>.</p> </note>
 newtype CreateRealtimeEndpointOutput = CreateRealtimeEndpointOutput 
-  { "MLModelId" :: NullOrUndefined (EntityId)
-  , "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo)
+  { "MLModelId" :: Maybe (EntityId)
+  , "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo)
   }
 derive instance newtypeCreateRealtimeEndpointOutput :: Newtype CreateRealtimeEndpointOutput _
 derive instance repGenericCreateRealtimeEndpointOutput :: Generic CreateRealtimeEndpointOutput _
@@ -459,12 +458,12 @@ instance encodeCreateRealtimeEndpointOutput :: Encode CreateRealtimeEndpointOutp
 
 -- | Constructs CreateRealtimeEndpointOutput from required parameters
 newCreateRealtimeEndpointOutput :: CreateRealtimeEndpointOutput
-newCreateRealtimeEndpointOutput  = CreateRealtimeEndpointOutput { "MLModelId": (NullOrUndefined Nothing), "RealtimeEndpointInfo": (NullOrUndefined Nothing) }
+newCreateRealtimeEndpointOutput  = CreateRealtimeEndpointOutput { "MLModelId": Nothing, "RealtimeEndpointInfo": Nothing }
 
 -- | Constructs CreateRealtimeEndpointOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateRealtimeEndpointOutput' :: ( { "MLModelId" :: NullOrUndefined (EntityId) , "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) } -> {"MLModelId" :: NullOrUndefined (EntityId) , "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) } ) -> CreateRealtimeEndpointOutput
-newCreateRealtimeEndpointOutput'  customize = (CreateRealtimeEndpointOutput <<< customize) { "MLModelId": (NullOrUndefined Nothing), "RealtimeEndpointInfo": (NullOrUndefined Nothing) }
+newCreateRealtimeEndpointOutput' :: ( { "MLModelId" :: Maybe (EntityId) , "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) } -> {"MLModelId" :: Maybe (EntityId) , "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) } ) -> CreateRealtimeEndpointOutput
+newCreateRealtimeEndpointOutput'  customize = (CreateRealtimeEndpointOutput <<< customize) { "MLModelId": Nothing, "RealtimeEndpointInfo": Nothing }
 
 
 
@@ -489,24 +488,24 @@ instance encodeDataSchema :: Encode DataSchema where encode = genericEncode opti
 
 -- | <p> Represents the output of the <code>GetDataSource</code> operation. </p> <p> The content consists of the detailed metadata and data file information and the current status of the <code>DataSource</code>. </p>
 newtype DataSource = DataSource 
-  { "DataSourceId" :: NullOrUndefined (EntityId)
-  , "DataLocationS3" :: NullOrUndefined (S3Url)
-  , "DataRearrangement" :: NullOrUndefined (DataRearrangement)
-  , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn)
-  , "CreatedAt" :: NullOrUndefined (EpochTime)
-  , "LastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "DataSizeInBytes" :: NullOrUndefined (LongType)
-  , "NumberOfFiles" :: NullOrUndefined (LongType)
-  , "Name" :: NullOrUndefined (EntityName)
-  , "Status" :: NullOrUndefined (EntityStatus)
-  , "Message" :: NullOrUndefined (Message)
-  , "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata)
-  , "RDSMetadata" :: NullOrUndefined (RDSMetadata)
-  , "RoleARN" :: NullOrUndefined (RoleARN)
-  , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics)
-  , "ComputeTime" :: NullOrUndefined (LongType)
-  , "FinishedAt" :: NullOrUndefined (EpochTime)
-  , "StartedAt" :: NullOrUndefined (EpochTime)
+  { "DataSourceId" :: Maybe (EntityId)
+  , "DataLocationS3" :: Maybe (S3Url)
+  , "DataRearrangement" :: Maybe (DataRearrangement)
+  , "CreatedByIamUser" :: Maybe (AwsUserArn)
+  , "CreatedAt" :: Maybe (EpochTime)
+  , "LastUpdatedAt" :: Maybe (EpochTime)
+  , "DataSizeInBytes" :: Maybe (LongType)
+  , "NumberOfFiles" :: Maybe (LongType)
+  , "Name" :: Maybe (EntityName)
+  , "Status" :: Maybe (EntityStatus)
+  , "Message" :: Maybe (Message)
+  , "RedshiftMetadata" :: Maybe (RedshiftMetadata)
+  , "RDSMetadata" :: Maybe (RDSMetadata)
+  , "RoleARN" :: Maybe (RoleARN)
+  , "ComputeStatistics" :: Maybe (ComputeStatistics)
+  , "ComputeTime" :: Maybe (LongType)
+  , "FinishedAt" :: Maybe (EpochTime)
+  , "StartedAt" :: Maybe (EpochTime)
   }
 derive instance newtypeDataSource :: Newtype DataSource _
 derive instance repGenericDataSource :: Generic DataSource _
@@ -516,12 +515,12 @@ instance encodeDataSource :: Encode DataSource where encode = genericEncode opti
 
 -- | Constructs DataSource from required parameters
 newDataSource :: DataSource
-newDataSource  = DataSource { "ComputeStatistics": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "DataLocationS3": (NullOrUndefined Nothing), "DataRearrangement": (NullOrUndefined Nothing), "DataSizeInBytes": (NullOrUndefined Nothing), "DataSourceId": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "NumberOfFiles": (NullOrUndefined Nothing), "RDSMetadata": (NullOrUndefined Nothing), "RedshiftMetadata": (NullOrUndefined Nothing), "RoleARN": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDataSource  = DataSource { "ComputeStatistics": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "DataLocationS3": Nothing, "DataRearrangement": Nothing, "DataSizeInBytes": Nothing, "DataSourceId": Nothing, "FinishedAt": Nothing, "LastUpdatedAt": Nothing, "Message": Nothing, "Name": Nothing, "NumberOfFiles": Nothing, "RDSMetadata": Nothing, "RedshiftMetadata": Nothing, "RoleARN": Nothing, "StartedAt": Nothing, "Status": Nothing }
 
 -- | Constructs DataSource's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDataSource' :: ( { "DataSourceId" :: NullOrUndefined (EntityId) , "DataLocationS3" :: NullOrUndefined (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "DataSizeInBytes" :: NullOrUndefined (LongType) , "NumberOfFiles" :: NullOrUndefined (LongType) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "Message" :: NullOrUndefined (Message) , "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata) , "RDSMetadata" :: NullOrUndefined (RDSMetadata) , "RoleARN" :: NullOrUndefined (RoleARN) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) } -> {"DataSourceId" :: NullOrUndefined (EntityId) , "DataLocationS3" :: NullOrUndefined (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "DataSizeInBytes" :: NullOrUndefined (LongType) , "NumberOfFiles" :: NullOrUndefined (LongType) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "Message" :: NullOrUndefined (Message) , "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata) , "RDSMetadata" :: NullOrUndefined (RDSMetadata) , "RoleARN" :: NullOrUndefined (RoleARN) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) } ) -> DataSource
-newDataSource'  customize = (DataSource <<< customize) { "ComputeStatistics": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "DataLocationS3": (NullOrUndefined Nothing), "DataRearrangement": (NullOrUndefined Nothing), "DataSizeInBytes": (NullOrUndefined Nothing), "DataSourceId": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "NumberOfFiles": (NullOrUndefined Nothing), "RDSMetadata": (NullOrUndefined Nothing), "RedshiftMetadata": (NullOrUndefined Nothing), "RoleARN": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDataSource' :: ( { "DataSourceId" :: Maybe (EntityId) , "DataLocationS3" :: Maybe (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "DataSizeInBytes" :: Maybe (LongType) , "NumberOfFiles" :: Maybe (LongType) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "Message" :: Maybe (Message) , "RedshiftMetadata" :: Maybe (RedshiftMetadata) , "RDSMetadata" :: Maybe (RDSMetadata) , "RoleARN" :: Maybe (RoleARN) , "ComputeStatistics" :: Maybe (ComputeStatistics) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) } -> {"DataSourceId" :: Maybe (EntityId) , "DataLocationS3" :: Maybe (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "DataSizeInBytes" :: Maybe (LongType) , "NumberOfFiles" :: Maybe (LongType) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "Message" :: Maybe (Message) , "RedshiftMetadata" :: Maybe (RedshiftMetadata) , "RDSMetadata" :: Maybe (RDSMetadata) , "RoleARN" :: Maybe (RoleARN) , "ComputeStatistics" :: Maybe (ComputeStatistics) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) } ) -> DataSource
+newDataSource'  customize = (DataSource <<< customize) { "ComputeStatistics": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "DataLocationS3": Nothing, "DataRearrangement": Nothing, "DataSizeInBytes": Nothing, "DataSourceId": Nothing, "FinishedAt": Nothing, "LastUpdatedAt": Nothing, "Message": Nothing, "Name": Nothing, "NumberOfFiles": Nothing, "RDSMetadata": Nothing, "RedshiftMetadata": Nothing, "RoleARN": Nothing, "StartedAt": Nothing, "Status": Nothing }
 
 
 
@@ -566,7 +565,7 @@ newDeleteBatchPredictionInput' _BatchPredictionId customize = (DeleteBatchPredic
 
 -- | <p> Represents the output of a <code>DeleteBatchPrediction</code> operation.</p> <p>You can use the <code>GetBatchPrediction</code> operation and check the value of the <code>Status</code> parameter to see whether a <code>BatchPrediction</code> is marked as <code>DELETED</code>.</p>
 newtype DeleteBatchPredictionOutput = DeleteBatchPredictionOutput 
-  { "BatchPredictionId" :: NullOrUndefined (EntityId)
+  { "BatchPredictionId" :: Maybe (EntityId)
   }
 derive instance newtypeDeleteBatchPredictionOutput :: Newtype DeleteBatchPredictionOutput _
 derive instance repGenericDeleteBatchPredictionOutput :: Generic DeleteBatchPredictionOutput _
@@ -576,12 +575,12 @@ instance encodeDeleteBatchPredictionOutput :: Encode DeleteBatchPredictionOutput
 
 -- | Constructs DeleteBatchPredictionOutput from required parameters
 newDeleteBatchPredictionOutput :: DeleteBatchPredictionOutput
-newDeleteBatchPredictionOutput  = DeleteBatchPredictionOutput { "BatchPredictionId": (NullOrUndefined Nothing) }
+newDeleteBatchPredictionOutput  = DeleteBatchPredictionOutput { "BatchPredictionId": Nothing }
 
 -- | Constructs DeleteBatchPredictionOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteBatchPredictionOutput' :: ( { "BatchPredictionId" :: NullOrUndefined (EntityId) } -> {"BatchPredictionId" :: NullOrUndefined (EntityId) } ) -> DeleteBatchPredictionOutput
-newDeleteBatchPredictionOutput'  customize = (DeleteBatchPredictionOutput <<< customize) { "BatchPredictionId": (NullOrUndefined Nothing) }
+newDeleteBatchPredictionOutput' :: ( { "BatchPredictionId" :: Maybe (EntityId) } -> {"BatchPredictionId" :: Maybe (EntityId) } ) -> DeleteBatchPredictionOutput
+newDeleteBatchPredictionOutput'  customize = (DeleteBatchPredictionOutput <<< customize) { "BatchPredictionId": Nothing }
 
 
 
@@ -607,7 +606,7 @@ newDeleteDataSourceInput' _DataSourceId customize = (DeleteDataSourceInput <<< c
 
 -- | <p> Represents the output of a <code>DeleteDataSource</code> operation.</p>
 newtype DeleteDataSourceOutput = DeleteDataSourceOutput 
-  { "DataSourceId" :: NullOrUndefined (EntityId)
+  { "DataSourceId" :: Maybe (EntityId)
   }
 derive instance newtypeDeleteDataSourceOutput :: Newtype DeleteDataSourceOutput _
 derive instance repGenericDeleteDataSourceOutput :: Generic DeleteDataSourceOutput _
@@ -617,12 +616,12 @@ instance encodeDeleteDataSourceOutput :: Encode DeleteDataSourceOutput where enc
 
 -- | Constructs DeleteDataSourceOutput from required parameters
 newDeleteDataSourceOutput :: DeleteDataSourceOutput
-newDeleteDataSourceOutput  = DeleteDataSourceOutput { "DataSourceId": (NullOrUndefined Nothing) }
+newDeleteDataSourceOutput  = DeleteDataSourceOutput { "DataSourceId": Nothing }
 
 -- | Constructs DeleteDataSourceOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteDataSourceOutput' :: ( { "DataSourceId" :: NullOrUndefined (EntityId) } -> {"DataSourceId" :: NullOrUndefined (EntityId) } ) -> DeleteDataSourceOutput
-newDeleteDataSourceOutput'  customize = (DeleteDataSourceOutput <<< customize) { "DataSourceId": (NullOrUndefined Nothing) }
+newDeleteDataSourceOutput' :: ( { "DataSourceId" :: Maybe (EntityId) } -> {"DataSourceId" :: Maybe (EntityId) } ) -> DeleteDataSourceOutput
+newDeleteDataSourceOutput'  customize = (DeleteDataSourceOutput <<< customize) { "DataSourceId": Nothing }
 
 
 
@@ -648,7 +647,7 @@ newDeleteEvaluationInput' _EvaluationId customize = (DeleteEvaluationInput <<< c
 
 -- | <p> Represents the output of a <code>DeleteEvaluation</code> operation. The output indicates that Amazon Machine Learning (Amazon ML) received the request.</p> <p>You can use the <code>GetEvaluation</code> operation and check the value of the <code>Status</code> parameter to see whether an <code>Evaluation</code> is marked as <code>DELETED</code>.</p>
 newtype DeleteEvaluationOutput = DeleteEvaluationOutput 
-  { "EvaluationId" :: NullOrUndefined (EntityId)
+  { "EvaluationId" :: Maybe (EntityId)
   }
 derive instance newtypeDeleteEvaluationOutput :: Newtype DeleteEvaluationOutput _
 derive instance repGenericDeleteEvaluationOutput :: Generic DeleteEvaluationOutput _
@@ -658,12 +657,12 @@ instance encodeDeleteEvaluationOutput :: Encode DeleteEvaluationOutput where enc
 
 -- | Constructs DeleteEvaluationOutput from required parameters
 newDeleteEvaluationOutput :: DeleteEvaluationOutput
-newDeleteEvaluationOutput  = DeleteEvaluationOutput { "EvaluationId": (NullOrUndefined Nothing) }
+newDeleteEvaluationOutput  = DeleteEvaluationOutput { "EvaluationId": Nothing }
 
 -- | Constructs DeleteEvaluationOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteEvaluationOutput' :: ( { "EvaluationId" :: NullOrUndefined (EntityId) } -> {"EvaluationId" :: NullOrUndefined (EntityId) } ) -> DeleteEvaluationOutput
-newDeleteEvaluationOutput'  customize = (DeleteEvaluationOutput <<< customize) { "EvaluationId": (NullOrUndefined Nothing) }
+newDeleteEvaluationOutput' :: ( { "EvaluationId" :: Maybe (EntityId) } -> {"EvaluationId" :: Maybe (EntityId) } ) -> DeleteEvaluationOutput
+newDeleteEvaluationOutput'  customize = (DeleteEvaluationOutput <<< customize) { "EvaluationId": Nothing }
 
 
 
@@ -689,7 +688,7 @@ newDeleteMLModelInput' _MLModelId customize = (DeleteMLModelInput <<< customize)
 
 -- | <p>Represents the output of a <code>DeleteMLModel</code> operation.</p> <p>You can use the <code>GetMLModel</code> operation and check the value of the <code>Status</code> parameter to see whether an <code>MLModel</code> is marked as <code>DELETED</code>.</p>
 newtype DeleteMLModelOutput = DeleteMLModelOutput 
-  { "MLModelId" :: NullOrUndefined (EntityId)
+  { "MLModelId" :: Maybe (EntityId)
   }
 derive instance newtypeDeleteMLModelOutput :: Newtype DeleteMLModelOutput _
 derive instance repGenericDeleteMLModelOutput :: Generic DeleteMLModelOutput _
@@ -699,12 +698,12 @@ instance encodeDeleteMLModelOutput :: Encode DeleteMLModelOutput where encode = 
 
 -- | Constructs DeleteMLModelOutput from required parameters
 newDeleteMLModelOutput :: DeleteMLModelOutput
-newDeleteMLModelOutput  = DeleteMLModelOutput { "MLModelId": (NullOrUndefined Nothing) }
+newDeleteMLModelOutput  = DeleteMLModelOutput { "MLModelId": Nothing }
 
 -- | Constructs DeleteMLModelOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteMLModelOutput' :: ( { "MLModelId" :: NullOrUndefined (EntityId) } -> {"MLModelId" :: NullOrUndefined (EntityId) } ) -> DeleteMLModelOutput
-newDeleteMLModelOutput'  customize = (DeleteMLModelOutput <<< customize) { "MLModelId": (NullOrUndefined Nothing) }
+newDeleteMLModelOutput' :: ( { "MLModelId" :: Maybe (EntityId) } -> {"MLModelId" :: Maybe (EntityId) } ) -> DeleteMLModelOutput
+newDeleteMLModelOutput'  customize = (DeleteMLModelOutput <<< customize) { "MLModelId": Nothing }
 
 
 
@@ -730,8 +729,8 @@ newDeleteRealtimeEndpointInput' _MLModelId customize = (DeleteRealtimeEndpointIn
 
 -- | <p>Represents the output of an <code>DeleteRealtimeEndpoint</code> operation.</p> <p>The result contains the <code>MLModelId</code> and the endpoint information for the <code>MLModel</code>. </p>
 newtype DeleteRealtimeEndpointOutput = DeleteRealtimeEndpointOutput 
-  { "MLModelId" :: NullOrUndefined (EntityId)
-  , "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo)
+  { "MLModelId" :: Maybe (EntityId)
+  , "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo)
   }
 derive instance newtypeDeleteRealtimeEndpointOutput :: Newtype DeleteRealtimeEndpointOutput _
 derive instance repGenericDeleteRealtimeEndpointOutput :: Generic DeleteRealtimeEndpointOutput _
@@ -741,12 +740,12 @@ instance encodeDeleteRealtimeEndpointOutput :: Encode DeleteRealtimeEndpointOutp
 
 -- | Constructs DeleteRealtimeEndpointOutput from required parameters
 newDeleteRealtimeEndpointOutput :: DeleteRealtimeEndpointOutput
-newDeleteRealtimeEndpointOutput  = DeleteRealtimeEndpointOutput { "MLModelId": (NullOrUndefined Nothing), "RealtimeEndpointInfo": (NullOrUndefined Nothing) }
+newDeleteRealtimeEndpointOutput  = DeleteRealtimeEndpointOutput { "MLModelId": Nothing, "RealtimeEndpointInfo": Nothing }
 
 -- | Constructs DeleteRealtimeEndpointOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteRealtimeEndpointOutput' :: ( { "MLModelId" :: NullOrUndefined (EntityId) , "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) } -> {"MLModelId" :: NullOrUndefined (EntityId) , "RealtimeEndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) } ) -> DeleteRealtimeEndpointOutput
-newDeleteRealtimeEndpointOutput'  customize = (DeleteRealtimeEndpointOutput <<< customize) { "MLModelId": (NullOrUndefined Nothing), "RealtimeEndpointInfo": (NullOrUndefined Nothing) }
+newDeleteRealtimeEndpointOutput' :: ( { "MLModelId" :: Maybe (EntityId) , "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) } -> {"MLModelId" :: Maybe (EntityId) , "RealtimeEndpointInfo" :: Maybe (RealtimeEndpointInfo) } ) -> DeleteRealtimeEndpointOutput
+newDeleteRealtimeEndpointOutput'  customize = (DeleteRealtimeEndpointOutput <<< customize) { "MLModelId": Nothing, "RealtimeEndpointInfo": Nothing }
 
 
 
@@ -774,8 +773,8 @@ newDeleteTagsInput' _ResourceId _ResourceType _TagKeys customize = (DeleteTagsIn
 
 -- | <p>Amazon ML returns the following elements. </p>
 newtype DeleteTagsOutput = DeleteTagsOutput 
-  { "ResourceId" :: NullOrUndefined (EntityId)
-  , "ResourceType" :: NullOrUndefined (TaggableResourceType)
+  { "ResourceId" :: Maybe (EntityId)
+  , "ResourceType" :: Maybe (TaggableResourceType)
   }
 derive instance newtypeDeleteTagsOutput :: Newtype DeleteTagsOutput _
 derive instance repGenericDeleteTagsOutput :: Generic DeleteTagsOutput _
@@ -785,27 +784,27 @@ instance encodeDeleteTagsOutput :: Encode DeleteTagsOutput where encode = generi
 
 -- | Constructs DeleteTagsOutput from required parameters
 newDeleteTagsOutput :: DeleteTagsOutput
-newDeleteTagsOutput  = DeleteTagsOutput { "ResourceId": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing) }
+newDeleteTagsOutput  = DeleteTagsOutput { "ResourceId": Nothing, "ResourceType": Nothing }
 
 -- | Constructs DeleteTagsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteTagsOutput' :: ( { "ResourceId" :: NullOrUndefined (EntityId) , "ResourceType" :: NullOrUndefined (TaggableResourceType) } -> {"ResourceId" :: NullOrUndefined (EntityId) , "ResourceType" :: NullOrUndefined (TaggableResourceType) } ) -> DeleteTagsOutput
-newDeleteTagsOutput'  customize = (DeleteTagsOutput <<< customize) { "ResourceId": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing) }
+newDeleteTagsOutput' :: ( { "ResourceId" :: Maybe (EntityId) , "ResourceType" :: Maybe (TaggableResourceType) } -> {"ResourceId" :: Maybe (EntityId) , "ResourceType" :: Maybe (TaggableResourceType) } ) -> DeleteTagsOutput
+newDeleteTagsOutput'  customize = (DeleteTagsOutput <<< customize) { "ResourceId": Nothing, "ResourceType": Nothing }
 
 
 
 newtype DescribeBatchPredictionsInput = DescribeBatchPredictionsInput 
-  { "FilterVariable" :: NullOrUndefined (BatchPredictionFilterVariable)
-  , "EQ" :: NullOrUndefined (ComparatorValue)
-  , "GT" :: NullOrUndefined (ComparatorValue)
-  , "LT" :: NullOrUndefined (ComparatorValue)
-  , "GE" :: NullOrUndefined (ComparatorValue)
-  , "LE" :: NullOrUndefined (ComparatorValue)
-  , "NE" :: NullOrUndefined (ComparatorValue)
-  , "Prefix" :: NullOrUndefined (ComparatorValue)
-  , "SortOrder" :: NullOrUndefined (SortOrder)
-  , "NextToken" :: NullOrUndefined (StringType)
-  , "Limit" :: NullOrUndefined (PageLimit)
+  { "FilterVariable" :: Maybe (BatchPredictionFilterVariable)
+  , "EQ" :: Maybe (ComparatorValue)
+  , "GT" :: Maybe (ComparatorValue)
+  , "LT" :: Maybe (ComparatorValue)
+  , "GE" :: Maybe (ComparatorValue)
+  , "LE" :: Maybe (ComparatorValue)
+  , "NE" :: Maybe (ComparatorValue)
+  , "Prefix" :: Maybe (ComparatorValue)
+  , "SortOrder" :: Maybe (SortOrder)
+  , "NextToken" :: Maybe (StringType)
+  , "Limit" :: Maybe (PageLimit)
   }
 derive instance newtypeDescribeBatchPredictionsInput :: Newtype DescribeBatchPredictionsInput _
 derive instance repGenericDescribeBatchPredictionsInput :: Generic DescribeBatchPredictionsInput _
@@ -815,19 +814,19 @@ instance encodeDescribeBatchPredictionsInput :: Encode DescribeBatchPredictionsI
 
 -- | Constructs DescribeBatchPredictionsInput from required parameters
 newDescribeBatchPredictionsInput :: DescribeBatchPredictionsInput
-newDescribeBatchPredictionsInput  = DescribeBatchPredictionsInput { "EQ": (NullOrUndefined Nothing), "FilterVariable": (NullOrUndefined Nothing), "GE": (NullOrUndefined Nothing), "GT": (NullOrUndefined Nothing), "LE": (NullOrUndefined Nothing), "LT": (NullOrUndefined Nothing), "Limit": (NullOrUndefined Nothing), "NE": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "Prefix": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newDescribeBatchPredictionsInput  = DescribeBatchPredictionsInput { "EQ": Nothing, "FilterVariable": Nothing, "GE": Nothing, "GT": Nothing, "LE": Nothing, "LT": Nothing, "Limit": Nothing, "NE": Nothing, "NextToken": Nothing, "Prefix": Nothing, "SortOrder": Nothing }
 
 -- | Constructs DescribeBatchPredictionsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeBatchPredictionsInput' :: ( { "FilterVariable" :: NullOrUndefined (BatchPredictionFilterVariable) , "EQ" :: NullOrUndefined (ComparatorValue) , "GT" :: NullOrUndefined (ComparatorValue) , "LT" :: NullOrUndefined (ComparatorValue) , "GE" :: NullOrUndefined (ComparatorValue) , "LE" :: NullOrUndefined (ComparatorValue) , "NE" :: NullOrUndefined (ComparatorValue) , "Prefix" :: NullOrUndefined (ComparatorValue) , "SortOrder" :: NullOrUndefined (SortOrder) , "NextToken" :: NullOrUndefined (StringType) , "Limit" :: NullOrUndefined (PageLimit) } -> {"FilterVariable" :: NullOrUndefined (BatchPredictionFilterVariable) , "EQ" :: NullOrUndefined (ComparatorValue) , "GT" :: NullOrUndefined (ComparatorValue) , "LT" :: NullOrUndefined (ComparatorValue) , "GE" :: NullOrUndefined (ComparatorValue) , "LE" :: NullOrUndefined (ComparatorValue) , "NE" :: NullOrUndefined (ComparatorValue) , "Prefix" :: NullOrUndefined (ComparatorValue) , "SortOrder" :: NullOrUndefined (SortOrder) , "NextToken" :: NullOrUndefined (StringType) , "Limit" :: NullOrUndefined (PageLimit) } ) -> DescribeBatchPredictionsInput
-newDescribeBatchPredictionsInput'  customize = (DescribeBatchPredictionsInput <<< customize) { "EQ": (NullOrUndefined Nothing), "FilterVariable": (NullOrUndefined Nothing), "GE": (NullOrUndefined Nothing), "GT": (NullOrUndefined Nothing), "LE": (NullOrUndefined Nothing), "LT": (NullOrUndefined Nothing), "Limit": (NullOrUndefined Nothing), "NE": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "Prefix": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newDescribeBatchPredictionsInput' :: ( { "FilterVariable" :: Maybe (BatchPredictionFilterVariable) , "EQ" :: Maybe (ComparatorValue) , "GT" :: Maybe (ComparatorValue) , "LT" :: Maybe (ComparatorValue) , "GE" :: Maybe (ComparatorValue) , "LE" :: Maybe (ComparatorValue) , "NE" :: Maybe (ComparatorValue) , "Prefix" :: Maybe (ComparatorValue) , "SortOrder" :: Maybe (SortOrder) , "NextToken" :: Maybe (StringType) , "Limit" :: Maybe (PageLimit) } -> {"FilterVariable" :: Maybe (BatchPredictionFilterVariable) , "EQ" :: Maybe (ComparatorValue) , "GT" :: Maybe (ComparatorValue) , "LT" :: Maybe (ComparatorValue) , "GE" :: Maybe (ComparatorValue) , "LE" :: Maybe (ComparatorValue) , "NE" :: Maybe (ComparatorValue) , "Prefix" :: Maybe (ComparatorValue) , "SortOrder" :: Maybe (SortOrder) , "NextToken" :: Maybe (StringType) , "Limit" :: Maybe (PageLimit) } ) -> DescribeBatchPredictionsInput
+newDescribeBatchPredictionsInput'  customize = (DescribeBatchPredictionsInput <<< customize) { "EQ": Nothing, "FilterVariable": Nothing, "GE": Nothing, "GT": Nothing, "LE": Nothing, "LT": Nothing, "Limit": Nothing, "NE": Nothing, "NextToken": Nothing, "Prefix": Nothing, "SortOrder": Nothing }
 
 
 
 -- | <p>Represents the output of a <code>DescribeBatchPredictions</code> operation. The content is essentially a list of <code>BatchPrediction</code>s.</p>
 newtype DescribeBatchPredictionsOutput = DescribeBatchPredictionsOutput 
-  { "Results" :: NullOrUndefined (BatchPredictions)
-  , "NextToken" :: NullOrUndefined (StringType)
+  { "Results" :: Maybe (BatchPredictions)
+  , "NextToken" :: Maybe (StringType)
   }
 derive instance newtypeDescribeBatchPredictionsOutput :: Newtype DescribeBatchPredictionsOutput _
 derive instance repGenericDescribeBatchPredictionsOutput :: Generic DescribeBatchPredictionsOutput _
@@ -837,27 +836,27 @@ instance encodeDescribeBatchPredictionsOutput :: Encode DescribeBatchPredictions
 
 -- | Constructs DescribeBatchPredictionsOutput from required parameters
 newDescribeBatchPredictionsOutput :: DescribeBatchPredictionsOutput
-newDescribeBatchPredictionsOutput  = DescribeBatchPredictionsOutput { "NextToken": (NullOrUndefined Nothing), "Results": (NullOrUndefined Nothing) }
+newDescribeBatchPredictionsOutput  = DescribeBatchPredictionsOutput { "NextToken": Nothing, "Results": Nothing }
 
 -- | Constructs DescribeBatchPredictionsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeBatchPredictionsOutput' :: ( { "Results" :: NullOrUndefined (BatchPredictions) , "NextToken" :: NullOrUndefined (StringType) } -> {"Results" :: NullOrUndefined (BatchPredictions) , "NextToken" :: NullOrUndefined (StringType) } ) -> DescribeBatchPredictionsOutput
-newDescribeBatchPredictionsOutput'  customize = (DescribeBatchPredictionsOutput <<< customize) { "NextToken": (NullOrUndefined Nothing), "Results": (NullOrUndefined Nothing) }
+newDescribeBatchPredictionsOutput' :: ( { "Results" :: Maybe (BatchPredictions) , "NextToken" :: Maybe (StringType) } -> {"Results" :: Maybe (BatchPredictions) , "NextToken" :: Maybe (StringType) } ) -> DescribeBatchPredictionsOutput
+newDescribeBatchPredictionsOutput'  customize = (DescribeBatchPredictionsOutput <<< customize) { "NextToken": Nothing, "Results": Nothing }
 
 
 
 newtype DescribeDataSourcesInput = DescribeDataSourcesInput 
-  { "FilterVariable" :: NullOrUndefined (DataSourceFilterVariable)
-  , "EQ" :: NullOrUndefined (ComparatorValue)
-  , "GT" :: NullOrUndefined (ComparatorValue)
-  , "LT" :: NullOrUndefined (ComparatorValue)
-  , "GE" :: NullOrUndefined (ComparatorValue)
-  , "LE" :: NullOrUndefined (ComparatorValue)
-  , "NE" :: NullOrUndefined (ComparatorValue)
-  , "Prefix" :: NullOrUndefined (ComparatorValue)
-  , "SortOrder" :: NullOrUndefined (SortOrder)
-  , "NextToken" :: NullOrUndefined (StringType)
-  , "Limit" :: NullOrUndefined (PageLimit)
+  { "FilterVariable" :: Maybe (DataSourceFilterVariable)
+  , "EQ" :: Maybe (ComparatorValue)
+  , "GT" :: Maybe (ComparatorValue)
+  , "LT" :: Maybe (ComparatorValue)
+  , "GE" :: Maybe (ComparatorValue)
+  , "LE" :: Maybe (ComparatorValue)
+  , "NE" :: Maybe (ComparatorValue)
+  , "Prefix" :: Maybe (ComparatorValue)
+  , "SortOrder" :: Maybe (SortOrder)
+  , "NextToken" :: Maybe (StringType)
+  , "Limit" :: Maybe (PageLimit)
   }
 derive instance newtypeDescribeDataSourcesInput :: Newtype DescribeDataSourcesInput _
 derive instance repGenericDescribeDataSourcesInput :: Generic DescribeDataSourcesInput _
@@ -867,19 +866,19 @@ instance encodeDescribeDataSourcesInput :: Encode DescribeDataSourcesInput where
 
 -- | Constructs DescribeDataSourcesInput from required parameters
 newDescribeDataSourcesInput :: DescribeDataSourcesInput
-newDescribeDataSourcesInput  = DescribeDataSourcesInput { "EQ": (NullOrUndefined Nothing), "FilterVariable": (NullOrUndefined Nothing), "GE": (NullOrUndefined Nothing), "GT": (NullOrUndefined Nothing), "LE": (NullOrUndefined Nothing), "LT": (NullOrUndefined Nothing), "Limit": (NullOrUndefined Nothing), "NE": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "Prefix": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newDescribeDataSourcesInput  = DescribeDataSourcesInput { "EQ": Nothing, "FilterVariable": Nothing, "GE": Nothing, "GT": Nothing, "LE": Nothing, "LT": Nothing, "Limit": Nothing, "NE": Nothing, "NextToken": Nothing, "Prefix": Nothing, "SortOrder": Nothing }
 
 -- | Constructs DescribeDataSourcesInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeDataSourcesInput' :: ( { "FilterVariable" :: NullOrUndefined (DataSourceFilterVariable) , "EQ" :: NullOrUndefined (ComparatorValue) , "GT" :: NullOrUndefined (ComparatorValue) , "LT" :: NullOrUndefined (ComparatorValue) , "GE" :: NullOrUndefined (ComparatorValue) , "LE" :: NullOrUndefined (ComparatorValue) , "NE" :: NullOrUndefined (ComparatorValue) , "Prefix" :: NullOrUndefined (ComparatorValue) , "SortOrder" :: NullOrUndefined (SortOrder) , "NextToken" :: NullOrUndefined (StringType) , "Limit" :: NullOrUndefined (PageLimit) } -> {"FilterVariable" :: NullOrUndefined (DataSourceFilterVariable) , "EQ" :: NullOrUndefined (ComparatorValue) , "GT" :: NullOrUndefined (ComparatorValue) , "LT" :: NullOrUndefined (ComparatorValue) , "GE" :: NullOrUndefined (ComparatorValue) , "LE" :: NullOrUndefined (ComparatorValue) , "NE" :: NullOrUndefined (ComparatorValue) , "Prefix" :: NullOrUndefined (ComparatorValue) , "SortOrder" :: NullOrUndefined (SortOrder) , "NextToken" :: NullOrUndefined (StringType) , "Limit" :: NullOrUndefined (PageLimit) } ) -> DescribeDataSourcesInput
-newDescribeDataSourcesInput'  customize = (DescribeDataSourcesInput <<< customize) { "EQ": (NullOrUndefined Nothing), "FilterVariable": (NullOrUndefined Nothing), "GE": (NullOrUndefined Nothing), "GT": (NullOrUndefined Nothing), "LE": (NullOrUndefined Nothing), "LT": (NullOrUndefined Nothing), "Limit": (NullOrUndefined Nothing), "NE": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "Prefix": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newDescribeDataSourcesInput' :: ( { "FilterVariable" :: Maybe (DataSourceFilterVariable) , "EQ" :: Maybe (ComparatorValue) , "GT" :: Maybe (ComparatorValue) , "LT" :: Maybe (ComparatorValue) , "GE" :: Maybe (ComparatorValue) , "LE" :: Maybe (ComparatorValue) , "NE" :: Maybe (ComparatorValue) , "Prefix" :: Maybe (ComparatorValue) , "SortOrder" :: Maybe (SortOrder) , "NextToken" :: Maybe (StringType) , "Limit" :: Maybe (PageLimit) } -> {"FilterVariable" :: Maybe (DataSourceFilterVariable) , "EQ" :: Maybe (ComparatorValue) , "GT" :: Maybe (ComparatorValue) , "LT" :: Maybe (ComparatorValue) , "GE" :: Maybe (ComparatorValue) , "LE" :: Maybe (ComparatorValue) , "NE" :: Maybe (ComparatorValue) , "Prefix" :: Maybe (ComparatorValue) , "SortOrder" :: Maybe (SortOrder) , "NextToken" :: Maybe (StringType) , "Limit" :: Maybe (PageLimit) } ) -> DescribeDataSourcesInput
+newDescribeDataSourcesInput'  customize = (DescribeDataSourcesInput <<< customize) { "EQ": Nothing, "FilterVariable": Nothing, "GE": Nothing, "GT": Nothing, "LE": Nothing, "LT": Nothing, "Limit": Nothing, "NE": Nothing, "NextToken": Nothing, "Prefix": Nothing, "SortOrder": Nothing }
 
 
 
 -- | <p>Represents the query results from a <a>DescribeDataSources</a> operation. The content is essentially a list of <code>DataSource</code>.</p>
 newtype DescribeDataSourcesOutput = DescribeDataSourcesOutput 
-  { "Results" :: NullOrUndefined (DataSources)
-  , "NextToken" :: NullOrUndefined (StringType)
+  { "Results" :: Maybe (DataSources)
+  , "NextToken" :: Maybe (StringType)
   }
 derive instance newtypeDescribeDataSourcesOutput :: Newtype DescribeDataSourcesOutput _
 derive instance repGenericDescribeDataSourcesOutput :: Generic DescribeDataSourcesOutput _
@@ -889,27 +888,27 @@ instance encodeDescribeDataSourcesOutput :: Encode DescribeDataSourcesOutput whe
 
 -- | Constructs DescribeDataSourcesOutput from required parameters
 newDescribeDataSourcesOutput :: DescribeDataSourcesOutput
-newDescribeDataSourcesOutput  = DescribeDataSourcesOutput { "NextToken": (NullOrUndefined Nothing), "Results": (NullOrUndefined Nothing) }
+newDescribeDataSourcesOutput  = DescribeDataSourcesOutput { "NextToken": Nothing, "Results": Nothing }
 
 -- | Constructs DescribeDataSourcesOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeDataSourcesOutput' :: ( { "Results" :: NullOrUndefined (DataSources) , "NextToken" :: NullOrUndefined (StringType) } -> {"Results" :: NullOrUndefined (DataSources) , "NextToken" :: NullOrUndefined (StringType) } ) -> DescribeDataSourcesOutput
-newDescribeDataSourcesOutput'  customize = (DescribeDataSourcesOutput <<< customize) { "NextToken": (NullOrUndefined Nothing), "Results": (NullOrUndefined Nothing) }
+newDescribeDataSourcesOutput' :: ( { "Results" :: Maybe (DataSources) , "NextToken" :: Maybe (StringType) } -> {"Results" :: Maybe (DataSources) , "NextToken" :: Maybe (StringType) } ) -> DescribeDataSourcesOutput
+newDescribeDataSourcesOutput'  customize = (DescribeDataSourcesOutput <<< customize) { "NextToken": Nothing, "Results": Nothing }
 
 
 
 newtype DescribeEvaluationsInput = DescribeEvaluationsInput 
-  { "FilterVariable" :: NullOrUndefined (EvaluationFilterVariable)
-  , "EQ" :: NullOrUndefined (ComparatorValue)
-  , "GT" :: NullOrUndefined (ComparatorValue)
-  , "LT" :: NullOrUndefined (ComparatorValue)
-  , "GE" :: NullOrUndefined (ComparatorValue)
-  , "LE" :: NullOrUndefined (ComparatorValue)
-  , "NE" :: NullOrUndefined (ComparatorValue)
-  , "Prefix" :: NullOrUndefined (ComparatorValue)
-  , "SortOrder" :: NullOrUndefined (SortOrder)
-  , "NextToken" :: NullOrUndefined (StringType)
-  , "Limit" :: NullOrUndefined (PageLimit)
+  { "FilterVariable" :: Maybe (EvaluationFilterVariable)
+  , "EQ" :: Maybe (ComparatorValue)
+  , "GT" :: Maybe (ComparatorValue)
+  , "LT" :: Maybe (ComparatorValue)
+  , "GE" :: Maybe (ComparatorValue)
+  , "LE" :: Maybe (ComparatorValue)
+  , "NE" :: Maybe (ComparatorValue)
+  , "Prefix" :: Maybe (ComparatorValue)
+  , "SortOrder" :: Maybe (SortOrder)
+  , "NextToken" :: Maybe (StringType)
+  , "Limit" :: Maybe (PageLimit)
   }
 derive instance newtypeDescribeEvaluationsInput :: Newtype DescribeEvaluationsInput _
 derive instance repGenericDescribeEvaluationsInput :: Generic DescribeEvaluationsInput _
@@ -919,19 +918,19 @@ instance encodeDescribeEvaluationsInput :: Encode DescribeEvaluationsInput where
 
 -- | Constructs DescribeEvaluationsInput from required parameters
 newDescribeEvaluationsInput :: DescribeEvaluationsInput
-newDescribeEvaluationsInput  = DescribeEvaluationsInput { "EQ": (NullOrUndefined Nothing), "FilterVariable": (NullOrUndefined Nothing), "GE": (NullOrUndefined Nothing), "GT": (NullOrUndefined Nothing), "LE": (NullOrUndefined Nothing), "LT": (NullOrUndefined Nothing), "Limit": (NullOrUndefined Nothing), "NE": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "Prefix": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newDescribeEvaluationsInput  = DescribeEvaluationsInput { "EQ": Nothing, "FilterVariable": Nothing, "GE": Nothing, "GT": Nothing, "LE": Nothing, "LT": Nothing, "Limit": Nothing, "NE": Nothing, "NextToken": Nothing, "Prefix": Nothing, "SortOrder": Nothing }
 
 -- | Constructs DescribeEvaluationsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEvaluationsInput' :: ( { "FilterVariable" :: NullOrUndefined (EvaluationFilterVariable) , "EQ" :: NullOrUndefined (ComparatorValue) , "GT" :: NullOrUndefined (ComparatorValue) , "LT" :: NullOrUndefined (ComparatorValue) , "GE" :: NullOrUndefined (ComparatorValue) , "LE" :: NullOrUndefined (ComparatorValue) , "NE" :: NullOrUndefined (ComparatorValue) , "Prefix" :: NullOrUndefined (ComparatorValue) , "SortOrder" :: NullOrUndefined (SortOrder) , "NextToken" :: NullOrUndefined (StringType) , "Limit" :: NullOrUndefined (PageLimit) } -> {"FilterVariable" :: NullOrUndefined (EvaluationFilterVariable) , "EQ" :: NullOrUndefined (ComparatorValue) , "GT" :: NullOrUndefined (ComparatorValue) , "LT" :: NullOrUndefined (ComparatorValue) , "GE" :: NullOrUndefined (ComparatorValue) , "LE" :: NullOrUndefined (ComparatorValue) , "NE" :: NullOrUndefined (ComparatorValue) , "Prefix" :: NullOrUndefined (ComparatorValue) , "SortOrder" :: NullOrUndefined (SortOrder) , "NextToken" :: NullOrUndefined (StringType) , "Limit" :: NullOrUndefined (PageLimit) } ) -> DescribeEvaluationsInput
-newDescribeEvaluationsInput'  customize = (DescribeEvaluationsInput <<< customize) { "EQ": (NullOrUndefined Nothing), "FilterVariable": (NullOrUndefined Nothing), "GE": (NullOrUndefined Nothing), "GT": (NullOrUndefined Nothing), "LE": (NullOrUndefined Nothing), "LT": (NullOrUndefined Nothing), "Limit": (NullOrUndefined Nothing), "NE": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "Prefix": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newDescribeEvaluationsInput' :: ( { "FilterVariable" :: Maybe (EvaluationFilterVariable) , "EQ" :: Maybe (ComparatorValue) , "GT" :: Maybe (ComparatorValue) , "LT" :: Maybe (ComparatorValue) , "GE" :: Maybe (ComparatorValue) , "LE" :: Maybe (ComparatorValue) , "NE" :: Maybe (ComparatorValue) , "Prefix" :: Maybe (ComparatorValue) , "SortOrder" :: Maybe (SortOrder) , "NextToken" :: Maybe (StringType) , "Limit" :: Maybe (PageLimit) } -> {"FilterVariable" :: Maybe (EvaluationFilterVariable) , "EQ" :: Maybe (ComparatorValue) , "GT" :: Maybe (ComparatorValue) , "LT" :: Maybe (ComparatorValue) , "GE" :: Maybe (ComparatorValue) , "LE" :: Maybe (ComparatorValue) , "NE" :: Maybe (ComparatorValue) , "Prefix" :: Maybe (ComparatorValue) , "SortOrder" :: Maybe (SortOrder) , "NextToken" :: Maybe (StringType) , "Limit" :: Maybe (PageLimit) } ) -> DescribeEvaluationsInput
+newDescribeEvaluationsInput'  customize = (DescribeEvaluationsInput <<< customize) { "EQ": Nothing, "FilterVariable": Nothing, "GE": Nothing, "GT": Nothing, "LE": Nothing, "LT": Nothing, "Limit": Nothing, "NE": Nothing, "NextToken": Nothing, "Prefix": Nothing, "SortOrder": Nothing }
 
 
 
 -- | <p>Represents the query results from a <code>DescribeEvaluations</code> operation. The content is essentially a list of <code>Evaluation</code>.</p>
 newtype DescribeEvaluationsOutput = DescribeEvaluationsOutput 
-  { "Results" :: NullOrUndefined (Evaluations)
-  , "NextToken" :: NullOrUndefined (StringType)
+  { "Results" :: Maybe (Evaluations)
+  , "NextToken" :: Maybe (StringType)
   }
 derive instance newtypeDescribeEvaluationsOutput :: Newtype DescribeEvaluationsOutput _
 derive instance repGenericDescribeEvaluationsOutput :: Generic DescribeEvaluationsOutput _
@@ -941,27 +940,27 @@ instance encodeDescribeEvaluationsOutput :: Encode DescribeEvaluationsOutput whe
 
 -- | Constructs DescribeEvaluationsOutput from required parameters
 newDescribeEvaluationsOutput :: DescribeEvaluationsOutput
-newDescribeEvaluationsOutput  = DescribeEvaluationsOutput { "NextToken": (NullOrUndefined Nothing), "Results": (NullOrUndefined Nothing) }
+newDescribeEvaluationsOutput  = DescribeEvaluationsOutput { "NextToken": Nothing, "Results": Nothing }
 
 -- | Constructs DescribeEvaluationsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEvaluationsOutput' :: ( { "Results" :: NullOrUndefined (Evaluations) , "NextToken" :: NullOrUndefined (StringType) } -> {"Results" :: NullOrUndefined (Evaluations) , "NextToken" :: NullOrUndefined (StringType) } ) -> DescribeEvaluationsOutput
-newDescribeEvaluationsOutput'  customize = (DescribeEvaluationsOutput <<< customize) { "NextToken": (NullOrUndefined Nothing), "Results": (NullOrUndefined Nothing) }
+newDescribeEvaluationsOutput' :: ( { "Results" :: Maybe (Evaluations) , "NextToken" :: Maybe (StringType) } -> {"Results" :: Maybe (Evaluations) , "NextToken" :: Maybe (StringType) } ) -> DescribeEvaluationsOutput
+newDescribeEvaluationsOutput'  customize = (DescribeEvaluationsOutput <<< customize) { "NextToken": Nothing, "Results": Nothing }
 
 
 
 newtype DescribeMLModelsInput = DescribeMLModelsInput 
-  { "FilterVariable" :: NullOrUndefined (MLModelFilterVariable)
-  , "EQ" :: NullOrUndefined (ComparatorValue)
-  , "GT" :: NullOrUndefined (ComparatorValue)
-  , "LT" :: NullOrUndefined (ComparatorValue)
-  , "GE" :: NullOrUndefined (ComparatorValue)
-  , "LE" :: NullOrUndefined (ComparatorValue)
-  , "NE" :: NullOrUndefined (ComparatorValue)
-  , "Prefix" :: NullOrUndefined (ComparatorValue)
-  , "SortOrder" :: NullOrUndefined (SortOrder)
-  , "NextToken" :: NullOrUndefined (StringType)
-  , "Limit" :: NullOrUndefined (PageLimit)
+  { "FilterVariable" :: Maybe (MLModelFilterVariable)
+  , "EQ" :: Maybe (ComparatorValue)
+  , "GT" :: Maybe (ComparatorValue)
+  , "LT" :: Maybe (ComparatorValue)
+  , "GE" :: Maybe (ComparatorValue)
+  , "LE" :: Maybe (ComparatorValue)
+  , "NE" :: Maybe (ComparatorValue)
+  , "Prefix" :: Maybe (ComparatorValue)
+  , "SortOrder" :: Maybe (SortOrder)
+  , "NextToken" :: Maybe (StringType)
+  , "Limit" :: Maybe (PageLimit)
   }
 derive instance newtypeDescribeMLModelsInput :: Newtype DescribeMLModelsInput _
 derive instance repGenericDescribeMLModelsInput :: Generic DescribeMLModelsInput _
@@ -971,19 +970,19 @@ instance encodeDescribeMLModelsInput :: Encode DescribeMLModelsInput where encod
 
 -- | Constructs DescribeMLModelsInput from required parameters
 newDescribeMLModelsInput :: DescribeMLModelsInput
-newDescribeMLModelsInput  = DescribeMLModelsInput { "EQ": (NullOrUndefined Nothing), "FilterVariable": (NullOrUndefined Nothing), "GE": (NullOrUndefined Nothing), "GT": (NullOrUndefined Nothing), "LE": (NullOrUndefined Nothing), "LT": (NullOrUndefined Nothing), "Limit": (NullOrUndefined Nothing), "NE": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "Prefix": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newDescribeMLModelsInput  = DescribeMLModelsInput { "EQ": Nothing, "FilterVariable": Nothing, "GE": Nothing, "GT": Nothing, "LE": Nothing, "LT": Nothing, "Limit": Nothing, "NE": Nothing, "NextToken": Nothing, "Prefix": Nothing, "SortOrder": Nothing }
 
 -- | Constructs DescribeMLModelsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeMLModelsInput' :: ( { "FilterVariable" :: NullOrUndefined (MLModelFilterVariable) , "EQ" :: NullOrUndefined (ComparatorValue) , "GT" :: NullOrUndefined (ComparatorValue) , "LT" :: NullOrUndefined (ComparatorValue) , "GE" :: NullOrUndefined (ComparatorValue) , "LE" :: NullOrUndefined (ComparatorValue) , "NE" :: NullOrUndefined (ComparatorValue) , "Prefix" :: NullOrUndefined (ComparatorValue) , "SortOrder" :: NullOrUndefined (SortOrder) , "NextToken" :: NullOrUndefined (StringType) , "Limit" :: NullOrUndefined (PageLimit) } -> {"FilterVariable" :: NullOrUndefined (MLModelFilterVariable) , "EQ" :: NullOrUndefined (ComparatorValue) , "GT" :: NullOrUndefined (ComparatorValue) , "LT" :: NullOrUndefined (ComparatorValue) , "GE" :: NullOrUndefined (ComparatorValue) , "LE" :: NullOrUndefined (ComparatorValue) , "NE" :: NullOrUndefined (ComparatorValue) , "Prefix" :: NullOrUndefined (ComparatorValue) , "SortOrder" :: NullOrUndefined (SortOrder) , "NextToken" :: NullOrUndefined (StringType) , "Limit" :: NullOrUndefined (PageLimit) } ) -> DescribeMLModelsInput
-newDescribeMLModelsInput'  customize = (DescribeMLModelsInput <<< customize) { "EQ": (NullOrUndefined Nothing), "FilterVariable": (NullOrUndefined Nothing), "GE": (NullOrUndefined Nothing), "GT": (NullOrUndefined Nothing), "LE": (NullOrUndefined Nothing), "LT": (NullOrUndefined Nothing), "Limit": (NullOrUndefined Nothing), "NE": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "Prefix": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newDescribeMLModelsInput' :: ( { "FilterVariable" :: Maybe (MLModelFilterVariable) , "EQ" :: Maybe (ComparatorValue) , "GT" :: Maybe (ComparatorValue) , "LT" :: Maybe (ComparatorValue) , "GE" :: Maybe (ComparatorValue) , "LE" :: Maybe (ComparatorValue) , "NE" :: Maybe (ComparatorValue) , "Prefix" :: Maybe (ComparatorValue) , "SortOrder" :: Maybe (SortOrder) , "NextToken" :: Maybe (StringType) , "Limit" :: Maybe (PageLimit) } -> {"FilterVariable" :: Maybe (MLModelFilterVariable) , "EQ" :: Maybe (ComparatorValue) , "GT" :: Maybe (ComparatorValue) , "LT" :: Maybe (ComparatorValue) , "GE" :: Maybe (ComparatorValue) , "LE" :: Maybe (ComparatorValue) , "NE" :: Maybe (ComparatorValue) , "Prefix" :: Maybe (ComparatorValue) , "SortOrder" :: Maybe (SortOrder) , "NextToken" :: Maybe (StringType) , "Limit" :: Maybe (PageLimit) } ) -> DescribeMLModelsInput
+newDescribeMLModelsInput'  customize = (DescribeMLModelsInput <<< customize) { "EQ": Nothing, "FilterVariable": Nothing, "GE": Nothing, "GT": Nothing, "LE": Nothing, "LT": Nothing, "Limit": Nothing, "NE": Nothing, "NextToken": Nothing, "Prefix": Nothing, "SortOrder": Nothing }
 
 
 
 -- | <p>Represents the output of a <code>DescribeMLModels</code> operation. The content is essentially a list of <code>MLModel</code>.</p>
 newtype DescribeMLModelsOutput = DescribeMLModelsOutput 
-  { "Results" :: NullOrUndefined (MLModels)
-  , "NextToken" :: NullOrUndefined (StringType)
+  { "Results" :: Maybe (MLModels)
+  , "NextToken" :: Maybe (StringType)
   }
 derive instance newtypeDescribeMLModelsOutput :: Newtype DescribeMLModelsOutput _
 derive instance repGenericDescribeMLModelsOutput :: Generic DescribeMLModelsOutput _
@@ -993,12 +992,12 @@ instance encodeDescribeMLModelsOutput :: Encode DescribeMLModelsOutput where enc
 
 -- | Constructs DescribeMLModelsOutput from required parameters
 newDescribeMLModelsOutput :: DescribeMLModelsOutput
-newDescribeMLModelsOutput  = DescribeMLModelsOutput { "NextToken": (NullOrUndefined Nothing), "Results": (NullOrUndefined Nothing) }
+newDescribeMLModelsOutput  = DescribeMLModelsOutput { "NextToken": Nothing, "Results": Nothing }
 
 -- | Constructs DescribeMLModelsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeMLModelsOutput' :: ( { "Results" :: NullOrUndefined (MLModels) , "NextToken" :: NullOrUndefined (StringType) } -> {"Results" :: NullOrUndefined (MLModels) , "NextToken" :: NullOrUndefined (StringType) } ) -> DescribeMLModelsOutput
-newDescribeMLModelsOutput'  customize = (DescribeMLModelsOutput <<< customize) { "NextToken": (NullOrUndefined Nothing), "Results": (NullOrUndefined Nothing) }
+newDescribeMLModelsOutput' :: ( { "Results" :: Maybe (MLModels) , "NextToken" :: Maybe (StringType) } -> {"Results" :: Maybe (MLModels) , "NextToken" :: Maybe (StringType) } ) -> DescribeMLModelsOutput
+newDescribeMLModelsOutput'  customize = (DescribeMLModelsOutput <<< customize) { "NextToken": Nothing, "Results": Nothing }
 
 
 
@@ -1025,9 +1024,9 @@ newDescribeTagsInput' _ResourceId _ResourceType customize = (DescribeTagsInput <
 
 -- | <p>Amazon ML returns the following elements. </p>
 newtype DescribeTagsOutput = DescribeTagsOutput 
-  { "ResourceId" :: NullOrUndefined (EntityId)
-  , "ResourceType" :: NullOrUndefined (TaggableResourceType)
-  , "Tags" :: NullOrUndefined (TagList)
+  { "ResourceId" :: Maybe (EntityId)
+  , "ResourceType" :: Maybe (TaggableResourceType)
+  , "Tags" :: Maybe (TagList)
   }
 derive instance newtypeDescribeTagsOutput :: Newtype DescribeTagsOutput _
 derive instance repGenericDescribeTagsOutput :: Generic DescribeTagsOutput _
@@ -1037,12 +1036,12 @@ instance encodeDescribeTagsOutput :: Encode DescribeTagsOutput where encode = ge
 
 -- | Constructs DescribeTagsOutput from required parameters
 newDescribeTagsOutput :: DescribeTagsOutput
-newDescribeTagsOutput  = DescribeTagsOutput { "ResourceId": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newDescribeTagsOutput  = DescribeTagsOutput { "ResourceId": Nothing, "ResourceType": Nothing, "Tags": Nothing }
 
 -- | Constructs DescribeTagsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeTagsOutput' :: ( { "ResourceId" :: NullOrUndefined (EntityId) , "ResourceType" :: NullOrUndefined (TaggableResourceType) , "Tags" :: NullOrUndefined (TagList) } -> {"ResourceId" :: NullOrUndefined (EntityId) , "ResourceType" :: NullOrUndefined (TaggableResourceType) , "Tags" :: NullOrUndefined (TagList) } ) -> DescribeTagsOutput
-newDescribeTagsOutput'  customize = (DescribeTagsOutput <<< customize) { "ResourceId": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newDescribeTagsOutput' :: ( { "ResourceId" :: Maybe (EntityId) , "ResourceType" :: Maybe (TaggableResourceType) , "Tags" :: Maybe (TagList) } -> {"ResourceId" :: Maybe (EntityId) , "ResourceType" :: Maybe (TaggableResourceType) , "Tags" :: Maybe (TagList) } ) -> DescribeTagsOutput
+newDescribeTagsOutput'  customize = (DescribeTagsOutput <<< customize) { "ResourceId": Nothing, "ResourceType": Nothing, "Tags": Nothing }
 
 
 
@@ -1188,20 +1187,20 @@ instance encodeErrorMessage :: Encode ErrorMessage where encode = genericEncode 
 
 -- | <p> Represents the output of <code>GetEvaluation</code> operation. </p> <p>The content consists of the detailed metadata and data file information and the current status of the <code>Evaluation</code>.</p>
 newtype Evaluation = Evaluation 
-  { "EvaluationId" :: NullOrUndefined (EntityId)
-  , "MLModelId" :: NullOrUndefined (EntityId)
-  , "EvaluationDataSourceId" :: NullOrUndefined (EntityId)
-  , "InputDataLocationS3" :: NullOrUndefined (S3Url)
-  , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn)
-  , "CreatedAt" :: NullOrUndefined (EpochTime)
-  , "LastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "Name" :: NullOrUndefined (EntityName)
-  , "Status" :: NullOrUndefined (EntityStatus)
-  , "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics)
-  , "Message" :: NullOrUndefined (Message)
-  , "ComputeTime" :: NullOrUndefined (LongType)
-  , "FinishedAt" :: NullOrUndefined (EpochTime)
-  , "StartedAt" :: NullOrUndefined (EpochTime)
+  { "EvaluationId" :: Maybe (EntityId)
+  , "MLModelId" :: Maybe (EntityId)
+  , "EvaluationDataSourceId" :: Maybe (EntityId)
+  , "InputDataLocationS3" :: Maybe (S3Url)
+  , "CreatedByIamUser" :: Maybe (AwsUserArn)
+  , "CreatedAt" :: Maybe (EpochTime)
+  , "LastUpdatedAt" :: Maybe (EpochTime)
+  , "Name" :: Maybe (EntityName)
+  , "Status" :: Maybe (EntityStatus)
+  , "PerformanceMetrics" :: Maybe (PerformanceMetrics)
+  , "Message" :: Maybe (Message)
+  , "ComputeTime" :: Maybe (LongType)
+  , "FinishedAt" :: Maybe (EpochTime)
+  , "StartedAt" :: Maybe (EpochTime)
   }
 derive instance newtypeEvaluation :: Newtype Evaluation _
 derive instance repGenericEvaluation :: Generic Evaluation _
@@ -1211,12 +1210,12 @@ instance encodeEvaluation :: Encode Evaluation where encode = genericEncode opti
 
 -- | Constructs Evaluation from required parameters
 newEvaluation :: Evaluation
-newEvaluation  = Evaluation { "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "EvaluationDataSourceId": (NullOrUndefined Nothing), "EvaluationId": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "PerformanceMetrics": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newEvaluation  = Evaluation { "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "EvaluationDataSourceId": Nothing, "EvaluationId": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "LastUpdatedAt": Nothing, "MLModelId": Nothing, "Message": Nothing, "Name": Nothing, "PerformanceMetrics": Nothing, "StartedAt": Nothing, "Status": Nothing }
 
 -- | Constructs Evaluation's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEvaluation' :: ( { "EvaluationId" :: NullOrUndefined (EntityId) , "MLModelId" :: NullOrUndefined (EntityId) , "EvaluationDataSourceId" :: NullOrUndefined (EntityId) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) } -> {"EvaluationId" :: NullOrUndefined (EntityId) , "MLModelId" :: NullOrUndefined (EntityId) , "EvaluationDataSourceId" :: NullOrUndefined (EntityId) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) } ) -> Evaluation
-newEvaluation'  customize = (Evaluation <<< customize) { "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "EvaluationDataSourceId": (NullOrUndefined Nothing), "EvaluationId": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "PerformanceMetrics": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newEvaluation' :: ( { "EvaluationId" :: Maybe (EntityId) , "MLModelId" :: Maybe (EntityId) , "EvaluationDataSourceId" :: Maybe (EntityId) , "InputDataLocationS3" :: Maybe (S3Url) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "PerformanceMetrics" :: Maybe (PerformanceMetrics) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) } -> {"EvaluationId" :: Maybe (EntityId) , "MLModelId" :: Maybe (EntityId) , "EvaluationDataSourceId" :: Maybe (EntityId) , "InputDataLocationS3" :: Maybe (S3Url) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "PerformanceMetrics" :: Maybe (PerformanceMetrics) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) } ) -> Evaluation
+newEvaluation'  customize = (Evaluation <<< customize) { "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "EvaluationDataSourceId": Nothing, "EvaluationId": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "LastUpdatedAt": Nothing, "MLModelId": Nothing, "Message": Nothing, "Name": Nothing, "PerformanceMetrics": Nothing, "StartedAt": Nothing, "Status": Nothing }
 
 
 
@@ -1261,23 +1260,23 @@ newGetBatchPredictionInput' _BatchPredictionId customize = (GetBatchPredictionIn
 
 -- | <p>Represents the output of a <code>GetBatchPrediction</code> operation and describes a <code>BatchPrediction</code>.</p>
 newtype GetBatchPredictionOutput = GetBatchPredictionOutput 
-  { "BatchPredictionId" :: NullOrUndefined (EntityId)
-  , "MLModelId" :: NullOrUndefined (EntityId)
-  , "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId)
-  , "InputDataLocationS3" :: NullOrUndefined (S3Url)
-  , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn)
-  , "CreatedAt" :: NullOrUndefined (EpochTime)
-  , "LastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "Name" :: NullOrUndefined (EntityName)
-  , "Status" :: NullOrUndefined (EntityStatus)
-  , "OutputUri" :: NullOrUndefined (S3Url)
-  , "LogUri" :: NullOrUndefined (PresignedS3Url)
-  , "Message" :: NullOrUndefined (Message)
-  , "ComputeTime" :: NullOrUndefined (LongType)
-  , "FinishedAt" :: NullOrUndefined (EpochTime)
-  , "StartedAt" :: NullOrUndefined (EpochTime)
-  , "TotalRecordCount" :: NullOrUndefined (LongType)
-  , "InvalidRecordCount" :: NullOrUndefined (LongType)
+  { "BatchPredictionId" :: Maybe (EntityId)
+  , "MLModelId" :: Maybe (EntityId)
+  , "BatchPredictionDataSourceId" :: Maybe (EntityId)
+  , "InputDataLocationS3" :: Maybe (S3Url)
+  , "CreatedByIamUser" :: Maybe (AwsUserArn)
+  , "CreatedAt" :: Maybe (EpochTime)
+  , "LastUpdatedAt" :: Maybe (EpochTime)
+  , "Name" :: Maybe (EntityName)
+  , "Status" :: Maybe (EntityStatus)
+  , "OutputUri" :: Maybe (S3Url)
+  , "LogUri" :: Maybe (PresignedS3Url)
+  , "Message" :: Maybe (Message)
+  , "ComputeTime" :: Maybe (LongType)
+  , "FinishedAt" :: Maybe (EpochTime)
+  , "StartedAt" :: Maybe (EpochTime)
+  , "TotalRecordCount" :: Maybe (LongType)
+  , "InvalidRecordCount" :: Maybe (LongType)
   }
 derive instance newtypeGetBatchPredictionOutput :: Newtype GetBatchPredictionOutput _
 derive instance repGenericGetBatchPredictionOutput :: Generic GetBatchPredictionOutput _
@@ -1287,18 +1286,18 @@ instance encodeGetBatchPredictionOutput :: Encode GetBatchPredictionOutput where
 
 -- | Constructs GetBatchPredictionOutput from required parameters
 newGetBatchPredictionOutput :: GetBatchPredictionOutput
-newGetBatchPredictionOutput  = GetBatchPredictionOutput { "BatchPredictionDataSourceId": (NullOrUndefined Nothing), "BatchPredictionId": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "InvalidRecordCount": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "LogUri": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "OutputUri": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TotalRecordCount": (NullOrUndefined Nothing) }
+newGetBatchPredictionOutput  = GetBatchPredictionOutput { "BatchPredictionDataSourceId": Nothing, "BatchPredictionId": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "InvalidRecordCount": Nothing, "LastUpdatedAt": Nothing, "LogUri": Nothing, "MLModelId": Nothing, "Message": Nothing, "Name": Nothing, "OutputUri": Nothing, "StartedAt": Nothing, "Status": Nothing, "TotalRecordCount": Nothing }
 
 -- | Constructs GetBatchPredictionOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetBatchPredictionOutput' :: ( { "BatchPredictionId" :: NullOrUndefined (EntityId) , "MLModelId" :: NullOrUndefined (EntityId) , "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "OutputUri" :: NullOrUndefined (S3Url) , "LogUri" :: NullOrUndefined (PresignedS3Url) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) , "TotalRecordCount" :: NullOrUndefined (LongType) , "InvalidRecordCount" :: NullOrUndefined (LongType) } -> {"BatchPredictionId" :: NullOrUndefined (EntityId) , "MLModelId" :: NullOrUndefined (EntityId) , "BatchPredictionDataSourceId" :: NullOrUndefined (EntityId) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "OutputUri" :: NullOrUndefined (S3Url) , "LogUri" :: NullOrUndefined (PresignedS3Url) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) , "TotalRecordCount" :: NullOrUndefined (LongType) , "InvalidRecordCount" :: NullOrUndefined (LongType) } ) -> GetBatchPredictionOutput
-newGetBatchPredictionOutput'  customize = (GetBatchPredictionOutput <<< customize) { "BatchPredictionDataSourceId": (NullOrUndefined Nothing), "BatchPredictionId": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "InvalidRecordCount": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "LogUri": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "OutputUri": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TotalRecordCount": (NullOrUndefined Nothing) }
+newGetBatchPredictionOutput' :: ( { "BatchPredictionId" :: Maybe (EntityId) , "MLModelId" :: Maybe (EntityId) , "BatchPredictionDataSourceId" :: Maybe (EntityId) , "InputDataLocationS3" :: Maybe (S3Url) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "OutputUri" :: Maybe (S3Url) , "LogUri" :: Maybe (PresignedS3Url) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) , "TotalRecordCount" :: Maybe (LongType) , "InvalidRecordCount" :: Maybe (LongType) } -> {"BatchPredictionId" :: Maybe (EntityId) , "MLModelId" :: Maybe (EntityId) , "BatchPredictionDataSourceId" :: Maybe (EntityId) , "InputDataLocationS3" :: Maybe (S3Url) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "OutputUri" :: Maybe (S3Url) , "LogUri" :: Maybe (PresignedS3Url) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) , "TotalRecordCount" :: Maybe (LongType) , "InvalidRecordCount" :: Maybe (LongType) } ) -> GetBatchPredictionOutput
+newGetBatchPredictionOutput'  customize = (GetBatchPredictionOutput <<< customize) { "BatchPredictionDataSourceId": Nothing, "BatchPredictionId": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "InvalidRecordCount": Nothing, "LastUpdatedAt": Nothing, "LogUri": Nothing, "MLModelId": Nothing, "Message": Nothing, "Name": Nothing, "OutputUri": Nothing, "StartedAt": Nothing, "Status": Nothing, "TotalRecordCount": Nothing }
 
 
 
 newtype GetDataSourceInput = GetDataSourceInput 
   { "DataSourceId" :: (EntityId)
-  , "Verbose" :: NullOrUndefined (Verbose)
+  , "Verbose" :: Maybe (Verbose)
   }
 derive instance newtypeGetDataSourceInput :: Newtype GetDataSourceInput _
 derive instance repGenericGetDataSourceInput :: Generic GetDataSourceInput _
@@ -1308,37 +1307,37 @@ instance encodeGetDataSourceInput :: Encode GetDataSourceInput where encode = ge
 
 -- | Constructs GetDataSourceInput from required parameters
 newGetDataSourceInput :: EntityId -> GetDataSourceInput
-newGetDataSourceInput _DataSourceId = GetDataSourceInput { "DataSourceId": _DataSourceId, "Verbose": (NullOrUndefined Nothing) }
+newGetDataSourceInput _DataSourceId = GetDataSourceInput { "DataSourceId": _DataSourceId, "Verbose": Nothing }
 
 -- | Constructs GetDataSourceInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDataSourceInput' :: EntityId -> ( { "DataSourceId" :: (EntityId) , "Verbose" :: NullOrUndefined (Verbose) } -> {"DataSourceId" :: (EntityId) , "Verbose" :: NullOrUndefined (Verbose) } ) -> GetDataSourceInput
-newGetDataSourceInput' _DataSourceId customize = (GetDataSourceInput <<< customize) { "DataSourceId": _DataSourceId, "Verbose": (NullOrUndefined Nothing) }
+newGetDataSourceInput' :: EntityId -> ( { "DataSourceId" :: (EntityId) , "Verbose" :: Maybe (Verbose) } -> {"DataSourceId" :: (EntityId) , "Verbose" :: Maybe (Verbose) } ) -> GetDataSourceInput
+newGetDataSourceInput' _DataSourceId customize = (GetDataSourceInput <<< customize) { "DataSourceId": _DataSourceId, "Verbose": Nothing }
 
 
 
 -- | <p>Represents the output of a <code>GetDataSource</code> operation and describes a <code>DataSource</code>.</p>
 newtype GetDataSourceOutput = GetDataSourceOutput 
-  { "DataSourceId" :: NullOrUndefined (EntityId)
-  , "DataLocationS3" :: NullOrUndefined (S3Url)
-  , "DataRearrangement" :: NullOrUndefined (DataRearrangement)
-  , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn)
-  , "CreatedAt" :: NullOrUndefined (EpochTime)
-  , "LastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "DataSizeInBytes" :: NullOrUndefined (LongType)
-  , "NumberOfFiles" :: NullOrUndefined (LongType)
-  , "Name" :: NullOrUndefined (EntityName)
-  , "Status" :: NullOrUndefined (EntityStatus)
-  , "LogUri" :: NullOrUndefined (PresignedS3Url)
-  , "Message" :: NullOrUndefined (Message)
-  , "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata)
-  , "RDSMetadata" :: NullOrUndefined (RDSMetadata)
-  , "RoleARN" :: NullOrUndefined (RoleARN)
-  , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics)
-  , "ComputeTime" :: NullOrUndefined (LongType)
-  , "FinishedAt" :: NullOrUndefined (EpochTime)
-  , "StartedAt" :: NullOrUndefined (EpochTime)
-  , "DataSourceSchema" :: NullOrUndefined (DataSchema)
+  { "DataSourceId" :: Maybe (EntityId)
+  , "DataLocationS3" :: Maybe (S3Url)
+  , "DataRearrangement" :: Maybe (DataRearrangement)
+  , "CreatedByIamUser" :: Maybe (AwsUserArn)
+  , "CreatedAt" :: Maybe (EpochTime)
+  , "LastUpdatedAt" :: Maybe (EpochTime)
+  , "DataSizeInBytes" :: Maybe (LongType)
+  , "NumberOfFiles" :: Maybe (LongType)
+  , "Name" :: Maybe (EntityName)
+  , "Status" :: Maybe (EntityStatus)
+  , "LogUri" :: Maybe (PresignedS3Url)
+  , "Message" :: Maybe (Message)
+  , "RedshiftMetadata" :: Maybe (RedshiftMetadata)
+  , "RDSMetadata" :: Maybe (RDSMetadata)
+  , "RoleARN" :: Maybe (RoleARN)
+  , "ComputeStatistics" :: Maybe (ComputeStatistics)
+  , "ComputeTime" :: Maybe (LongType)
+  , "FinishedAt" :: Maybe (EpochTime)
+  , "StartedAt" :: Maybe (EpochTime)
+  , "DataSourceSchema" :: Maybe (DataSchema)
   }
 derive instance newtypeGetDataSourceOutput :: Newtype GetDataSourceOutput _
 derive instance repGenericGetDataSourceOutput :: Generic GetDataSourceOutput _
@@ -1348,12 +1347,12 @@ instance encodeGetDataSourceOutput :: Encode GetDataSourceOutput where encode = 
 
 -- | Constructs GetDataSourceOutput from required parameters
 newGetDataSourceOutput :: GetDataSourceOutput
-newGetDataSourceOutput  = GetDataSourceOutput { "ComputeStatistics": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "DataLocationS3": (NullOrUndefined Nothing), "DataRearrangement": (NullOrUndefined Nothing), "DataSizeInBytes": (NullOrUndefined Nothing), "DataSourceId": (NullOrUndefined Nothing), "DataSourceSchema": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "LogUri": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "NumberOfFiles": (NullOrUndefined Nothing), "RDSMetadata": (NullOrUndefined Nothing), "RedshiftMetadata": (NullOrUndefined Nothing), "RoleARN": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newGetDataSourceOutput  = GetDataSourceOutput { "ComputeStatistics": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "DataLocationS3": Nothing, "DataRearrangement": Nothing, "DataSizeInBytes": Nothing, "DataSourceId": Nothing, "DataSourceSchema": Nothing, "FinishedAt": Nothing, "LastUpdatedAt": Nothing, "LogUri": Nothing, "Message": Nothing, "Name": Nothing, "NumberOfFiles": Nothing, "RDSMetadata": Nothing, "RedshiftMetadata": Nothing, "RoleARN": Nothing, "StartedAt": Nothing, "Status": Nothing }
 
 -- | Constructs GetDataSourceOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDataSourceOutput' :: ( { "DataSourceId" :: NullOrUndefined (EntityId) , "DataLocationS3" :: NullOrUndefined (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "DataSizeInBytes" :: NullOrUndefined (LongType) , "NumberOfFiles" :: NullOrUndefined (LongType) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "LogUri" :: NullOrUndefined (PresignedS3Url) , "Message" :: NullOrUndefined (Message) , "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata) , "RDSMetadata" :: NullOrUndefined (RDSMetadata) , "RoleARN" :: NullOrUndefined (RoleARN) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) , "DataSourceSchema" :: NullOrUndefined (DataSchema) } -> {"DataSourceId" :: NullOrUndefined (EntityId) , "DataLocationS3" :: NullOrUndefined (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "DataSizeInBytes" :: NullOrUndefined (LongType) , "NumberOfFiles" :: NullOrUndefined (LongType) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "LogUri" :: NullOrUndefined (PresignedS3Url) , "Message" :: NullOrUndefined (Message) , "RedshiftMetadata" :: NullOrUndefined (RedshiftMetadata) , "RDSMetadata" :: NullOrUndefined (RDSMetadata) , "RoleARN" :: NullOrUndefined (RoleARN) , "ComputeStatistics" :: NullOrUndefined (ComputeStatistics) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) , "DataSourceSchema" :: NullOrUndefined (DataSchema) } ) -> GetDataSourceOutput
-newGetDataSourceOutput'  customize = (GetDataSourceOutput <<< customize) { "ComputeStatistics": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "DataLocationS3": (NullOrUndefined Nothing), "DataRearrangement": (NullOrUndefined Nothing), "DataSizeInBytes": (NullOrUndefined Nothing), "DataSourceId": (NullOrUndefined Nothing), "DataSourceSchema": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "LogUri": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "NumberOfFiles": (NullOrUndefined Nothing), "RDSMetadata": (NullOrUndefined Nothing), "RedshiftMetadata": (NullOrUndefined Nothing), "RoleARN": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newGetDataSourceOutput' :: ( { "DataSourceId" :: Maybe (EntityId) , "DataLocationS3" :: Maybe (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "DataSizeInBytes" :: Maybe (LongType) , "NumberOfFiles" :: Maybe (LongType) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "LogUri" :: Maybe (PresignedS3Url) , "Message" :: Maybe (Message) , "RedshiftMetadata" :: Maybe (RedshiftMetadata) , "RDSMetadata" :: Maybe (RDSMetadata) , "RoleARN" :: Maybe (RoleARN) , "ComputeStatistics" :: Maybe (ComputeStatistics) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) , "DataSourceSchema" :: Maybe (DataSchema) } -> {"DataSourceId" :: Maybe (EntityId) , "DataLocationS3" :: Maybe (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "DataSizeInBytes" :: Maybe (LongType) , "NumberOfFiles" :: Maybe (LongType) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "LogUri" :: Maybe (PresignedS3Url) , "Message" :: Maybe (Message) , "RedshiftMetadata" :: Maybe (RedshiftMetadata) , "RDSMetadata" :: Maybe (RDSMetadata) , "RoleARN" :: Maybe (RoleARN) , "ComputeStatistics" :: Maybe (ComputeStatistics) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) , "DataSourceSchema" :: Maybe (DataSchema) } ) -> GetDataSourceOutput
+newGetDataSourceOutput'  customize = (GetDataSourceOutput <<< customize) { "ComputeStatistics": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "DataLocationS3": Nothing, "DataRearrangement": Nothing, "DataSizeInBytes": Nothing, "DataSourceId": Nothing, "DataSourceSchema": Nothing, "FinishedAt": Nothing, "LastUpdatedAt": Nothing, "LogUri": Nothing, "Message": Nothing, "Name": Nothing, "NumberOfFiles": Nothing, "RDSMetadata": Nothing, "RedshiftMetadata": Nothing, "RoleARN": Nothing, "StartedAt": Nothing, "Status": Nothing }
 
 
 
@@ -1379,21 +1378,21 @@ newGetEvaluationInput' _EvaluationId customize = (GetEvaluationInput <<< customi
 
 -- | <p>Represents the output of a <code>GetEvaluation</code> operation and describes an <code>Evaluation</code>.</p>
 newtype GetEvaluationOutput = GetEvaluationOutput 
-  { "EvaluationId" :: NullOrUndefined (EntityId)
-  , "MLModelId" :: NullOrUndefined (EntityId)
-  , "EvaluationDataSourceId" :: NullOrUndefined (EntityId)
-  , "InputDataLocationS3" :: NullOrUndefined (S3Url)
-  , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn)
-  , "CreatedAt" :: NullOrUndefined (EpochTime)
-  , "LastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "Name" :: NullOrUndefined (EntityName)
-  , "Status" :: NullOrUndefined (EntityStatus)
-  , "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics)
-  , "LogUri" :: NullOrUndefined (PresignedS3Url)
-  , "Message" :: NullOrUndefined (Message)
-  , "ComputeTime" :: NullOrUndefined (LongType)
-  , "FinishedAt" :: NullOrUndefined (EpochTime)
-  , "StartedAt" :: NullOrUndefined (EpochTime)
+  { "EvaluationId" :: Maybe (EntityId)
+  , "MLModelId" :: Maybe (EntityId)
+  , "EvaluationDataSourceId" :: Maybe (EntityId)
+  , "InputDataLocationS3" :: Maybe (S3Url)
+  , "CreatedByIamUser" :: Maybe (AwsUserArn)
+  , "CreatedAt" :: Maybe (EpochTime)
+  , "LastUpdatedAt" :: Maybe (EpochTime)
+  , "Name" :: Maybe (EntityName)
+  , "Status" :: Maybe (EntityStatus)
+  , "PerformanceMetrics" :: Maybe (PerformanceMetrics)
+  , "LogUri" :: Maybe (PresignedS3Url)
+  , "Message" :: Maybe (Message)
+  , "ComputeTime" :: Maybe (LongType)
+  , "FinishedAt" :: Maybe (EpochTime)
+  , "StartedAt" :: Maybe (EpochTime)
   }
 derive instance newtypeGetEvaluationOutput :: Newtype GetEvaluationOutput _
 derive instance repGenericGetEvaluationOutput :: Generic GetEvaluationOutput _
@@ -1403,18 +1402,18 @@ instance encodeGetEvaluationOutput :: Encode GetEvaluationOutput where encode = 
 
 -- | Constructs GetEvaluationOutput from required parameters
 newGetEvaluationOutput :: GetEvaluationOutput
-newGetEvaluationOutput  = GetEvaluationOutput { "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "EvaluationDataSourceId": (NullOrUndefined Nothing), "EvaluationId": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "LogUri": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "PerformanceMetrics": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newGetEvaluationOutput  = GetEvaluationOutput { "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "EvaluationDataSourceId": Nothing, "EvaluationId": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "LastUpdatedAt": Nothing, "LogUri": Nothing, "MLModelId": Nothing, "Message": Nothing, "Name": Nothing, "PerformanceMetrics": Nothing, "StartedAt": Nothing, "Status": Nothing }
 
 -- | Constructs GetEvaluationOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetEvaluationOutput' :: ( { "EvaluationId" :: NullOrUndefined (EntityId) , "MLModelId" :: NullOrUndefined (EntityId) , "EvaluationDataSourceId" :: NullOrUndefined (EntityId) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics) , "LogUri" :: NullOrUndefined (PresignedS3Url) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) } -> {"EvaluationId" :: NullOrUndefined (EntityId) , "MLModelId" :: NullOrUndefined (EntityId) , "EvaluationDataSourceId" :: NullOrUndefined (EntityId) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (EntityName) , "Status" :: NullOrUndefined (EntityStatus) , "PerformanceMetrics" :: NullOrUndefined (PerformanceMetrics) , "LogUri" :: NullOrUndefined (PresignedS3Url) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) } ) -> GetEvaluationOutput
-newGetEvaluationOutput'  customize = (GetEvaluationOutput <<< customize) { "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "EvaluationDataSourceId": (NullOrUndefined Nothing), "EvaluationId": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "LogUri": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "PerformanceMetrics": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newGetEvaluationOutput' :: ( { "EvaluationId" :: Maybe (EntityId) , "MLModelId" :: Maybe (EntityId) , "EvaluationDataSourceId" :: Maybe (EntityId) , "InputDataLocationS3" :: Maybe (S3Url) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "PerformanceMetrics" :: Maybe (PerformanceMetrics) , "LogUri" :: Maybe (PresignedS3Url) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) } -> {"EvaluationId" :: Maybe (EntityId) , "MLModelId" :: Maybe (EntityId) , "EvaluationDataSourceId" :: Maybe (EntityId) , "InputDataLocationS3" :: Maybe (S3Url) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (EntityName) , "Status" :: Maybe (EntityStatus) , "PerformanceMetrics" :: Maybe (PerformanceMetrics) , "LogUri" :: Maybe (PresignedS3Url) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) } ) -> GetEvaluationOutput
+newGetEvaluationOutput'  customize = (GetEvaluationOutput <<< customize) { "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "EvaluationDataSourceId": Nothing, "EvaluationId": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "LastUpdatedAt": Nothing, "LogUri": Nothing, "MLModelId": Nothing, "Message": Nothing, "Name": Nothing, "PerformanceMetrics": Nothing, "StartedAt": Nothing, "Status": Nothing }
 
 
 
 newtype GetMLModelInput = GetMLModelInput 
   { "MLModelId" :: (EntityId)
-  , "Verbose" :: NullOrUndefined (Verbose)
+  , "Verbose" :: Maybe (Verbose)
   }
 derive instance newtypeGetMLModelInput :: Newtype GetMLModelInput _
 derive instance repGenericGetMLModelInput :: Generic GetMLModelInput _
@@ -1424,38 +1423,38 @@ instance encodeGetMLModelInput :: Encode GetMLModelInput where encode = genericE
 
 -- | Constructs GetMLModelInput from required parameters
 newGetMLModelInput :: EntityId -> GetMLModelInput
-newGetMLModelInput _MLModelId = GetMLModelInput { "MLModelId": _MLModelId, "Verbose": (NullOrUndefined Nothing) }
+newGetMLModelInput _MLModelId = GetMLModelInput { "MLModelId": _MLModelId, "Verbose": Nothing }
 
 -- | Constructs GetMLModelInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetMLModelInput' :: EntityId -> ( { "MLModelId" :: (EntityId) , "Verbose" :: NullOrUndefined (Verbose) } -> {"MLModelId" :: (EntityId) , "Verbose" :: NullOrUndefined (Verbose) } ) -> GetMLModelInput
-newGetMLModelInput' _MLModelId customize = (GetMLModelInput <<< customize) { "MLModelId": _MLModelId, "Verbose": (NullOrUndefined Nothing) }
+newGetMLModelInput' :: EntityId -> ( { "MLModelId" :: (EntityId) , "Verbose" :: Maybe (Verbose) } -> {"MLModelId" :: (EntityId) , "Verbose" :: Maybe (Verbose) } ) -> GetMLModelInput
+newGetMLModelInput' _MLModelId customize = (GetMLModelInput <<< customize) { "MLModelId": _MLModelId, "Verbose": Nothing }
 
 
 
 -- | <p>Represents the output of a <code>GetMLModel</code> operation, and provides detailed information about a <code>MLModel</code>.</p>
 newtype GetMLModelOutput = GetMLModelOutput 
-  { "MLModelId" :: NullOrUndefined (EntityId)
-  , "TrainingDataSourceId" :: NullOrUndefined (EntityId)
-  , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn)
-  , "CreatedAt" :: NullOrUndefined (EpochTime)
-  , "LastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "Name" :: NullOrUndefined (MLModelName)
-  , "Status" :: NullOrUndefined (EntityStatus)
-  , "SizeInBytes" :: NullOrUndefined (LongType)
-  , "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo)
-  , "TrainingParameters" :: NullOrUndefined (TrainingParameters)
-  , "InputDataLocationS3" :: NullOrUndefined (S3Url)
-  , "MLModelType" :: NullOrUndefined (MLModelType)
-  , "ScoreThreshold" :: NullOrUndefined (ScoreThreshold)
-  , "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "LogUri" :: NullOrUndefined (PresignedS3Url)
-  , "Message" :: NullOrUndefined (Message)
-  , "ComputeTime" :: NullOrUndefined (LongType)
-  , "FinishedAt" :: NullOrUndefined (EpochTime)
-  , "StartedAt" :: NullOrUndefined (EpochTime)
-  , "Recipe" :: NullOrUndefined (Recipe)
-  , "Schema" :: NullOrUndefined (DataSchema)
+  { "MLModelId" :: Maybe (EntityId)
+  , "TrainingDataSourceId" :: Maybe (EntityId)
+  , "CreatedByIamUser" :: Maybe (AwsUserArn)
+  , "CreatedAt" :: Maybe (EpochTime)
+  , "LastUpdatedAt" :: Maybe (EpochTime)
+  , "Name" :: Maybe (MLModelName)
+  , "Status" :: Maybe (EntityStatus)
+  , "SizeInBytes" :: Maybe (LongType)
+  , "EndpointInfo" :: Maybe (RealtimeEndpointInfo)
+  , "TrainingParameters" :: Maybe (TrainingParameters)
+  , "InputDataLocationS3" :: Maybe (S3Url)
+  , "MLModelType" :: Maybe (MLModelType)
+  , "ScoreThreshold" :: Maybe (ScoreThreshold)
+  , "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime)
+  , "LogUri" :: Maybe (PresignedS3Url)
+  , "Message" :: Maybe (Message)
+  , "ComputeTime" :: Maybe (LongType)
+  , "FinishedAt" :: Maybe (EpochTime)
+  , "StartedAt" :: Maybe (EpochTime)
+  , "Recipe" :: Maybe (Recipe)
+  , "Schema" :: Maybe (DataSchema)
   }
 derive instance newtypeGetMLModelOutput :: Newtype GetMLModelOutput _
 derive instance repGenericGetMLModelOutput :: Generic GetMLModelOutput _
@@ -1465,19 +1464,19 @@ instance encodeGetMLModelOutput :: Encode GetMLModelOutput where encode = generi
 
 -- | Constructs GetMLModelOutput from required parameters
 newGetMLModelOutput :: GetMLModelOutput
-newGetMLModelOutput  = GetMLModelOutput { "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "EndpointInfo": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "LogUri": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "MLModelType": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Recipe": (NullOrUndefined Nothing), "Schema": (NullOrUndefined Nothing), "ScoreThreshold": (NullOrUndefined Nothing), "ScoreThresholdLastUpdatedAt": (NullOrUndefined Nothing), "SizeInBytes": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TrainingDataSourceId": (NullOrUndefined Nothing), "TrainingParameters": (NullOrUndefined Nothing) }
+newGetMLModelOutput  = GetMLModelOutput { "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "EndpointInfo": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "LastUpdatedAt": Nothing, "LogUri": Nothing, "MLModelId": Nothing, "MLModelType": Nothing, "Message": Nothing, "Name": Nothing, "Recipe": Nothing, "Schema": Nothing, "ScoreThreshold": Nothing, "ScoreThresholdLastUpdatedAt": Nothing, "SizeInBytes": Nothing, "StartedAt": Nothing, "Status": Nothing, "TrainingDataSourceId": Nothing, "TrainingParameters": Nothing }
 
 -- | Constructs GetMLModelOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetMLModelOutput' :: ( { "MLModelId" :: NullOrUndefined (EntityId) , "TrainingDataSourceId" :: NullOrUndefined (EntityId) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (MLModelName) , "Status" :: NullOrUndefined (EntityStatus) , "SizeInBytes" :: NullOrUndefined (LongType) , "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) , "TrainingParameters" :: NullOrUndefined (TrainingParameters) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "MLModelType" :: NullOrUndefined (MLModelType) , "ScoreThreshold" :: NullOrUndefined (ScoreThreshold) , "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime) , "LogUri" :: NullOrUndefined (PresignedS3Url) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) , "Recipe" :: NullOrUndefined (Recipe) , "Schema" :: NullOrUndefined (DataSchema) } -> {"MLModelId" :: NullOrUndefined (EntityId) , "TrainingDataSourceId" :: NullOrUndefined (EntityId) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (MLModelName) , "Status" :: NullOrUndefined (EntityStatus) , "SizeInBytes" :: NullOrUndefined (LongType) , "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) , "TrainingParameters" :: NullOrUndefined (TrainingParameters) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "MLModelType" :: NullOrUndefined (MLModelType) , "ScoreThreshold" :: NullOrUndefined (ScoreThreshold) , "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime) , "LogUri" :: NullOrUndefined (PresignedS3Url) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) , "Recipe" :: NullOrUndefined (Recipe) , "Schema" :: NullOrUndefined (DataSchema) } ) -> GetMLModelOutput
-newGetMLModelOutput'  customize = (GetMLModelOutput <<< customize) { "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "EndpointInfo": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "LogUri": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "MLModelType": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Recipe": (NullOrUndefined Nothing), "Schema": (NullOrUndefined Nothing), "ScoreThreshold": (NullOrUndefined Nothing), "ScoreThresholdLastUpdatedAt": (NullOrUndefined Nothing), "SizeInBytes": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TrainingDataSourceId": (NullOrUndefined Nothing), "TrainingParameters": (NullOrUndefined Nothing) }
+newGetMLModelOutput' :: ( { "MLModelId" :: Maybe (EntityId) , "TrainingDataSourceId" :: Maybe (EntityId) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (MLModelName) , "Status" :: Maybe (EntityStatus) , "SizeInBytes" :: Maybe (LongType) , "EndpointInfo" :: Maybe (RealtimeEndpointInfo) , "TrainingParameters" :: Maybe (TrainingParameters) , "InputDataLocationS3" :: Maybe (S3Url) , "MLModelType" :: Maybe (MLModelType) , "ScoreThreshold" :: Maybe (ScoreThreshold) , "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime) , "LogUri" :: Maybe (PresignedS3Url) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) , "Recipe" :: Maybe (Recipe) , "Schema" :: Maybe (DataSchema) } -> {"MLModelId" :: Maybe (EntityId) , "TrainingDataSourceId" :: Maybe (EntityId) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (MLModelName) , "Status" :: Maybe (EntityStatus) , "SizeInBytes" :: Maybe (LongType) , "EndpointInfo" :: Maybe (RealtimeEndpointInfo) , "TrainingParameters" :: Maybe (TrainingParameters) , "InputDataLocationS3" :: Maybe (S3Url) , "MLModelType" :: Maybe (MLModelType) , "ScoreThreshold" :: Maybe (ScoreThreshold) , "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime) , "LogUri" :: Maybe (PresignedS3Url) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) , "Recipe" :: Maybe (Recipe) , "Schema" :: Maybe (DataSchema) } ) -> GetMLModelOutput
+newGetMLModelOutput'  customize = (GetMLModelOutput <<< customize) { "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "EndpointInfo": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "LastUpdatedAt": Nothing, "LogUri": Nothing, "MLModelId": Nothing, "MLModelType": Nothing, "Message": Nothing, "Name": Nothing, "Recipe": Nothing, "Schema": Nothing, "ScoreThreshold": Nothing, "ScoreThresholdLastUpdatedAt": Nothing, "SizeInBytes": Nothing, "StartedAt": Nothing, "Status": Nothing, "TrainingDataSourceId": Nothing, "TrainingParameters": Nothing }
 
 
 
 -- | <p>A second request to use or change an object was not allowed. This can result from retrying a request using a parameter that was not present in the original request.</p>
 newtype IdempotentParameterMismatchException = IdempotentParameterMismatchException 
-  { "message" :: NullOrUndefined (ErrorMessage)
-  , "code" :: NullOrUndefined (ErrorCode)
+  { "message" :: Maybe (ErrorMessage)
+  , "code" :: Maybe (ErrorCode)
   }
 derive instance newtypeIdempotentParameterMismatchException :: Newtype IdempotentParameterMismatchException _
 derive instance repGenericIdempotentParameterMismatchException :: Generic IdempotentParameterMismatchException _
@@ -1487,12 +1486,12 @@ instance encodeIdempotentParameterMismatchException :: Encode IdempotentParamete
 
 -- | Constructs IdempotentParameterMismatchException from required parameters
 newIdempotentParameterMismatchException :: IdempotentParameterMismatchException
-newIdempotentParameterMismatchException  = IdempotentParameterMismatchException { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newIdempotentParameterMismatchException  = IdempotentParameterMismatchException { "code": Nothing, "message": Nothing }
 
 -- | Constructs IdempotentParameterMismatchException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newIdempotentParameterMismatchException' :: ( { "message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } -> {"message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } ) -> IdempotentParameterMismatchException
-newIdempotentParameterMismatchException'  customize = (IdempotentParameterMismatchException <<< customize) { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newIdempotentParameterMismatchException' :: ( { "message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } -> {"message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } ) -> IdempotentParameterMismatchException
+newIdempotentParameterMismatchException'  customize = (IdempotentParameterMismatchException <<< customize) { "code": Nothing, "message": Nothing }
 
 
 
@@ -1508,8 +1507,8 @@ instance encodeIntegerType :: Encode IntegerType where encode = genericEncode op
 
 -- | <p>An error on the server occurred when trying to process a request.</p>
 newtype InternalServerException = InternalServerException 
-  { "message" :: NullOrUndefined (ErrorMessage)
-  , "code" :: NullOrUndefined (ErrorCode)
+  { "message" :: Maybe (ErrorMessage)
+  , "code" :: Maybe (ErrorCode)
   }
 derive instance newtypeInternalServerException :: Newtype InternalServerException _
 derive instance repGenericInternalServerException :: Generic InternalServerException _
@@ -1519,19 +1518,19 @@ instance encodeInternalServerException :: Encode InternalServerException where e
 
 -- | Constructs InternalServerException from required parameters
 newInternalServerException :: InternalServerException
-newInternalServerException  = InternalServerException { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newInternalServerException  = InternalServerException { "code": Nothing, "message": Nothing }
 
 -- | Constructs InternalServerException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInternalServerException' :: ( { "message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } -> {"message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } ) -> InternalServerException
-newInternalServerException'  customize = (InternalServerException <<< customize) { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newInternalServerException' :: ( { "message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } -> {"message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } ) -> InternalServerException
+newInternalServerException'  customize = (InternalServerException <<< customize) { "code": Nothing, "message": Nothing }
 
 
 
 -- | <p>An error on the client occurred. Typically, the cause is an invalid input value.</p>
 newtype InvalidInputException = InvalidInputException 
-  { "message" :: NullOrUndefined (ErrorMessage)
-  , "code" :: NullOrUndefined (ErrorCode)
+  { "message" :: Maybe (ErrorMessage)
+  , "code" :: Maybe (ErrorCode)
   }
 derive instance newtypeInvalidInputException :: Newtype InvalidInputException _
 derive instance repGenericInvalidInputException :: Generic InvalidInputException _
@@ -1541,17 +1540,17 @@ instance encodeInvalidInputException :: Encode InvalidInputException where encod
 
 -- | Constructs InvalidInputException from required parameters
 newInvalidInputException :: InvalidInputException
-newInvalidInputException  = InvalidInputException { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newInvalidInputException  = InvalidInputException { "code": Nothing, "message": Nothing }
 
 -- | Constructs InvalidInputException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidInputException' :: ( { "message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } -> {"message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } ) -> InvalidInputException
-newInvalidInputException'  customize = (InvalidInputException <<< customize) { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newInvalidInputException' :: ( { "message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } -> {"message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } ) -> InvalidInputException
+newInvalidInputException'  customize = (InvalidInputException <<< customize) { "code": Nothing, "message": Nothing }
 
 
 
 newtype InvalidTagException = InvalidTagException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeInvalidTagException :: Newtype InvalidTagException _
 derive instance repGenericInvalidTagException :: Generic InvalidTagException _
@@ -1561,12 +1560,12 @@ instance encodeInvalidTagException :: Encode InvalidTagException where encode = 
 
 -- | Constructs InvalidTagException from required parameters
 newInvalidTagException :: InvalidTagException
-newInvalidTagException  = InvalidTagException { "message": (NullOrUndefined Nothing) }
+newInvalidTagException  = InvalidTagException { "message": Nothing }
 
 -- | Constructs InvalidTagException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidTagException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> InvalidTagException
-newInvalidTagException'  customize = (InvalidTagException <<< customize) { "message": (NullOrUndefined Nothing) }
+newInvalidTagException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> InvalidTagException
+newInvalidTagException'  customize = (InvalidTagException <<< customize) { "message": Nothing }
 
 
 
@@ -1581,8 +1580,8 @@ instance encodeLabel :: Encode Label where encode = genericEncode options
 
 -- | <p>The subscriber exceeded the maximum number of operations. This exception can occur when listing objects such as <code>DataSource</code>.</p>
 newtype LimitExceededException = LimitExceededException 
-  { "message" :: NullOrUndefined (ErrorMessage)
-  , "code" :: NullOrUndefined (ErrorCode)
+  { "message" :: Maybe (ErrorMessage)
+  , "code" :: Maybe (ErrorCode)
   }
 derive instance newtypeLimitExceededException :: Newtype LimitExceededException _
 derive instance repGenericLimitExceededException :: Generic LimitExceededException _
@@ -1592,12 +1591,12 @@ instance encodeLimitExceededException :: Encode LimitExceededException where enc
 
 -- | Constructs LimitExceededException from required parameters
 newLimitExceededException :: LimitExceededException
-newLimitExceededException  = LimitExceededException { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newLimitExceededException  = LimitExceededException { "code": Nothing, "message": Nothing }
 
 -- | Constructs LimitExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLimitExceededException' :: ( { "message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } -> {"message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } ) -> LimitExceededException
-newLimitExceededException'  customize = (LimitExceededException <<< customize) { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newLimitExceededException' :: ( { "message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } -> {"message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } ) -> LimitExceededException
+newLimitExceededException'  customize = (LimitExceededException <<< customize) { "code": Nothing, "message": Nothing }
 
 
 
@@ -1613,25 +1612,25 @@ instance encodeLongType :: Encode LongType where encode = genericEncode options
 
 -- | <p> Represents the output of a <code>GetMLModel</code> operation. </p> <p>The content consists of the detailed metadata and the current status of the <code>MLModel</code>.</p>
 newtype MLModel = MLModel 
-  { "MLModelId" :: NullOrUndefined (EntityId)
-  , "TrainingDataSourceId" :: NullOrUndefined (EntityId)
-  , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn)
-  , "CreatedAt" :: NullOrUndefined (EpochTime)
-  , "LastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "Name" :: NullOrUndefined (MLModelName)
-  , "Status" :: NullOrUndefined (EntityStatus)
-  , "SizeInBytes" :: NullOrUndefined (LongType)
-  , "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo)
-  , "TrainingParameters" :: NullOrUndefined (TrainingParameters)
-  , "InputDataLocationS3" :: NullOrUndefined (S3Url)
-  , "Algorithm" :: NullOrUndefined (Algorithm)
-  , "MLModelType" :: NullOrUndefined (MLModelType)
-  , "ScoreThreshold" :: NullOrUndefined (ScoreThreshold)
-  , "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime)
-  , "Message" :: NullOrUndefined (Message)
-  , "ComputeTime" :: NullOrUndefined (LongType)
-  , "FinishedAt" :: NullOrUndefined (EpochTime)
-  , "StartedAt" :: NullOrUndefined (EpochTime)
+  { "MLModelId" :: Maybe (EntityId)
+  , "TrainingDataSourceId" :: Maybe (EntityId)
+  , "CreatedByIamUser" :: Maybe (AwsUserArn)
+  , "CreatedAt" :: Maybe (EpochTime)
+  , "LastUpdatedAt" :: Maybe (EpochTime)
+  , "Name" :: Maybe (MLModelName)
+  , "Status" :: Maybe (EntityStatus)
+  , "SizeInBytes" :: Maybe (LongType)
+  , "EndpointInfo" :: Maybe (RealtimeEndpointInfo)
+  , "TrainingParameters" :: Maybe (TrainingParameters)
+  , "InputDataLocationS3" :: Maybe (S3Url)
+  , "Algorithm" :: Maybe (Algorithm)
+  , "MLModelType" :: Maybe (MLModelType)
+  , "ScoreThreshold" :: Maybe (ScoreThreshold)
+  , "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime)
+  , "Message" :: Maybe (Message)
+  , "ComputeTime" :: Maybe (LongType)
+  , "FinishedAt" :: Maybe (EpochTime)
+  , "StartedAt" :: Maybe (EpochTime)
   }
 derive instance newtypeMLModel :: Newtype MLModel _
 derive instance repGenericMLModel :: Generic MLModel _
@@ -1641,12 +1640,12 @@ instance encodeMLModel :: Encode MLModel where encode = genericEncode options
 
 -- | Constructs MLModel from required parameters
 newMLModel :: MLModel
-newMLModel  = MLModel { "Algorithm": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "EndpointInfo": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "MLModelType": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "ScoreThreshold": (NullOrUndefined Nothing), "ScoreThresholdLastUpdatedAt": (NullOrUndefined Nothing), "SizeInBytes": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TrainingDataSourceId": (NullOrUndefined Nothing), "TrainingParameters": (NullOrUndefined Nothing) }
+newMLModel  = MLModel { "Algorithm": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "EndpointInfo": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "LastUpdatedAt": Nothing, "MLModelId": Nothing, "MLModelType": Nothing, "Message": Nothing, "Name": Nothing, "ScoreThreshold": Nothing, "ScoreThresholdLastUpdatedAt": Nothing, "SizeInBytes": Nothing, "StartedAt": Nothing, "Status": Nothing, "TrainingDataSourceId": Nothing, "TrainingParameters": Nothing }
 
 -- | Constructs MLModel's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMLModel' :: ( { "MLModelId" :: NullOrUndefined (EntityId) , "TrainingDataSourceId" :: NullOrUndefined (EntityId) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (MLModelName) , "Status" :: NullOrUndefined (EntityStatus) , "SizeInBytes" :: NullOrUndefined (LongType) , "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) , "TrainingParameters" :: NullOrUndefined (TrainingParameters) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "Algorithm" :: NullOrUndefined (Algorithm) , "MLModelType" :: NullOrUndefined (MLModelType) , "ScoreThreshold" :: NullOrUndefined (ScoreThreshold) , "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) } -> {"MLModelId" :: NullOrUndefined (EntityId) , "TrainingDataSourceId" :: NullOrUndefined (EntityId) , "CreatedByIamUser" :: NullOrUndefined (AwsUserArn) , "CreatedAt" :: NullOrUndefined (EpochTime) , "LastUpdatedAt" :: NullOrUndefined (EpochTime) , "Name" :: NullOrUndefined (MLModelName) , "Status" :: NullOrUndefined (EntityStatus) , "SizeInBytes" :: NullOrUndefined (LongType) , "EndpointInfo" :: NullOrUndefined (RealtimeEndpointInfo) , "TrainingParameters" :: NullOrUndefined (TrainingParameters) , "InputDataLocationS3" :: NullOrUndefined (S3Url) , "Algorithm" :: NullOrUndefined (Algorithm) , "MLModelType" :: NullOrUndefined (MLModelType) , "ScoreThreshold" :: NullOrUndefined (ScoreThreshold) , "ScoreThresholdLastUpdatedAt" :: NullOrUndefined (EpochTime) , "Message" :: NullOrUndefined (Message) , "ComputeTime" :: NullOrUndefined (LongType) , "FinishedAt" :: NullOrUndefined (EpochTime) , "StartedAt" :: NullOrUndefined (EpochTime) } ) -> MLModel
-newMLModel'  customize = (MLModel <<< customize) { "Algorithm": (NullOrUndefined Nothing), "ComputeTime": (NullOrUndefined Nothing), "CreatedAt": (NullOrUndefined Nothing), "CreatedByIamUser": (NullOrUndefined Nothing), "EndpointInfo": (NullOrUndefined Nothing), "FinishedAt": (NullOrUndefined Nothing), "InputDataLocationS3": (NullOrUndefined Nothing), "LastUpdatedAt": (NullOrUndefined Nothing), "MLModelId": (NullOrUndefined Nothing), "MLModelType": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "ScoreThreshold": (NullOrUndefined Nothing), "ScoreThresholdLastUpdatedAt": (NullOrUndefined Nothing), "SizeInBytes": (NullOrUndefined Nothing), "StartedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TrainingDataSourceId": (NullOrUndefined Nothing), "TrainingParameters": (NullOrUndefined Nothing) }
+newMLModel' :: ( { "MLModelId" :: Maybe (EntityId) , "TrainingDataSourceId" :: Maybe (EntityId) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (MLModelName) , "Status" :: Maybe (EntityStatus) , "SizeInBytes" :: Maybe (LongType) , "EndpointInfo" :: Maybe (RealtimeEndpointInfo) , "TrainingParameters" :: Maybe (TrainingParameters) , "InputDataLocationS3" :: Maybe (S3Url) , "Algorithm" :: Maybe (Algorithm) , "MLModelType" :: Maybe (MLModelType) , "ScoreThreshold" :: Maybe (ScoreThreshold) , "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) } -> {"MLModelId" :: Maybe (EntityId) , "TrainingDataSourceId" :: Maybe (EntityId) , "CreatedByIamUser" :: Maybe (AwsUserArn) , "CreatedAt" :: Maybe (EpochTime) , "LastUpdatedAt" :: Maybe (EpochTime) , "Name" :: Maybe (MLModelName) , "Status" :: Maybe (EntityStatus) , "SizeInBytes" :: Maybe (LongType) , "EndpointInfo" :: Maybe (RealtimeEndpointInfo) , "TrainingParameters" :: Maybe (TrainingParameters) , "InputDataLocationS3" :: Maybe (S3Url) , "Algorithm" :: Maybe (Algorithm) , "MLModelType" :: Maybe (MLModelType) , "ScoreThreshold" :: Maybe (ScoreThreshold) , "ScoreThresholdLastUpdatedAt" :: Maybe (EpochTime) , "Message" :: Maybe (Message) , "ComputeTime" :: Maybe (LongType) , "FinishedAt" :: Maybe (EpochTime) , "StartedAt" :: Maybe (EpochTime) } ) -> MLModel
+newMLModel'  customize = (MLModel <<< customize) { "Algorithm": Nothing, "ComputeTime": Nothing, "CreatedAt": Nothing, "CreatedByIamUser": Nothing, "EndpointInfo": Nothing, "FinishedAt": Nothing, "InputDataLocationS3": Nothing, "LastUpdatedAt": Nothing, "MLModelId": Nothing, "MLModelType": Nothing, "Message": Nothing, "Name": Nothing, "ScoreThreshold": Nothing, "ScoreThresholdLastUpdatedAt": Nothing, "SizeInBytes": Nothing, "StartedAt": Nothing, "Status": Nothing, "TrainingDataSourceId": Nothing, "TrainingParameters": Nothing }
 
 
 
@@ -1707,7 +1706,7 @@ instance encodePageLimit :: Encode PageLimit where encode = genericEncode option
 
 -- | <p>Measurements of how well the <code>MLModel</code> performed on known observations. One of the following metrics is returned, based on the type of the <code>MLModel</code>: </p> <ul> <li> <p>BinaryAUC: The binary <code>MLModel</code> uses the Area Under the Curve (AUC) technique to measure performance. </p> </li> <li> <p>RegressionRMSE: The regression <code>MLModel</code> uses the Root Mean Square Error (RMSE) technique to measure performance. RMSE measures the difference between predicted and actual values for a single variable.</p> </li> <li> <p>MulticlassAvgFScore: The multiclass <code>MLModel</code> uses the F1 score technique to measure performance. </p> </li> </ul> <p> For more information about performance metrics, please see the <a href="http://docs.aws.amazon.com/machine-learning/latest/dg">Amazon Machine Learning Developer Guide</a>. </p>
 newtype PerformanceMetrics = PerformanceMetrics 
-  { "Properties" :: NullOrUndefined (PerformanceMetricsProperties)
+  { "Properties" :: Maybe (PerformanceMetricsProperties)
   }
 derive instance newtypePerformanceMetrics :: Newtype PerformanceMetrics _
 derive instance repGenericPerformanceMetrics :: Generic PerformanceMetrics _
@@ -1717,12 +1716,12 @@ instance encodePerformanceMetrics :: Encode PerformanceMetrics where encode = ge
 
 -- | Constructs PerformanceMetrics from required parameters
 newPerformanceMetrics :: PerformanceMetrics
-newPerformanceMetrics  = PerformanceMetrics { "Properties": (NullOrUndefined Nothing) }
+newPerformanceMetrics  = PerformanceMetrics { "Properties": Nothing }
 
 -- | Constructs PerformanceMetrics's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPerformanceMetrics' :: ( { "Properties" :: NullOrUndefined (PerformanceMetricsProperties) } -> {"Properties" :: NullOrUndefined (PerformanceMetricsProperties) } ) -> PerformanceMetrics
-newPerformanceMetrics'  customize = (PerformanceMetrics <<< customize) { "Properties": (NullOrUndefined Nothing) }
+newPerformanceMetrics' :: ( { "Properties" :: Maybe (PerformanceMetricsProperties) } -> {"Properties" :: Maybe (PerformanceMetricsProperties) } ) -> PerformanceMetrics
+newPerformanceMetrics'  customize = (PerformanceMetrics <<< customize) { "Properties": Nothing }
 
 
 
@@ -1776,7 +1775,7 @@ newPredictInput' _MLModelId _PredictEndpoint _Record customize = (PredictInput <
 
 
 newtype PredictOutput = PredictOutput 
-  { "Prediction" :: NullOrUndefined (Prediction)
+  { "Prediction" :: Maybe (Prediction)
   }
 derive instance newtypePredictOutput :: Newtype PredictOutput _
 derive instance repGenericPredictOutput :: Generic PredictOutput _
@@ -1786,21 +1785,21 @@ instance encodePredictOutput :: Encode PredictOutput where encode = genericEncod
 
 -- | Constructs PredictOutput from required parameters
 newPredictOutput :: PredictOutput
-newPredictOutput  = PredictOutput { "Prediction": (NullOrUndefined Nothing) }
+newPredictOutput  = PredictOutput { "Prediction": Nothing }
 
 -- | Constructs PredictOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPredictOutput' :: ( { "Prediction" :: NullOrUndefined (Prediction) } -> {"Prediction" :: NullOrUndefined (Prediction) } ) -> PredictOutput
-newPredictOutput'  customize = (PredictOutput <<< customize) { "Prediction": (NullOrUndefined Nothing) }
+newPredictOutput' :: ( { "Prediction" :: Maybe (Prediction) } -> {"Prediction" :: Maybe (Prediction) } ) -> PredictOutput
+newPredictOutput'  customize = (PredictOutput <<< customize) { "Prediction": Nothing }
 
 
 
 -- | <p>The output from a <code>Predict</code> operation: </p> <ul> <li> <p> <code>Details</code> - Contains the following attributes: <code>DetailsAttributes.PREDICTIVE_MODEL_TYPE - REGRESSION | BINARY | MULTICLASS</code> <code>DetailsAttributes.ALGORITHM - SGD</code> </p> </li> <li> <p> <code>PredictedLabel</code> - Present for either a <code>BINARY</code> or <code>MULTICLASS</code> <code>MLModel</code> request. </p> </li> <li> <p> <code>PredictedScores</code> - Contains the raw classification score corresponding to each label. </p> </li> <li> <p> <code>PredictedValue</code> - Present for a <code>REGRESSION</code> <code>MLModel</code> request. </p> </li> </ul>
 newtype Prediction = Prediction 
-  { "predictedLabel" :: NullOrUndefined (Label)
-  , "predictedValue" :: NullOrUndefined (FloatLabel')
-  , "predictedScores" :: NullOrUndefined (ScoreValuePerLabelMap)
-  , "details" :: NullOrUndefined (DetailsMap)
+  { "predictedLabel" :: Maybe (Label)
+  , "predictedValue" :: Maybe (FloatLabel')
+  , "predictedScores" :: Maybe (ScoreValuePerLabelMap)
+  , "details" :: Maybe (DetailsMap)
   }
 derive instance newtypePrediction :: Newtype Prediction _
 derive instance repGenericPrediction :: Generic Prediction _
@@ -1810,18 +1809,18 @@ instance encodePrediction :: Encode Prediction where encode = genericEncode opti
 
 -- | Constructs Prediction from required parameters
 newPrediction :: Prediction
-newPrediction  = Prediction { "details": (NullOrUndefined Nothing), "predictedLabel": (NullOrUndefined Nothing), "predictedScores": (NullOrUndefined Nothing), "predictedValue": (NullOrUndefined Nothing) }
+newPrediction  = Prediction { "details": Nothing, "predictedLabel": Nothing, "predictedScores": Nothing, "predictedValue": Nothing }
 
 -- | Constructs Prediction's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPrediction' :: ( { "predictedLabel" :: NullOrUndefined (Label) , "predictedValue" :: NullOrUndefined (FloatLabel') , "predictedScores" :: NullOrUndefined (ScoreValuePerLabelMap) , "details" :: NullOrUndefined (DetailsMap) } -> {"predictedLabel" :: NullOrUndefined (Label) , "predictedValue" :: NullOrUndefined (FloatLabel') , "predictedScores" :: NullOrUndefined (ScoreValuePerLabelMap) , "details" :: NullOrUndefined (DetailsMap) } ) -> Prediction
-newPrediction'  customize = (Prediction <<< customize) { "details": (NullOrUndefined Nothing), "predictedLabel": (NullOrUndefined Nothing), "predictedScores": (NullOrUndefined Nothing), "predictedValue": (NullOrUndefined Nothing) }
+newPrediction' :: ( { "predictedLabel" :: Maybe (Label) , "predictedValue" :: Maybe (FloatLabel') , "predictedScores" :: Maybe (ScoreValuePerLabelMap) , "details" :: Maybe (DetailsMap) } -> {"predictedLabel" :: Maybe (Label) , "predictedValue" :: Maybe (FloatLabel') , "predictedScores" :: Maybe (ScoreValuePerLabelMap) , "details" :: Maybe (DetailsMap) } ) -> Prediction
+newPrediction'  customize = (Prediction <<< customize) { "details": Nothing, "predictedLabel": Nothing, "predictedScores": Nothing, "predictedValue": Nothing }
 
 
 
 -- | <p>The exception is thrown when a predict request is made to an unmounted <code>MLModel</code>.</p>
 newtype PredictorNotMountedException = PredictorNotMountedException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypePredictorNotMountedException :: Newtype PredictorNotMountedException _
 derive instance repGenericPredictorNotMountedException :: Generic PredictorNotMountedException _
@@ -1831,12 +1830,12 @@ instance encodePredictorNotMountedException :: Encode PredictorNotMountedExcepti
 
 -- | Constructs PredictorNotMountedException from required parameters
 newPredictorNotMountedException :: PredictorNotMountedException
-newPredictorNotMountedException  = PredictorNotMountedException { "message": (NullOrUndefined Nothing) }
+newPredictorNotMountedException  = PredictorNotMountedException { "message": Nothing }
 
 -- | Constructs PredictorNotMountedException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPredictorNotMountedException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> PredictorNotMountedException
-newPredictorNotMountedException'  customize = (PredictorNotMountedException <<< customize) { "message": (NullOrUndefined Nothing) }
+newPredictorNotMountedException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> PredictorNotMountedException
+newPredictorNotMountedException'  customize = (PredictorNotMountedException <<< customize) { "message": Nothing }
 
 
 
@@ -1855,9 +1854,9 @@ newtype RDSDataSpec = RDSDataSpec
   , "SelectSqlQuery" :: (RDSSelectSqlQuery)
   , "DatabaseCredentials" :: (RDSDatabaseCredentials)
   , "S3StagingLocation" :: (S3Url)
-  , "DataRearrangement" :: NullOrUndefined (DataRearrangement)
-  , "DataSchema" :: NullOrUndefined (DataSchema)
-  , "DataSchemaUri" :: NullOrUndefined (S3Url)
+  , "DataRearrangement" :: Maybe (DataRearrangement)
+  , "DataSchema" :: Maybe (DataSchema)
+  , "DataSchemaUri" :: Maybe (S3Url)
   , "ResourceRole" :: (EDPResourceRole)
   , "ServiceRole" :: (EDPServiceRole)
   , "SubnetId" :: (EDPSubnetId)
@@ -1871,12 +1870,12 @@ instance encodeRDSDataSpec :: Encode RDSDataSpec where encode = genericEncode op
 
 -- | Constructs RDSDataSpec from required parameters
 newRDSDataSpec :: RDSDatabaseCredentials -> RDSDatabase -> EDPResourceRole -> S3Url -> EDPSecurityGroupIds -> RDSSelectSqlQuery -> EDPServiceRole -> EDPSubnetId -> RDSDataSpec
-newRDSDataSpec _DatabaseCredentials _DatabaseInformation _ResourceRole _S3StagingLocation _SecurityGroupIds _SelectSqlQuery _ServiceRole _SubnetId = RDSDataSpec { "DatabaseCredentials": _DatabaseCredentials, "DatabaseInformation": _DatabaseInformation, "ResourceRole": _ResourceRole, "S3StagingLocation": _S3StagingLocation, "SecurityGroupIds": _SecurityGroupIds, "SelectSqlQuery": _SelectSqlQuery, "ServiceRole": _ServiceRole, "SubnetId": _SubnetId, "DataRearrangement": (NullOrUndefined Nothing), "DataSchema": (NullOrUndefined Nothing), "DataSchemaUri": (NullOrUndefined Nothing) }
+newRDSDataSpec _DatabaseCredentials _DatabaseInformation _ResourceRole _S3StagingLocation _SecurityGroupIds _SelectSqlQuery _ServiceRole _SubnetId = RDSDataSpec { "DatabaseCredentials": _DatabaseCredentials, "DatabaseInformation": _DatabaseInformation, "ResourceRole": _ResourceRole, "S3StagingLocation": _S3StagingLocation, "SecurityGroupIds": _SecurityGroupIds, "SelectSqlQuery": _SelectSqlQuery, "ServiceRole": _ServiceRole, "SubnetId": _SubnetId, "DataRearrangement": Nothing, "DataSchema": Nothing, "DataSchemaUri": Nothing }
 
 -- | Constructs RDSDataSpec's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRDSDataSpec' :: RDSDatabaseCredentials -> RDSDatabase -> EDPResourceRole -> S3Url -> EDPSecurityGroupIds -> RDSSelectSqlQuery -> EDPServiceRole -> EDPSubnetId -> ( { "DatabaseInformation" :: (RDSDatabase) , "SelectSqlQuery" :: (RDSSelectSqlQuery) , "DatabaseCredentials" :: (RDSDatabaseCredentials) , "S3StagingLocation" :: (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "DataSchema" :: NullOrUndefined (DataSchema) , "DataSchemaUri" :: NullOrUndefined (S3Url) , "ResourceRole" :: (EDPResourceRole) , "ServiceRole" :: (EDPServiceRole) , "SubnetId" :: (EDPSubnetId) , "SecurityGroupIds" :: (EDPSecurityGroupIds) } -> {"DatabaseInformation" :: (RDSDatabase) , "SelectSqlQuery" :: (RDSSelectSqlQuery) , "DatabaseCredentials" :: (RDSDatabaseCredentials) , "S3StagingLocation" :: (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "DataSchema" :: NullOrUndefined (DataSchema) , "DataSchemaUri" :: NullOrUndefined (S3Url) , "ResourceRole" :: (EDPResourceRole) , "ServiceRole" :: (EDPServiceRole) , "SubnetId" :: (EDPSubnetId) , "SecurityGroupIds" :: (EDPSecurityGroupIds) } ) -> RDSDataSpec
-newRDSDataSpec' _DatabaseCredentials _DatabaseInformation _ResourceRole _S3StagingLocation _SecurityGroupIds _SelectSqlQuery _ServiceRole _SubnetId customize = (RDSDataSpec <<< customize) { "DatabaseCredentials": _DatabaseCredentials, "DatabaseInformation": _DatabaseInformation, "ResourceRole": _ResourceRole, "S3StagingLocation": _S3StagingLocation, "SecurityGroupIds": _SecurityGroupIds, "SelectSqlQuery": _SelectSqlQuery, "ServiceRole": _ServiceRole, "SubnetId": _SubnetId, "DataRearrangement": (NullOrUndefined Nothing), "DataSchema": (NullOrUndefined Nothing), "DataSchemaUri": (NullOrUndefined Nothing) }
+newRDSDataSpec' :: RDSDatabaseCredentials -> RDSDatabase -> EDPResourceRole -> S3Url -> EDPSecurityGroupIds -> RDSSelectSqlQuery -> EDPServiceRole -> EDPSubnetId -> ( { "DatabaseInformation" :: (RDSDatabase) , "SelectSqlQuery" :: (RDSSelectSqlQuery) , "DatabaseCredentials" :: (RDSDatabaseCredentials) , "S3StagingLocation" :: (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "DataSchema" :: Maybe (DataSchema) , "DataSchemaUri" :: Maybe (S3Url) , "ResourceRole" :: (EDPResourceRole) , "ServiceRole" :: (EDPServiceRole) , "SubnetId" :: (EDPSubnetId) , "SecurityGroupIds" :: (EDPSecurityGroupIds) } -> {"DatabaseInformation" :: (RDSDatabase) , "SelectSqlQuery" :: (RDSSelectSqlQuery) , "DatabaseCredentials" :: (RDSDatabaseCredentials) , "S3StagingLocation" :: (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "DataSchema" :: Maybe (DataSchema) , "DataSchemaUri" :: Maybe (S3Url) , "ResourceRole" :: (EDPResourceRole) , "ServiceRole" :: (EDPServiceRole) , "SubnetId" :: (EDPSubnetId) , "SecurityGroupIds" :: (EDPSecurityGroupIds) } ) -> RDSDataSpec
+newRDSDataSpec' _DatabaseCredentials _DatabaseInformation _ResourceRole _S3StagingLocation _SecurityGroupIds _SelectSqlQuery _ServiceRole _SubnetId customize = (RDSDataSpec <<< customize) { "DatabaseCredentials": _DatabaseCredentials, "DatabaseInformation": _DatabaseInformation, "ResourceRole": _ResourceRole, "S3StagingLocation": _S3StagingLocation, "SecurityGroupIds": _SecurityGroupIds, "SelectSqlQuery": _SelectSqlQuery, "ServiceRole": _ServiceRole, "SubnetId": _SubnetId, "DataRearrangement": Nothing, "DataSchema": Nothing, "DataSchemaUri": Nothing }
 
 
 
@@ -1966,12 +1965,12 @@ instance encodeRDSInstanceIdentifier :: Encode RDSInstanceIdentifier where encod
 
 -- | <p>The datasource details that are specific to Amazon RDS.</p>
 newtype RDSMetadata = RDSMetadata 
-  { "Database" :: NullOrUndefined (RDSDatabase)
-  , "DatabaseUserName" :: NullOrUndefined (RDSDatabaseUsername)
-  , "SelectSqlQuery" :: NullOrUndefined (RDSSelectSqlQuery)
-  , "ResourceRole" :: NullOrUndefined (EDPResourceRole)
-  , "ServiceRole" :: NullOrUndefined (EDPServiceRole)
-  , "DataPipelineId" :: NullOrUndefined (EDPPipelineId)
+  { "Database" :: Maybe (RDSDatabase)
+  , "DatabaseUserName" :: Maybe (RDSDatabaseUsername)
+  , "SelectSqlQuery" :: Maybe (RDSSelectSqlQuery)
+  , "ResourceRole" :: Maybe (EDPResourceRole)
+  , "ServiceRole" :: Maybe (EDPServiceRole)
+  , "DataPipelineId" :: Maybe (EDPPipelineId)
   }
 derive instance newtypeRDSMetadata :: Newtype RDSMetadata _
 derive instance repGenericRDSMetadata :: Generic RDSMetadata _
@@ -1981,12 +1980,12 @@ instance encodeRDSMetadata :: Encode RDSMetadata where encode = genericEncode op
 
 -- | Constructs RDSMetadata from required parameters
 newRDSMetadata :: RDSMetadata
-newRDSMetadata  = RDSMetadata { "DataPipelineId": (NullOrUndefined Nothing), "Database": (NullOrUndefined Nothing), "DatabaseUserName": (NullOrUndefined Nothing), "ResourceRole": (NullOrUndefined Nothing), "SelectSqlQuery": (NullOrUndefined Nothing), "ServiceRole": (NullOrUndefined Nothing) }
+newRDSMetadata  = RDSMetadata { "DataPipelineId": Nothing, "Database": Nothing, "DatabaseUserName": Nothing, "ResourceRole": Nothing, "SelectSqlQuery": Nothing, "ServiceRole": Nothing }
 
 -- | Constructs RDSMetadata's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRDSMetadata' :: ( { "Database" :: NullOrUndefined (RDSDatabase) , "DatabaseUserName" :: NullOrUndefined (RDSDatabaseUsername) , "SelectSqlQuery" :: NullOrUndefined (RDSSelectSqlQuery) , "ResourceRole" :: NullOrUndefined (EDPResourceRole) , "ServiceRole" :: NullOrUndefined (EDPServiceRole) , "DataPipelineId" :: NullOrUndefined (EDPPipelineId) } -> {"Database" :: NullOrUndefined (RDSDatabase) , "DatabaseUserName" :: NullOrUndefined (RDSDatabaseUsername) , "SelectSqlQuery" :: NullOrUndefined (RDSSelectSqlQuery) , "ResourceRole" :: NullOrUndefined (EDPResourceRole) , "ServiceRole" :: NullOrUndefined (EDPServiceRole) , "DataPipelineId" :: NullOrUndefined (EDPPipelineId) } ) -> RDSMetadata
-newRDSMetadata'  customize = (RDSMetadata <<< customize) { "DataPipelineId": (NullOrUndefined Nothing), "Database": (NullOrUndefined Nothing), "DatabaseUserName": (NullOrUndefined Nothing), "ResourceRole": (NullOrUndefined Nothing), "SelectSqlQuery": (NullOrUndefined Nothing), "ServiceRole": (NullOrUndefined Nothing) }
+newRDSMetadata' :: ( { "Database" :: Maybe (RDSDatabase) , "DatabaseUserName" :: Maybe (RDSDatabaseUsername) , "SelectSqlQuery" :: Maybe (RDSSelectSqlQuery) , "ResourceRole" :: Maybe (EDPResourceRole) , "ServiceRole" :: Maybe (EDPServiceRole) , "DataPipelineId" :: Maybe (EDPPipelineId) } -> {"Database" :: Maybe (RDSDatabase) , "DatabaseUserName" :: Maybe (RDSDatabaseUsername) , "SelectSqlQuery" :: Maybe (RDSSelectSqlQuery) , "ResourceRole" :: Maybe (EDPResourceRole) , "ServiceRole" :: Maybe (EDPServiceRole) , "DataPipelineId" :: Maybe (EDPPipelineId) } ) -> RDSMetadata
+newRDSMetadata'  customize = (RDSMetadata <<< customize) { "DataPipelineId": Nothing, "Database": Nothing, "DatabaseUserName": Nothing, "ResourceRole": Nothing, "SelectSqlQuery": Nothing, "ServiceRole": Nothing }
 
 
 
@@ -2002,10 +2001,10 @@ instance encodeRDSSelectSqlQuery :: Encode RDSSelectSqlQuery where encode = gene
 
 -- | <p> Describes the real-time endpoint information for an <code>MLModel</code>.</p>
 newtype RealtimeEndpointInfo = RealtimeEndpointInfo 
-  { "PeakRequestsPerSecond" :: NullOrUndefined (IntegerType)
-  , "CreatedAt" :: NullOrUndefined (EpochTime)
-  , "EndpointUrl" :: NullOrUndefined (VipURL)
-  , "EndpointStatus" :: NullOrUndefined (RealtimeEndpointStatus)
+  { "PeakRequestsPerSecond" :: Maybe (IntegerType)
+  , "CreatedAt" :: Maybe (EpochTime)
+  , "EndpointUrl" :: Maybe (VipURL)
+  , "EndpointStatus" :: Maybe (RealtimeEndpointStatus)
   }
 derive instance newtypeRealtimeEndpointInfo :: Newtype RealtimeEndpointInfo _
 derive instance repGenericRealtimeEndpointInfo :: Generic RealtimeEndpointInfo _
@@ -2015,12 +2014,12 @@ instance encodeRealtimeEndpointInfo :: Encode RealtimeEndpointInfo where encode 
 
 -- | Constructs RealtimeEndpointInfo from required parameters
 newRealtimeEndpointInfo :: RealtimeEndpointInfo
-newRealtimeEndpointInfo  = RealtimeEndpointInfo { "CreatedAt": (NullOrUndefined Nothing), "EndpointStatus": (NullOrUndefined Nothing), "EndpointUrl": (NullOrUndefined Nothing), "PeakRequestsPerSecond": (NullOrUndefined Nothing) }
+newRealtimeEndpointInfo  = RealtimeEndpointInfo { "CreatedAt": Nothing, "EndpointStatus": Nothing, "EndpointUrl": Nothing, "PeakRequestsPerSecond": Nothing }
 
 -- | Constructs RealtimeEndpointInfo's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRealtimeEndpointInfo' :: ( { "PeakRequestsPerSecond" :: NullOrUndefined (IntegerType) , "CreatedAt" :: NullOrUndefined (EpochTime) , "EndpointUrl" :: NullOrUndefined (VipURL) , "EndpointStatus" :: NullOrUndefined (RealtimeEndpointStatus) } -> {"PeakRequestsPerSecond" :: NullOrUndefined (IntegerType) , "CreatedAt" :: NullOrUndefined (EpochTime) , "EndpointUrl" :: NullOrUndefined (VipURL) , "EndpointStatus" :: NullOrUndefined (RealtimeEndpointStatus) } ) -> RealtimeEndpointInfo
-newRealtimeEndpointInfo'  customize = (RealtimeEndpointInfo <<< customize) { "CreatedAt": (NullOrUndefined Nothing), "EndpointStatus": (NullOrUndefined Nothing), "EndpointUrl": (NullOrUndefined Nothing), "PeakRequestsPerSecond": (NullOrUndefined Nothing) }
+newRealtimeEndpointInfo' :: ( { "PeakRequestsPerSecond" :: Maybe (IntegerType) , "CreatedAt" :: Maybe (EpochTime) , "EndpointUrl" :: Maybe (VipURL) , "EndpointStatus" :: Maybe (RealtimeEndpointStatus) } -> {"PeakRequestsPerSecond" :: Maybe (IntegerType) , "CreatedAt" :: Maybe (EpochTime) , "EndpointUrl" :: Maybe (VipURL) , "EndpointStatus" :: Maybe (RealtimeEndpointStatus) } ) -> RealtimeEndpointInfo
+newRealtimeEndpointInfo'  customize = (RealtimeEndpointInfo <<< customize) { "CreatedAt": Nothing, "EndpointStatus": Nothing, "EndpointUrl": Nothing, "PeakRequestsPerSecond": Nothing }
 
 
 
@@ -2068,9 +2067,9 @@ newtype RedshiftDataSpec = RedshiftDataSpec
   , "SelectSqlQuery" :: (RedshiftSelectSqlQuery)
   , "DatabaseCredentials" :: (RedshiftDatabaseCredentials)
   , "S3StagingLocation" :: (S3Url)
-  , "DataRearrangement" :: NullOrUndefined (DataRearrangement)
-  , "DataSchema" :: NullOrUndefined (DataSchema)
-  , "DataSchemaUri" :: NullOrUndefined (S3Url)
+  , "DataRearrangement" :: Maybe (DataRearrangement)
+  , "DataSchema" :: Maybe (DataSchema)
+  , "DataSchemaUri" :: Maybe (S3Url)
   }
 derive instance newtypeRedshiftDataSpec :: Newtype RedshiftDataSpec _
 derive instance repGenericRedshiftDataSpec :: Generic RedshiftDataSpec _
@@ -2080,12 +2079,12 @@ instance encodeRedshiftDataSpec :: Encode RedshiftDataSpec where encode = generi
 
 -- | Constructs RedshiftDataSpec from required parameters
 newRedshiftDataSpec :: RedshiftDatabaseCredentials -> RedshiftDatabase -> S3Url -> RedshiftSelectSqlQuery -> RedshiftDataSpec
-newRedshiftDataSpec _DatabaseCredentials _DatabaseInformation _S3StagingLocation _SelectSqlQuery = RedshiftDataSpec { "DatabaseCredentials": _DatabaseCredentials, "DatabaseInformation": _DatabaseInformation, "S3StagingLocation": _S3StagingLocation, "SelectSqlQuery": _SelectSqlQuery, "DataRearrangement": (NullOrUndefined Nothing), "DataSchema": (NullOrUndefined Nothing), "DataSchemaUri": (NullOrUndefined Nothing) }
+newRedshiftDataSpec _DatabaseCredentials _DatabaseInformation _S3StagingLocation _SelectSqlQuery = RedshiftDataSpec { "DatabaseCredentials": _DatabaseCredentials, "DatabaseInformation": _DatabaseInformation, "S3StagingLocation": _S3StagingLocation, "SelectSqlQuery": _SelectSqlQuery, "DataRearrangement": Nothing, "DataSchema": Nothing, "DataSchemaUri": Nothing }
 
 -- | Constructs RedshiftDataSpec's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRedshiftDataSpec' :: RedshiftDatabaseCredentials -> RedshiftDatabase -> S3Url -> RedshiftSelectSqlQuery -> ( { "DatabaseInformation" :: (RedshiftDatabase) , "SelectSqlQuery" :: (RedshiftSelectSqlQuery) , "DatabaseCredentials" :: (RedshiftDatabaseCredentials) , "S3StagingLocation" :: (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "DataSchema" :: NullOrUndefined (DataSchema) , "DataSchemaUri" :: NullOrUndefined (S3Url) } -> {"DatabaseInformation" :: (RedshiftDatabase) , "SelectSqlQuery" :: (RedshiftSelectSqlQuery) , "DatabaseCredentials" :: (RedshiftDatabaseCredentials) , "S3StagingLocation" :: (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "DataSchema" :: NullOrUndefined (DataSchema) , "DataSchemaUri" :: NullOrUndefined (S3Url) } ) -> RedshiftDataSpec
-newRedshiftDataSpec' _DatabaseCredentials _DatabaseInformation _S3StagingLocation _SelectSqlQuery customize = (RedshiftDataSpec <<< customize) { "DatabaseCredentials": _DatabaseCredentials, "DatabaseInformation": _DatabaseInformation, "S3StagingLocation": _S3StagingLocation, "SelectSqlQuery": _SelectSqlQuery, "DataRearrangement": (NullOrUndefined Nothing), "DataSchema": (NullOrUndefined Nothing), "DataSchemaUri": (NullOrUndefined Nothing) }
+newRedshiftDataSpec' :: RedshiftDatabaseCredentials -> RedshiftDatabase -> S3Url -> RedshiftSelectSqlQuery -> ( { "DatabaseInformation" :: (RedshiftDatabase) , "SelectSqlQuery" :: (RedshiftSelectSqlQuery) , "DatabaseCredentials" :: (RedshiftDatabaseCredentials) , "S3StagingLocation" :: (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "DataSchema" :: Maybe (DataSchema) , "DataSchemaUri" :: Maybe (S3Url) } -> {"DatabaseInformation" :: (RedshiftDatabase) , "SelectSqlQuery" :: (RedshiftSelectSqlQuery) , "DatabaseCredentials" :: (RedshiftDatabaseCredentials) , "S3StagingLocation" :: (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "DataSchema" :: Maybe (DataSchema) , "DataSchemaUri" :: Maybe (S3Url) } ) -> RedshiftDataSpec
+newRedshiftDataSpec' _DatabaseCredentials _DatabaseInformation _S3StagingLocation _SelectSqlQuery customize = (RedshiftDataSpec <<< customize) { "DatabaseCredentials": _DatabaseCredentials, "DatabaseInformation": _DatabaseInformation, "S3StagingLocation": _S3StagingLocation, "SelectSqlQuery": _SelectSqlQuery, "DataRearrangement": Nothing, "DataSchema": Nothing, "DataSchemaUri": Nothing }
 
 
 
@@ -2165,9 +2164,9 @@ instance encodeRedshiftDatabaseUsername :: Encode RedshiftDatabaseUsername where
 
 -- | <p>Describes the <code>DataSource</code> details specific to Amazon Redshift.</p>
 newtype RedshiftMetadata = RedshiftMetadata 
-  { "RedshiftDatabase" :: NullOrUndefined (RedshiftDatabase)
-  , "DatabaseUserName" :: NullOrUndefined (RedshiftDatabaseUsername)
-  , "SelectSqlQuery" :: NullOrUndefined (RedshiftSelectSqlQuery)
+  { "RedshiftDatabase" :: Maybe (RedshiftDatabase)
+  , "DatabaseUserName" :: Maybe (RedshiftDatabaseUsername)
+  , "SelectSqlQuery" :: Maybe (RedshiftSelectSqlQuery)
   }
 derive instance newtypeRedshiftMetadata :: Newtype RedshiftMetadata _
 derive instance repGenericRedshiftMetadata :: Generic RedshiftMetadata _
@@ -2177,12 +2176,12 @@ instance encodeRedshiftMetadata :: Encode RedshiftMetadata where encode = generi
 
 -- | Constructs RedshiftMetadata from required parameters
 newRedshiftMetadata :: RedshiftMetadata
-newRedshiftMetadata  = RedshiftMetadata { "DatabaseUserName": (NullOrUndefined Nothing), "RedshiftDatabase": (NullOrUndefined Nothing), "SelectSqlQuery": (NullOrUndefined Nothing) }
+newRedshiftMetadata  = RedshiftMetadata { "DatabaseUserName": Nothing, "RedshiftDatabase": Nothing, "SelectSqlQuery": Nothing }
 
 -- | Constructs RedshiftMetadata's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRedshiftMetadata' :: ( { "RedshiftDatabase" :: NullOrUndefined (RedshiftDatabase) , "DatabaseUserName" :: NullOrUndefined (RedshiftDatabaseUsername) , "SelectSqlQuery" :: NullOrUndefined (RedshiftSelectSqlQuery) } -> {"RedshiftDatabase" :: NullOrUndefined (RedshiftDatabase) , "DatabaseUserName" :: NullOrUndefined (RedshiftDatabaseUsername) , "SelectSqlQuery" :: NullOrUndefined (RedshiftSelectSqlQuery) } ) -> RedshiftMetadata
-newRedshiftMetadata'  customize = (RedshiftMetadata <<< customize) { "DatabaseUserName": (NullOrUndefined Nothing), "RedshiftDatabase": (NullOrUndefined Nothing), "SelectSqlQuery": (NullOrUndefined Nothing) }
+newRedshiftMetadata' :: ( { "RedshiftDatabase" :: Maybe (RedshiftDatabase) , "DatabaseUserName" :: Maybe (RedshiftDatabaseUsername) , "SelectSqlQuery" :: Maybe (RedshiftSelectSqlQuery) } -> {"RedshiftDatabase" :: Maybe (RedshiftDatabase) , "DatabaseUserName" :: Maybe (RedshiftDatabaseUsername) , "SelectSqlQuery" :: Maybe (RedshiftSelectSqlQuery) } ) -> RedshiftMetadata
+newRedshiftMetadata'  customize = (RedshiftMetadata <<< customize) { "DatabaseUserName": Nothing, "RedshiftDatabase": Nothing, "SelectSqlQuery": Nothing }
 
 
 
@@ -2198,8 +2197,8 @@ instance encodeRedshiftSelectSqlQuery :: Encode RedshiftSelectSqlQuery where enc
 
 -- | <p>A specified resource cannot be located.</p>
 newtype ResourceNotFoundException = ResourceNotFoundException 
-  { "message" :: NullOrUndefined (ErrorMessage)
-  , "code" :: NullOrUndefined (ErrorCode)
+  { "message" :: Maybe (ErrorMessage)
+  , "code" :: Maybe (ErrorCode)
   }
 derive instance newtypeResourceNotFoundException :: Newtype ResourceNotFoundException _
 derive instance repGenericResourceNotFoundException :: Generic ResourceNotFoundException _
@@ -2209,12 +2208,12 @@ instance encodeResourceNotFoundException :: Encode ResourceNotFoundException whe
 
 -- | Constructs ResourceNotFoundException from required parameters
 newResourceNotFoundException :: ResourceNotFoundException
-newResourceNotFoundException  = ResourceNotFoundException { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newResourceNotFoundException  = ResourceNotFoundException { "code": Nothing, "message": Nothing }
 
 -- | Constructs ResourceNotFoundException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceNotFoundException' :: ( { "message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } -> {"message" :: NullOrUndefined (ErrorMessage) , "code" :: NullOrUndefined (ErrorCode) } ) -> ResourceNotFoundException
-newResourceNotFoundException'  customize = (ResourceNotFoundException <<< customize) { "code": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing) }
+newResourceNotFoundException' :: ( { "message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } -> {"message" :: Maybe (ErrorMessage) , "code" :: Maybe (ErrorCode) } ) -> ResourceNotFoundException
+newResourceNotFoundException'  customize = (ResourceNotFoundException <<< customize) { "code": Nothing, "message": Nothing }
 
 
 
@@ -2231,9 +2230,9 @@ instance encodeRoleARN :: Encode RoleARN where encode = genericEncode options
 -- | <p> Describes the data specification of a <code>DataSource</code>.</p>
 newtype S3DataSpec = S3DataSpec 
   { "DataLocationS3" :: (S3Url)
-  , "DataRearrangement" :: NullOrUndefined (DataRearrangement)
-  , "DataSchema" :: NullOrUndefined (DataSchema)
-  , "DataSchemaLocationS3" :: NullOrUndefined (S3Url)
+  , "DataRearrangement" :: Maybe (DataRearrangement)
+  , "DataSchema" :: Maybe (DataSchema)
+  , "DataSchemaLocationS3" :: Maybe (S3Url)
   }
 derive instance newtypeS3DataSpec :: Newtype S3DataSpec _
 derive instance repGenericS3DataSpec :: Generic S3DataSpec _
@@ -2243,12 +2242,12 @@ instance encodeS3DataSpec :: Encode S3DataSpec where encode = genericEncode opti
 
 -- | Constructs S3DataSpec from required parameters
 newS3DataSpec :: S3Url -> S3DataSpec
-newS3DataSpec _DataLocationS3 = S3DataSpec { "DataLocationS3": _DataLocationS3, "DataRearrangement": (NullOrUndefined Nothing), "DataSchema": (NullOrUndefined Nothing), "DataSchemaLocationS3": (NullOrUndefined Nothing) }
+newS3DataSpec _DataLocationS3 = S3DataSpec { "DataLocationS3": _DataLocationS3, "DataRearrangement": Nothing, "DataSchema": Nothing, "DataSchemaLocationS3": Nothing }
 
 -- | Constructs S3DataSpec's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newS3DataSpec' :: S3Url -> ( { "DataLocationS3" :: (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "DataSchema" :: NullOrUndefined (DataSchema) , "DataSchemaLocationS3" :: NullOrUndefined (S3Url) } -> {"DataLocationS3" :: (S3Url) , "DataRearrangement" :: NullOrUndefined (DataRearrangement) , "DataSchema" :: NullOrUndefined (DataSchema) , "DataSchemaLocationS3" :: NullOrUndefined (S3Url) } ) -> S3DataSpec
-newS3DataSpec' _DataLocationS3 customize = (S3DataSpec <<< customize) { "DataLocationS3": _DataLocationS3, "DataRearrangement": (NullOrUndefined Nothing), "DataSchema": (NullOrUndefined Nothing), "DataSchemaLocationS3": (NullOrUndefined Nothing) }
+newS3DataSpec' :: S3Url -> ( { "DataLocationS3" :: (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "DataSchema" :: Maybe (DataSchema) , "DataSchemaLocationS3" :: Maybe (S3Url) } -> {"DataLocationS3" :: (S3Url) , "DataRearrangement" :: Maybe (DataRearrangement) , "DataSchema" :: Maybe (DataSchema) , "DataSchemaLocationS3" :: Maybe (S3Url) } ) -> S3DataSpec
+newS3DataSpec' _DataLocationS3 customize = (S3DataSpec <<< customize) { "DataLocationS3": _DataLocationS3, "DataRearrangement": Nothing, "DataSchema": Nothing, "DataSchemaLocationS3": Nothing }
 
 
 
@@ -2312,8 +2311,8 @@ instance encodeStringType :: Encode StringType where encode = genericEncode opti
 
 -- | <p>A custom key-value pair associated with an ML object, such as an ML model.</p>
 newtype Tag = Tag 
-  { "Key" :: NullOrUndefined (TagKey)
-  , "Value" :: NullOrUndefined (TagValue)
+  { "Key" :: Maybe (TagKey)
+  , "Value" :: Maybe (TagValue)
   }
 derive instance newtypeTag :: Newtype Tag _
 derive instance repGenericTag :: Generic Tag _
@@ -2323,12 +2322,12 @@ instance encodeTag :: Encode Tag where encode = genericEncode options
 
 -- | Constructs Tag from required parameters
 newTag :: Tag
-newTag  = Tag { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTag  = Tag { "Key": Nothing, "Value": Nothing }
 
 -- | Constructs Tag's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTag' :: ( { "Key" :: NullOrUndefined (TagKey) , "Value" :: NullOrUndefined (TagValue) } -> {"Key" :: NullOrUndefined (TagKey) , "Value" :: NullOrUndefined (TagValue) } ) -> Tag
-newTag'  customize = (Tag <<< customize) { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTag' :: ( { "Key" :: Maybe (TagKey) , "Value" :: Maybe (TagValue) } -> {"Key" :: Maybe (TagKey) , "Value" :: Maybe (TagValue) } ) -> Tag
+newTag'  customize = (Tag <<< customize) { "Key": Nothing, "Value": Nothing }
 
 
 
@@ -2351,7 +2350,7 @@ instance encodeTagKeyList :: Encode TagKeyList where encode = genericEncode opti
 
 
 newtype TagLimitExceededException = TagLimitExceededException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeTagLimitExceededException :: Newtype TagLimitExceededException _
 derive instance repGenericTagLimitExceededException :: Generic TagLimitExceededException _
@@ -2361,12 +2360,12 @@ instance encodeTagLimitExceededException :: Encode TagLimitExceededException whe
 
 -- | Constructs TagLimitExceededException from required parameters
 newTagLimitExceededException :: TagLimitExceededException
-newTagLimitExceededException  = TagLimitExceededException { "message": (NullOrUndefined Nothing) }
+newTagLimitExceededException  = TagLimitExceededException { "message": Nothing }
 
 -- | Constructs TagLimitExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTagLimitExceededException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> TagLimitExceededException
-newTagLimitExceededException'  customize = (TagLimitExceededException <<< customize) { "message": (NullOrUndefined Nothing) }
+newTagLimitExceededException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> TagLimitExceededException
+newTagLimitExceededException'  customize = (TagLimitExceededException <<< customize) { "message": Nothing }
 
 
 
@@ -2429,7 +2428,7 @@ newUpdateBatchPredictionInput' _BatchPredictionId _BatchPredictionName customize
 
 -- | <p>Represents the output of an <code>UpdateBatchPrediction</code> operation.</p> <p>You can see the updated content by using the <code>GetBatchPrediction</code> operation.</p>
 newtype UpdateBatchPredictionOutput = UpdateBatchPredictionOutput 
-  { "BatchPredictionId" :: NullOrUndefined (EntityId)
+  { "BatchPredictionId" :: Maybe (EntityId)
   }
 derive instance newtypeUpdateBatchPredictionOutput :: Newtype UpdateBatchPredictionOutput _
 derive instance repGenericUpdateBatchPredictionOutput :: Generic UpdateBatchPredictionOutput _
@@ -2439,12 +2438,12 @@ instance encodeUpdateBatchPredictionOutput :: Encode UpdateBatchPredictionOutput
 
 -- | Constructs UpdateBatchPredictionOutput from required parameters
 newUpdateBatchPredictionOutput :: UpdateBatchPredictionOutput
-newUpdateBatchPredictionOutput  = UpdateBatchPredictionOutput { "BatchPredictionId": (NullOrUndefined Nothing) }
+newUpdateBatchPredictionOutput  = UpdateBatchPredictionOutput { "BatchPredictionId": Nothing }
 
 -- | Constructs UpdateBatchPredictionOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateBatchPredictionOutput' :: ( { "BatchPredictionId" :: NullOrUndefined (EntityId) } -> {"BatchPredictionId" :: NullOrUndefined (EntityId) } ) -> UpdateBatchPredictionOutput
-newUpdateBatchPredictionOutput'  customize = (UpdateBatchPredictionOutput <<< customize) { "BatchPredictionId": (NullOrUndefined Nothing) }
+newUpdateBatchPredictionOutput' :: ( { "BatchPredictionId" :: Maybe (EntityId) } -> {"BatchPredictionId" :: Maybe (EntityId) } ) -> UpdateBatchPredictionOutput
+newUpdateBatchPredictionOutput'  customize = (UpdateBatchPredictionOutput <<< customize) { "BatchPredictionId": Nothing }
 
 
 
@@ -2471,7 +2470,7 @@ newUpdateDataSourceInput' _DataSourceId _DataSourceName customize = (UpdateDataS
 
 -- | <p>Represents the output of an <code>UpdateDataSource</code> operation.</p> <p>You can see the updated content by using the <code>GetBatchPrediction</code> operation.</p>
 newtype UpdateDataSourceOutput = UpdateDataSourceOutput 
-  { "DataSourceId" :: NullOrUndefined (EntityId)
+  { "DataSourceId" :: Maybe (EntityId)
   }
 derive instance newtypeUpdateDataSourceOutput :: Newtype UpdateDataSourceOutput _
 derive instance repGenericUpdateDataSourceOutput :: Generic UpdateDataSourceOutput _
@@ -2481,12 +2480,12 @@ instance encodeUpdateDataSourceOutput :: Encode UpdateDataSourceOutput where enc
 
 -- | Constructs UpdateDataSourceOutput from required parameters
 newUpdateDataSourceOutput :: UpdateDataSourceOutput
-newUpdateDataSourceOutput  = UpdateDataSourceOutput { "DataSourceId": (NullOrUndefined Nothing) }
+newUpdateDataSourceOutput  = UpdateDataSourceOutput { "DataSourceId": Nothing }
 
 -- | Constructs UpdateDataSourceOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateDataSourceOutput' :: ( { "DataSourceId" :: NullOrUndefined (EntityId) } -> {"DataSourceId" :: NullOrUndefined (EntityId) } ) -> UpdateDataSourceOutput
-newUpdateDataSourceOutput'  customize = (UpdateDataSourceOutput <<< customize) { "DataSourceId": (NullOrUndefined Nothing) }
+newUpdateDataSourceOutput' :: ( { "DataSourceId" :: Maybe (EntityId) } -> {"DataSourceId" :: Maybe (EntityId) } ) -> UpdateDataSourceOutput
+newUpdateDataSourceOutput'  customize = (UpdateDataSourceOutput <<< customize) { "DataSourceId": Nothing }
 
 
 
@@ -2513,7 +2512,7 @@ newUpdateEvaluationInput' _EvaluationId _EvaluationName customize = (UpdateEvalu
 
 -- | <p>Represents the output of an <code>UpdateEvaluation</code> operation.</p> <p>You can see the updated content by using the <code>GetEvaluation</code> operation.</p>
 newtype UpdateEvaluationOutput = UpdateEvaluationOutput 
-  { "EvaluationId" :: NullOrUndefined (EntityId)
+  { "EvaluationId" :: Maybe (EntityId)
   }
 derive instance newtypeUpdateEvaluationOutput :: Newtype UpdateEvaluationOutput _
 derive instance repGenericUpdateEvaluationOutput :: Generic UpdateEvaluationOutput _
@@ -2523,19 +2522,19 @@ instance encodeUpdateEvaluationOutput :: Encode UpdateEvaluationOutput where enc
 
 -- | Constructs UpdateEvaluationOutput from required parameters
 newUpdateEvaluationOutput :: UpdateEvaluationOutput
-newUpdateEvaluationOutput  = UpdateEvaluationOutput { "EvaluationId": (NullOrUndefined Nothing) }
+newUpdateEvaluationOutput  = UpdateEvaluationOutput { "EvaluationId": Nothing }
 
 -- | Constructs UpdateEvaluationOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateEvaluationOutput' :: ( { "EvaluationId" :: NullOrUndefined (EntityId) } -> {"EvaluationId" :: NullOrUndefined (EntityId) } ) -> UpdateEvaluationOutput
-newUpdateEvaluationOutput'  customize = (UpdateEvaluationOutput <<< customize) { "EvaluationId": (NullOrUndefined Nothing) }
+newUpdateEvaluationOutput' :: ( { "EvaluationId" :: Maybe (EntityId) } -> {"EvaluationId" :: Maybe (EntityId) } ) -> UpdateEvaluationOutput
+newUpdateEvaluationOutput'  customize = (UpdateEvaluationOutput <<< customize) { "EvaluationId": Nothing }
 
 
 
 newtype UpdateMLModelInput = UpdateMLModelInput 
   { "MLModelId" :: (EntityId)
-  , "MLModelName" :: NullOrUndefined (EntityName)
-  , "ScoreThreshold" :: NullOrUndefined (ScoreThreshold)
+  , "MLModelName" :: Maybe (EntityName)
+  , "ScoreThreshold" :: Maybe (ScoreThreshold)
   }
 derive instance newtypeUpdateMLModelInput :: Newtype UpdateMLModelInput _
 derive instance repGenericUpdateMLModelInput :: Generic UpdateMLModelInput _
@@ -2545,18 +2544,18 @@ instance encodeUpdateMLModelInput :: Encode UpdateMLModelInput where encode = ge
 
 -- | Constructs UpdateMLModelInput from required parameters
 newUpdateMLModelInput :: EntityId -> UpdateMLModelInput
-newUpdateMLModelInput _MLModelId = UpdateMLModelInput { "MLModelId": _MLModelId, "MLModelName": (NullOrUndefined Nothing), "ScoreThreshold": (NullOrUndefined Nothing) }
+newUpdateMLModelInput _MLModelId = UpdateMLModelInput { "MLModelId": _MLModelId, "MLModelName": Nothing, "ScoreThreshold": Nothing }
 
 -- | Constructs UpdateMLModelInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateMLModelInput' :: EntityId -> ( { "MLModelId" :: (EntityId) , "MLModelName" :: NullOrUndefined (EntityName) , "ScoreThreshold" :: NullOrUndefined (ScoreThreshold) } -> {"MLModelId" :: (EntityId) , "MLModelName" :: NullOrUndefined (EntityName) , "ScoreThreshold" :: NullOrUndefined (ScoreThreshold) } ) -> UpdateMLModelInput
-newUpdateMLModelInput' _MLModelId customize = (UpdateMLModelInput <<< customize) { "MLModelId": _MLModelId, "MLModelName": (NullOrUndefined Nothing), "ScoreThreshold": (NullOrUndefined Nothing) }
+newUpdateMLModelInput' :: EntityId -> ( { "MLModelId" :: (EntityId) , "MLModelName" :: Maybe (EntityName) , "ScoreThreshold" :: Maybe (ScoreThreshold) } -> {"MLModelId" :: (EntityId) , "MLModelName" :: Maybe (EntityName) , "ScoreThreshold" :: Maybe (ScoreThreshold) } ) -> UpdateMLModelInput
+newUpdateMLModelInput' _MLModelId customize = (UpdateMLModelInput <<< customize) { "MLModelId": _MLModelId, "MLModelName": Nothing, "ScoreThreshold": Nothing }
 
 
 
 -- | <p>Represents the output of an <code>UpdateMLModel</code> operation.</p> <p>You can see the updated content by using the <code>GetMLModel</code> operation.</p>
 newtype UpdateMLModelOutput = UpdateMLModelOutput 
-  { "MLModelId" :: NullOrUndefined (EntityId)
+  { "MLModelId" :: Maybe (EntityId)
   }
 derive instance newtypeUpdateMLModelOutput :: Newtype UpdateMLModelOutput _
 derive instance repGenericUpdateMLModelOutput :: Generic UpdateMLModelOutput _
@@ -2566,12 +2565,12 @@ instance encodeUpdateMLModelOutput :: Encode UpdateMLModelOutput where encode = 
 
 -- | Constructs UpdateMLModelOutput from required parameters
 newUpdateMLModelOutput :: UpdateMLModelOutput
-newUpdateMLModelOutput  = UpdateMLModelOutput { "MLModelId": (NullOrUndefined Nothing) }
+newUpdateMLModelOutput  = UpdateMLModelOutput { "MLModelId": Nothing }
 
 -- | Constructs UpdateMLModelOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateMLModelOutput' :: ( { "MLModelId" :: NullOrUndefined (EntityId) } -> {"MLModelId" :: NullOrUndefined (EntityId) } ) -> UpdateMLModelOutput
-newUpdateMLModelOutput'  customize = (UpdateMLModelOutput <<< customize) { "MLModelId": (NullOrUndefined Nothing) }
+newUpdateMLModelOutput' :: ( { "MLModelId" :: Maybe (EntityId) } -> {"MLModelId" :: Maybe (EntityId) } ) -> UpdateMLModelOutput
+newUpdateMLModelOutput'  customize = (UpdateMLModelOutput <<< customize) { "MLModelId": Nothing }
 
 
 
